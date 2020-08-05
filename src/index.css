@@ -2576,8 +2576,8 @@ select:focus {
   margin: 0 -3px; }
   .number-list li {
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     font-size: 14px;
     text-align: center;
     line-height: 30px;

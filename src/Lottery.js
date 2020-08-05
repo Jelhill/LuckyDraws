@@ -19,18 +19,18 @@ import { connect } from 'react-redux'
 
 
 
-function Lottery() {
+function Lottery(props) {
 
 	// const generateNum = () => {
-	// 	const it = generateLotteryNumber(1, 200, 1);
-	// 	let result = it.next();
-	// 	while (!result.done) {
-
-	// 	// console.log(result.value); // 1 3 5 7 9
-	// 	// result = it.next();
-	// 	}
+	// 	let result = []
+	// 	let num = 1result
 	// }
 
+	// useEffect(() => {
+	// 	const result = generateNum()
+    //     props.generateNumbers(result)
+	// })
+	
 	return (
 		<div>
 			<Header />
@@ -184,7 +184,7 @@ function Lottery() {
 														QUANTITY 
 												</h4>
 												<div className="number">
-													<input type="number" value="1" />
+													<input type="number" value="" />
 												</div>
 											</div>
 										</div>
@@ -227,8 +227,14 @@ function Lottery() {
 											</div>
 											<div className="main-content">
 												<ul className="number-list">
-													<li>1</li>
-													<li>2</li>
+												{Array.from({length: 500}, (v, k) => k+1).map((num, index) => {
+													return <li key={index}>{`A${num}`}</li>
+												})}
+												{/* {props.numbers.map((num, index) => {
+													return <li key={index}>{`A${num}`}</li>
+												})} */}
+										
+													{/* <li>2</li>
 													<li>3</li>
 													<li>4</li>
 													<li>5</li>
@@ -276,7 +282,7 @@ function Lottery() {
 													<li>47</li>
 													<li>48</li>
 													<li>49</li>
-													<li>50</li>
+													<li>50</li> */}
 												  </ul>
 											</div>
 										</div>
@@ -613,10 +619,9 @@ function Lottery() {
 
 
 const mapStateToProps = (state) => {
-	const { modalReducer } = state
+	const { lotteryReducer } = state
 	return {
-      showSignInModal: modalReducer.showSignInModal,
-      showSignUpModal: modalReducer.showSignUpModal,
+      numbers: lotteryReducer.lotteryNumbers,
 	}
   }
   

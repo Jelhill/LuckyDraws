@@ -3,17 +3,18 @@ import {
  } from "../Actions/lotteryActions"
 
 const initialState = {
-    lotteryNumbers = []
+    lotteryNumbers: []
 }   
 
-const lotterReducer = (state = initialState, action) => {
+const lotteryReducer = (state = initialState, action) => {
     const newState = {...state}
 
     if(action.type === GENERATE_LOTTERY_NUMBERS) {
-        newState.lotteryNumbers = [...newState.lotteryNumbers, action.values]
+        console.log(action.values)
+        newState.lotteryNumbers = newState.lotteryNumbers.concat(action.values)
     }
 
     return newState
 }
 
-export default lotterReducer
+export default lotteryReducer

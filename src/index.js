@@ -5,12 +5,14 @@ import App from './App';
 import { Provider } from "react-redux";
 import { createStore, combineReducers } from "redux"
 import modalReducer from "./Reducers/modalReducer"
+import lotteryReducer from "./Reducers/lotteryReducer"
 
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router} from "react-router-dom"
 
 const rootReducer = combineReducers({
   modalReducer, 
+  lotteryReducer
 })
 const store = createStore(rootReducer)
 

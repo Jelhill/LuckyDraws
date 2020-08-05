@@ -3,10 +3,10 @@ export const GENERATE_LOTTERY_NUMBERS = "GENERATE_LOTTERY_NUMBERS"
 
 
 
-export const generateNumbers = (value) => {
+export const generateNumbers = (values) => {
     return {
         type: GENERATE_LOTTERY_NUMBERS,
-        value
+        values
     }
 }
 
