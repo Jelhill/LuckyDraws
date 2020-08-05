@@ -3,14 +3,27 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import Header from './Header'
 import Footer from './Footer'
+import breadcrumbLottery from "./assets/images/breadcrumb/lottery.png"
+import lotterySt1 from "./assets/images/lottery/st1.png"
+import lotterySt2 from "./assets/images/lottery/st2.png"
+import tikitIcon from "./assets/images/tikit-icon.png"
+import bgShape from "./assets/images/howitwork/bg-shape.png"
+import howItWorkIC1 from "./assets/images/howitwork/ic1.png"
+import howItWorkIC2 from "./assets/images/howitwork/ic2.png"
+import howItWorkIC3 from "./assets/images/howitwork/ic3.png"
+import questionLeft from "./assets/images/question-left.png"
+import icon2 from "./assets/images/icon2.png"
+// import { generateLotteryNumber } from "./Data/lotteryData"
+import { connect } from 'react-redux'
 
-export default function Lottery() {
+
+function Lottery() {
 	return (
 		<div>
 			<Header />
 	
 	<section className="breadcrumb-area bc-lottery">
-		<img className="bc-img" src="assets/images/breadcrumb/lottery.png" alt="" />
+		<img className="bc-img" src={breadcrumbLottery} alt="" />
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-12">
@@ -44,7 +57,7 @@ export default function Lottery() {
 						<div className="single-staticstics">
 							<div className="left">
 								<div className="icon">
-									<img src="assets/images/lottery/st1.png" alt="" />
+									<img src={lotterySt1} alt="" />
 								</div>
 							</div>
 							<div className="right">
@@ -60,13 +73,13 @@ export default function Lottery() {
 						<div className="single-staticstics">
 							<div className="left">
 								<div className="icon">
-									<img src="assets/images/lottery/st2.png" alt="" />
+									<img src={lotterySt2} alt="" />
 								</div>
 							</div>
 							<div className="right">
 								<h4 className="title">Purchased Tickets</h4>
 								<div className="count">
-									<img src="assets/images/tikit-icon.png" alt="" />
+									<img src={tikitIcon} alt="" />
 									<span>120</span>
 								</div>
 							</div>
@@ -76,13 +89,13 @@ export default function Lottery() {
 						<div className="single-staticstics">
 							<div className="left">
 								<div className="icon">
-									<img src="assets/images/lottery/st2.png" alt="" />
+									<img src={lotterySt2} alt="" />
 								</div>
 							</div>
 							<div className="right">
 								<h4 className="title">My Tickets</h4>
 								<div className="count">
-									<img src="assets/images/tikit-icon.png" alt="" />
+									<img src={tikitIcon} alt="" />
 									<span>02</span>
 								</div>
 							</div>
@@ -275,7 +288,7 @@ export default function Lottery() {
 
 		</div>
 		<div className="how-it-work">
-			<img className="bg-shape" src="assets/images/howitwork/bg-shape.png" alt="" />
+			<img className="bg-shape" src={bgShape} alt="" />
 			<div className="container">
 			<div className="row justify-content-center">
 					<div className="col-lg-8 col-md-10">
@@ -295,7 +308,7 @@ export default function Lottery() {
 				<div className="row">
 					<div className="col-lg-4">
 						<div className="single-work">
-							<img src="assets/images/howitwork/ic1.png" alt="" />
+							<img src={howItWorkIC1} alt="" />
 							<h4 className="title">
 								START
 							</h4>
@@ -306,7 +319,7 @@ export default function Lottery() {
 					</div>
 					<div className="col-lg-4">
 						<div className="single-work">
-							<img src="assets/images/howitwork/ic2.png" alt="" />
+							<img src={howItWorkIC2} alt="" />
 							<h4 className="title">
 								CHOOSE
 							</h4>
@@ -317,7 +330,7 @@ export default function Lottery() {
 					</div>
 					<div className="col-lg-4">
 						<div className="single-work">
-							<img src="assets/images/howitwork/ic3.png" alt="" />
+							<img src={howItWorkIC3} alt="" />
 							<h4 className="title">
 								WIN
 							</h4>
@@ -348,7 +361,7 @@ export default function Lottery() {
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-6">
-					<img src="assets/images/question-left.png" alt="" />
+					<img src={questionLeft} alt="" />
 				</div>
 				<div className="col-lg-6">
 					<div className="section-heading">
@@ -412,7 +425,7 @@ export default function Lottery() {
 											₦ 30,000
 									</div>
 									<div className="right">
-											<img src="assets/images/icon2.png" alt="" />
+											<img src={icon2} alt="" />
 									</div>
 								</div>
 							</div>
@@ -437,7 +450,7 @@ export default function Lottery() {
 											₦ 14,000
 									</div>
 									<div className="right">
-											<img src="assets/images/icon2.png" alt="" />
+											<img src={icon2} alt="" />
 									</div>
 								</div>
 							</div>
@@ -462,7 +475,7 @@ export default function Lottery() {
 											₦ 40,000
 									</div>
 									<div className="right">
-											<img src="assets/images/icon2.png" alt="" />
+											<img src={icon2} alt="" />
 									</div>
 								</div>
 							</div>
@@ -583,3 +596,22 @@ export default function Lottery() {
 	</div>
 	)
 }
+
+
+
+const mapStateToProps = (state) => {
+	const { modalReducer } = state
+	return {
+      showSignInModal: modalReducer.showSignInModal,
+      showSignUpModal: modalReducer.showSignUpModal,
+	}
+  }
+  
+  const mapDispatchToProps = (dispatch) => {
+	return {
+        // openSignInModal: (value) =>  dispatch(openSignInModal(value)),
+        // openSignUpModal: (value) =>  dispatch(openSignUpModal(value))
+	}
+  }
+
+  export default connect(mapStateToProps, mapDispatchToProps)(Lottery)
