@@ -13,6 +13,12 @@ import icon1 from "./assets/images/game/icon1.png"
 import icon2 from "./assets/images/game/icon2.png"
 import icon3 from "./assets/images/game/icon3.png"
 import iconImage2 from "./assets/images/icon2.png"
+import sandero from "./assets/images/prize/sandero.png"
+import acura from "./assets/images/prize/acura.png"
+import beasto from "./assets/images/prize/beasto.png"
+import infinity from "./assets/images/prize/infinity.png"
+import racingcar from "./assets/images/prize/racingcar.png"
+import ford from "./assets/images/prize/ford.png"
 
 export default function Competitions() {
 	return (
@@ -95,37 +101,42 @@ export default function Competitions() {
 										<div className="row">
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon1} alt="" />
+													{/* <img src={icon1} alt="" /> */}
+													<img src={acura} alt="" />
 													<Link to="lottery" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon2} alt="" />
+													{/* <img src={icon2} alt="" /> */}
+													<img src={beasto} alt="" />
 													<Link to="lottery" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon3} alt="" />
+													<img src={infinity} alt="" />
 													<Link to="lottery" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon1} alt="" />
+													{/* <img src={icon1} alt="" /> */}
+													<img src={racingcar} alt="" />
 													<Link to="lottery" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon2} alt="" />
+													{/* <img src={icon2} alt="" /> */}
+													<img src={sandero} alt="" />
 													<Link to="lottery" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon3} alt="" />
+													{/* <img src={icon3} alt="" /> */}
+													<img src={ford} alt="" />
 													<Link to="lottery" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
@@ -140,37 +151,43 @@ export default function Competitions() {
 										<div className="row">
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
+													{/* <img src={icon1} alt="" /> */}
 													<img src={icon1} alt="" />
 													<Link to="#" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon2} alt="" />
-													<Link to="#" className="mybtn2">PLay NoW !</Link>
-												</div>
-											</div>
-											<div className="col-lg-4 col-md-6">
-												<div className="single-game">
-													<img src={icon3} alt="" />
-													<Link to="#" className="mybtn2">PLay NoW !</Link>
-												</div>
-											</div>
-											<div className="col-lg-4 col-md-6">
-												<div className="single-game">
+													{/* <img src={icon2} alt="" /> */}
 													<img src={icon1} alt="" />
 													<Link to="#" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
+													{/* <img src={icon3} alt="" /> */}
 													<img src={icon1} alt="" />
 													<Link to="#" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>
 											<div className="col-lg-4 col-md-6">
 												<div className="single-game">
-													<img src={icon3} alt="" />
+													{/* <img src={icon1} alt="" /> */}
+													<img src={icon1} alt="" />
+													<Link to="#" className="mybtn2">PLay NoW !</Link>
+												</div>
+											</div>
+											<div className="col-lg-4 col-md-6">
+												<div className="single-game">
+													{/* <img src={icon1} alt="" /> */}
+													<img src={icon1} alt="" />
+													<Link to="#" className="mybtn2">PLay NoW !</Link>
+												</div>
+											</div>
+											<div className="col-lg-4 col-md-6">
+												<div className="single-game">
+													{/* <img src={icon3} alt="" /> */}
+													<img src={icon1} alt="" />
 													<Link to="#" className="mybtn2">PLay NoW !</Link>
 												</div>
 											</div>

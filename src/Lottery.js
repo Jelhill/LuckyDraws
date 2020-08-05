@@ -13,11 +13,24 @@ import howItWorkIC2 from "./assets/images/howitwork/ic2.png"
 import howItWorkIC3 from "./assets/images/howitwork/ic3.png"
 import questionLeft from "./assets/images/question-left.png"
 import icon2 from "./assets/images/icon2.png"
-// import { generateLotteryNumber } from "./Data/lotteryData"
+import { generateLotteryNumber } from "./Data/lotteryData"
+import { generateNumbers } from "./Actions/lotteryActions"
 import { connect } from 'react-redux'
 
 
+
 function Lottery() {
+
+	const generateNum = () => {
+		const it = generateLotteryNumber(1, 200, 1);
+		let result = it.next();
+		while (!result.done) {
+			
+		// console.log(result.value); // 1 3 5 7 9
+		// result = it.next();
+		}
+	}
+
 	return (
 		<div>
 			<Header />
@@ -609,8 +622,7 @@ const mapStateToProps = (state) => {
   
   const mapDispatchToProps = (dispatch) => {
 	return {
-        // openSignInModal: (value) =>  dispatch(openSignInModal(value)),
-        // openSignUpModal: (value) =>  dispatch(openSignUpModal(value))
+		generateNumbers: (values) => dispatch(generateNumbers(values))
 	}
   }
 

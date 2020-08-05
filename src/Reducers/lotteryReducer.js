@@ -3,14 +3,14 @@ import {
  } from "../Actions/lotteryActions"
 
 const initialState = {
-    lotterNumbers = []
+    lotteryNumbers = []
 }   
 
 const lotterReducer = (state = initialState, action) => {
     const newState = {...state}
 
     if(action.type === GENERATE_LOTTERY_NUMBERS) {
-        newState.showSignInModal = action.value
+        newState.lotteryNumbers = [...newState.lotteryNumbers, action.values]
     }
 
     return newState
