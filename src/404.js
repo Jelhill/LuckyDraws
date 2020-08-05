@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Image404 from "./assets/images/404-bg.png"
 import Image4042 from "./assets/images/404.png"
 
@@ -17,7 +18,7 @@ export default function Error404() {
 											Oops,
 											Something went wrong !
 									</h4>
-									<a href="index.html" class="mybtn1"><i class="fas fa-angle-double-left"></i> BACK TO HOME</a>
+									<Link to="index" class="mybtn1"><i class="fas fa-angle-double-left"></i> BACK TO HOME</Link>
 								</div>
 							</div>
 						</div>

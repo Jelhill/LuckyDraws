@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from "react-router-dom"
 import Footer from './Footer'
 import Logo from "./assets/images/logo.png"
 import breadcrumbAbout from "./assets/images/breadcrumb/about.png"
@@ -9,40 +10,40 @@ export default function About() {
 	return (
 		<Fragment>
 		<div>
-			<header class="header">		
-				<section class="top-header">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="content">
-									<div class="left-content">
-										<ul class="left-list">
+			<header className="header">		
+				<section className="top-header">
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-12">
+								<div className="content">
+									<div className="left-content">
+										<ul className="left-list">
 											<li>
 												<p>
-													<i class="fas fa-headset"></i>	Support
+													<i className="fas fa-headset"></i>	Support
 												</p>
 											</li>
 											<li>
 												<p>
-													<i class="fas fa-envelope"></i>	info@LuckyDraws.ng
+													<i className="fas fa-envelope"></i>	info@LuckyDraws.ng
 												</p>
 											</li>
 									
 										</ul>
 									</div>
-									<div class="right-content">
-											<ul class="right-list">
+									<div className="right-content">
+											<ul className="right-list">
 												<li>
-													<div class="cart-icon tm-dropdown">
-														<i class="fas fa-cart-arrow-down"></i>
-														<span class="cart-count">10</span>
-														<div class="tm-dropdown-menu">
-															<ul class="list">
-																<li class="list-item">
-																		<div class="close">
-																				<i class="fas fa-times"></i>
+													<div className="cart-icon tm-dropdown">
+														<i className="fas fa-cart-arrow-down"></i>
+														<span className="cart-count">10</span>
+														<div className="tm-dropdown-menu">
+															<ul className="list">
+																<li className="list-item">
+																		<div className="close">
+																				<i className="fas fa-times"></i>
 																		</div>
-																	<ul class="number-list">
+																	<ul className="number-list">
 																		<li>24</li>
 																		<li>25</li>
 																		<li>26</li>
@@ -50,11 +51,11 @@ export default function About() {
 																		<li>28</li>
 																	</ul>
 																</li>
-																<li class="list-item">
-																		<div class="close">
-																				<i class="fas fa-times"></i>
+																<li className="list-item">
+																		<div className="close">
+																				<i className="fas fa-times"></i>
 																		</div>
-																	<ul class="number-list">
+																	<ul className="number-list">
 																		<li>24</li>
 																		<li>25</li>
 																		<li>26</li>
@@ -62,11 +63,11 @@ export default function About() {
 																		<li>28</li>
 																	</ul>
 																</li>
-																<li class="list-item">
-																		<div class="close">
-																				<i class="fas fa-times"></i>
+																<li className="list-item">
+																		<div className="close">
+																				<i className="fas fa-times"></i>
 																		</div>
-																	<ul class="number-list">
+																	<ul className="number-list">
 																		<li>24</li>
 																		<li>25</li>
 																		<li>26</li>
@@ -74,11 +75,11 @@ export default function About() {
 																		<li>28</li>
 																	</ul>
 																</li>
-																<li class="list-item">
-																	<div class="close">
-																			<i class="fas fa-times"></i>
+																<li className="list-item">
+																	<div className="close">
+																			<i className="fas fa-times"></i>
 																	</div>
-																	<ul class="number-list">
+																	<ul className="number-list">
 																		<li>24</li>
 																		<li>25</li>
 																		<li>26</li>
@@ -87,54 +88,54 @@ export default function About() {
 																	</ul>
 																</li>
 															</ul>
-															<a href="cart.html" class="link-btn">Checkout</a>
+															<Link to="cart" className="link-btn">Checkout</Link>
 														</div>
 													</div>
 												</li>
 												<li>
-													<div class="notofication tm-dropdown">
-														<i class="fas fa-bell"></i>
-														<span class="count">11</span>
-														<div class="tm-dropdown-menu">
-																<ul class="list">
+													<div className="notofication tm-dropdown">
+														<i className="fas fa-bell"></i>
+														<span className="count">11</span>
+														<div className="tm-dropdown-menu">
+																<ul className="list">
 																	<li>
-																		<a href="#">
-																			<i class="fas fa-bell"></i>
+																		<Link to="#">
+																			<i className="fas fa-bell"></i>
 																			Invest Exchange
-																		</a>
+																		</Link>
 																	</li>
 																	<li>
-																		<a href="#">
-																			<i class="fas fa-bell"></i>
+																		<Link to="#">
+																			<i className="fas fa-bell"></i>
 																			Invest Exchange
-																		</a>
+																		</Link>
 																	</li>
 																	<li>
-																		<a href="#">
-																			<i class="fas fa-bell"></i>
+																		<Link to="#">
+																			<i className="fas fa-bell"></i>
 																			Invest Exchange
-																		</a>
+																		</Link>
 																	</li>
 																	<li>
-																		<a href="#">
-																			<i class="fas fa-bell"></i>
+																		<Link to="#">
+																			<i className="fas fa-bell"></i>
 																			Invest Exchange
-																		</a>
+																		</Link>
 																	</li>
 																	<li>
-																		<a href="#">
-																			<i class="fas fa-bell"></i>
+																		<Link to="#">
+																			<i className="fas fa-bell"></i>
 																			Invest Exchange
-																		</a>
+																		</Link>
 																	</li>
 																</ul>
 															</div>
 													</div>
 												</li>
 												<li>
-													<a href="#" class="sign-in" data-toggle="modal" data-target="#login">
-														<i class="fas fa-user"></i> Sign In
-													</a>
+													<Link to="#" className="sign-in" data-toggle="modal" data-target="#login">
+														<i className="fas fa-user"></i> Sign In
+													</Link>
 												</li>
 											</ul>
 									</div>
@@ -143,41 +144,41 @@ export default function About() {
 						</div>
 					</div>
 				</section>	
-				<div class="mainmenu-area">
-					<div class="container">
-					<div class="row">
-						<div class="col-lg-12">                 
-							<nav class="navbar navbar-expand-lg navbar-light">
-								<a class="navbar-brand" href="index.html">
+				<div className="mainmenu-area">
+					<div className="container">
+					<div className="row">
+						<div className="col-lg-12">                 
+							<nav className="navbar navbar-expand-lg navbar-light">
+								<Link className="navbar-brand" to="index">
 									<img src={Logo} alt=""/>
-								</a>
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
+								</Link>
+								<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
 									aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
+									<span className="navbar-toggler-icon"></span>
 								</button>
-								<div class="collapse navbar-collapse fixed-height" id="main_menu">
+								<div className="collapse navbar-collapse fixed-height" id="main_menu">
 									
-										<ul class="navbar-nav ml-auto">
-										<li class="nav-item ">
-											<a class="nav-link " href="index.html">Home
-													<div class="mr-hover-effect"></div></a>
+										<ul className="navbar-nav ml-auto">
+										<li className="nav-item ">
+											<Link className="nav-link " to="index">Home
+													<div className="mr-hover-effect"></div></Link>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="competitions.html">Competitions
-													<div class="mr-hover-effect"></div></a>
+										<li className="nav-item">
+											<Link className="nav-link" to="competitions">Competitions
+													<div className="mr-hover-effect"></div></Link>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="how-it-work.html">How To Play
-											<div class="mr-hover-effect"></div></a>
+										<li className="nav-item">
+											<Link className="nav-link" to="howItWork">How To Play
+											<div className="mr-hover-effect"></div></Link>
 										</li>
 																	
-										<li class="nav-item">
-											<a class="nav-link" href="contact.html">Contact
-											<div class="mr-hover-effect"></div></a>
+										<li className="nav-item">
+											<Link className="nav-link" to="contact">Contact
+											<div className="mr-hover-effect"></div></Link>
 										</li>
 									</ul>
 										
-								<a href="#" class="mybtn1"  data-toggle="modal" data-target="#signin"> Join us</a>
+								<Link to="#" className="mybtn1"  data-toggle="modal" data-target="#signin"> Join us</Link>
 								</div>
 							</nav>
 						</div>
@@ -186,55 +187,55 @@ export default function About() {
 				</div>
 			</header>
 
-			<section class="breadcrumb-area about">
-				<img class="bc-img" src={breadcrumbAbout} alt="" />
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<h4 class="title">
+			<section className="breadcrumb-area about">
+				<img className="bc-img" src={breadcrumbAbout} alt="" />
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<h4 className="title">
 								About Us
 							</h4>
-							<ul class="breadcrumb-list">
+							<ul className="breadcrumb-list">
 								<li>
-									<a href="index.html">
-											<i class="fas fa-home"></i>
+									<Link to="index">
+											<i className="fas fa-home"></i>
 											Home
-									</a>
+									</Link>
 								</li>
 								<li>
-									<span><i class="fas fa-chevron-right"></i> </span>
+									<span><i className="fas fa-chevron-right"></i> </span>
 								</li>
 								<li>
-									<a href="about.html">About Us</a>
+									<Link to="about">About Us</Link>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="about-page-section">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6 d-flex align-self-center">
-								<div class="about-video">
+			<section className="about-page-section">
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-6 d-flex align-self-center">
+								<div className="about-video">
 									<img src={aboutVideoBg} alt="" />
-									<a href="https://www.youtube.com/watch?v=oj40TQirhss" class="play-video mfp-iframe">
+									<Link to="https://www.youtube.com/watch?v=oj40TQirhss" className="play-video mfp-iframe">
 										<img src={playIconRed} alt="" />
-									</a>
+									</Link>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="section-heading">
-									<h5 class="subtitle">
+							<div className="col-lg-6">
+								<div className="section-heading">
+									<h5 className="subtitle">
 											Our Journey in a Nutshell
 									</h5>
-									<h2 class="title">
+									<h2 className="title">
 											About LuckyDraws
 									</h2>
-									<p class="text">
+									<p className="text">
 											Luckydraws is an exciting online gaming lotto brand that offers the largest selection of online virtual games.
 									</p>
-									<p class="text">
+									<p className="text">
 											All games are available on multi-platforms, including web, mobiles and tablets. To top it all off, we also offer our clients a variety of promotions and offers.
 									</p>
 									
@@ -245,105 +246,105 @@ export default function About() {
 			</section>
 			<Footer />
 			</div>
-			<div class="bottomtotop">
-				<i class="fas fa-chevron-right"></i>
+			<div className="bottomtotop">
+				<i className="fas fa-chevron-right"></i>
 			</div>
-			<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<div class="modal-body">
-						<div class="logo-area">
-								<img class="logo" src="assets/images/logo.png" alt="" />
+			<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+				<div className="modal-dialog modal-dialog-centered" role="document">
+				<div className="modal-content">
+					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div className="modal-body">
+						<div className="logo-area">
+								<img className="logo" src="assets/images/logo.png" alt="" />
 						</div>
-						<div class="header-area">
-							<h4 class="title">Great to have you back!</h4>
-							<p class="sub-title">Enter your details below.</p>
+						<div className="header-area">
+							<h4 className="title">Great to have you back!</h4>
+							<p className="sub-title">Enter your details below.</p>
 						</div>
-						<div class="form-area">
+						<div className="form-area">
 							<form action="#"  method="POST">
-								<div class="form-group">
+								<div className="form-group">
 										<label for="login-input-email">Email*</label>
-										<input type="email" class="input-field" id="login-input-email"  placeholder="Enter your Email" />
+										<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="login-input-password">Password*</label>
-										<input type="password" class="input-field" id="login-input-password"  placeholder="Password" />
+										<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
 								</div>
-								<div class="form-group">
-									<div class="box">
-										<div class="left">
-												<input type="checkbox" class="check-box-field" id="input-save-password" checked />
+								<div className="form-group">
+									<div className="box">
+										<div className="left">
+												<input type="checkbox" className="check-box-field" id="input-save-password" checked />
 											<label for="input-save-password">Remember Password</label>
 										</div>
-										<div class="right">
-											<a href="#">
+										<div className="right">
+											<Link to="#">
 												Forgot Password?
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>
-								<div class="form-group">
-									<button type="submit" class="mybtn1">Log In</button>
+								<div className="form-group">
+									<button type="submit" className="mybtn1">Log In</button>
 								</div>
 							</form>
 						</div>
-						<div class="form-footer">
+						<div className="form-footer">
 							<p>Not a member? 
-									<a href="#">Create account <i class="fas fa-angle-double-right"></i></a>
+									<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
 							</p>
 						</div>
 					</div>
 				</div>
 				</div>
 			</div>
-			<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered " role="document">
-					<div class="modal-content">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div class="modal-body">
-							<div class="logo-area">
-								<img class="logo" src="assets/images/logo.png" alt="" />
+			<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+				<div className="modal-dialog modal-dialog-centered " role="document">
+					<div className="modal-content">
+						<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div className="modal-body">
+							<div className="logo-area">
+								<img className="logo" src="assets/images/logo.png" alt="" />
 							</div>
-							<div class="header-area">
-								<h4 class="title">Great to have you back!</h4>
-								<p class="sub-title">Enter your details below.</p>
+							<div className="header-area">
+								<h4 className="title">Great to have you back!</h4>
+								<p className="sub-title">Enter your details below.</p>
 							</div>
-							<div class="form-area">
+							<div className="form-area">
 								<form action="#" method="POST">
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-name">Name*</label>
-											<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name" />
+											<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-email">Email*</label>
-											<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email" />
+											<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-password">Password*</label>
-											<input type="password" class="input-field" id="input-password"  placeholder="Enter your password" />
+											<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-con-password">confirm password**</label>
-											<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
+											<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<select>
 												<option value="0">BTC</option>
 												<option value="1">USD</option>
 												<option value="2">EUR</option>
 											</select>
 									</div>
-									<div class="form-group">
-										<div class="check-group">
-												<input type="checkbox" class="check-box-field" id="input-terms" checked />
+									<div className="form-group">
+										<div className="check-group">
+												<input type="checkbox" className="check-box-field" id="input-terms" checked />
 												<label for="input-terms">
-														I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
+														I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
 												</label>
 										</div>
 									</div>
-									<div class="form-group">
-										<button type="submit" class="mybtn1">Take Bonus</button>
+									<div className="form-group">
+										<button type="submit" className="mybtn1">Take Bonus</button>
 									</div>
 								</form>
 							</div>

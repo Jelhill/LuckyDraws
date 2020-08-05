@@ -4,38 +4,38 @@ import mailBox from "./assets/images/mail-box.png"
 
 export default function Footer() {
     return (
-        <footer class="footer" id="footer">
-		<div class="subscribe-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="subscribe-box">
+        <footer className="footer" id="footer">
+		<div className="subscribe-area">
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-12">
+						<div className="subscribe-box">
 								<form action="#">
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="heading-area">
-											<h5 class="sub-title">
+							<div className="row">
+								<div className="col-lg-12">
+									<div className="heading-area">
+											<h5 className="sub-title">
 													subscribe to LuckyDraws
 											</h5>
-											<h4 class="title">
+											<h4 className="title">
 													To Get Exclusive Benefits
 											</h4>
 									</div>
 								</div>
-								<div class="col-lg-3 col-4 d-flex align-self-center">
-									<div class="icon">
+								<div className="col-lg-3 col-4 d-flex align-self-center">
+									<div className="icon">
 										<img src={mailBox} alt="" />
 									</div>
 								</div>
-								<div class="col-lg-6 col-8 d-flex align-self-center">
-									<div class="form-area">
+								<div className="col-lg-6 col-8 d-flex align-self-center">
+									<div className="form-area">
 											<input type="text" placeholder="Your Email Address" />
 									</div>
 								</div>
-								<div class="col-lg-3 d-flex align-self-center">
-									<div class="button-area">
-										<button class="mybtn1" type="submit">Subscribe
-											<span><i class="fas fa-paper-plane"></i></span>
+								<div className="col-lg-3 d-flex align-self-center">
+									<div className="button-area">
+										<button className="mybtn1" type="submit">Subscribe
+											<span><i className="fas fa-paper-plane"></i></span>
 										</button>
 									</div>
 								</div>
@@ -46,62 +46,62 @@ export default function Footer() {
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-lg-3">
-					<div class="footer-widget info-link-widget">
-						<h4 class="title">
+		<div className="container">
+			<div className="row">
+				<div className="col-sm-6 col-lg-3">
+					<div className="footer-widget info-link-widget">
+						<h4 className="title">
 							About 
 						</h4>
-						<ul class="link-list">
+						<ul className="link-list">
 							<li>
 								<Link to="about">
-									<i class="fas fa-angle-double-right"></i>	About Us
+									<i className="fas fa-angle-double-right"></i>	About Us
 								</Link>
 							</li>
 							<li>
 								<Link to="contact">
-									<i class="fas fa-angle-double-right"></i>	Contact Us
+									<i className="fas fa-angle-double-right"></i>	Contact Us
 								</Link>
 							</li>
 							
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="footer-widget info-link-widget">
-						<h4 class="title">
+				<div className="col-sm-6 col-lg-3">
+					<div className="footer-widget info-link-widget">
+						<h4 className="title">
 							My Account
 						</h4>
-						<ul class="link-list">
+						<ul className="link-list">
 							<li>
 								<Link to="wallet">
-									<i class="fas fa-angle-double-right"></i> Manage Your Account
+									<i className="fas fa-angle-double-right"></i> Manage Your Account
 								</Link>
 							</li>
 							<li>
 								<Link to="faq">
-									<i class="fas fa-angle-double-right"></i>FAQ
+									<i className="fas fa-angle-double-right"></i>FAQ
 								</Link>
 							</li>
 														
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="footer-widget info-link-widget">
-						<h4 class="title">
+				<div className="col-sm-6 col-lg-3">
+					<div className="footer-widget info-link-widget">
+						<h4 className="title">
 							Legal Info
 						</h4>
-						<ul class="link-list">
+						<ul className="link-list">
 							<li>
 								<Link to="termsAndConditionDetails">
-									<i class="fas fa-angle-double-right"></i>Privacy Policy
+									<i className="fas fa-angle-double-right"></i>Privacy Policy
 								</Link>
 							</li>
 							<li>
 								<Link to="termsAndConditionDetails">
-									<i class="fas fa-angle-double-right"></i>Terms of Service
+									<i className="fas fa-angle-double-right"></i>Terms of Service
 								</Link>
 							</li>
 							
@@ -110,11 +110,11 @@ export default function Footer() {
 				</div>
 			</div>
 		</div>
-		<div class="copy-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="left-area">
+		<div className="copy-bg">
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-12">
+						<div className="left-area">
 							<p>Copyright © 2020.All Rights Reserved By <Link to="https://www.Doshservices.com">Dosh Services</Link>
 							</p>
 						</div>

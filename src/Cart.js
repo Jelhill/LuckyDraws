@@ -1,5 +1,6 @@
 
 import React, { Fragment } from 'react'
+import { Link } from "react-router-dom"
 import Header from './Header'
 import Footer from './Footer'
 
@@ -7,56 +8,56 @@ export default function Cart() {
 	return (
 		<Fragment>
 			<Header />
-			<section class="breadcrumb-area cart">
-				<img class="bc-img" src="assets/images/breadcrumb/cart-bg.png" alt="" /> 
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<h4 class="title">
+			<section className="breadcrumb-area cart">
+				<img className="bc-img" src="assets/images/breadcrumb/cart-bg.png" alt="" /> 
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<h4 className="title">
 								Cart
 							</h4>
-							<ul class="breadcrumb-list">
+							<ul className="breadcrumb-list">
 								<li>
-									<a href="index.html">
-										<i class="fas fa-home"></i>
+									<Link to="index">
+										<i className="fas fa-home"></i>
 										Home
-									</a>
+									</Link>
 								</li>
 								<li>
-									<span><i class="fas fa-chevron-right"></i> </span>
+									<span><i className="fas fa-chevron-right"></i> </span>
 								</li>
 								<li>
-									<a href="cart.html">Cart</a>
+									<Link to="cart">Cart</Link>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="cart-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="message-one">
+			<section className="cart-area">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<div className="message-one">
 								<p>
 										Hey! Nice Number Selection.Please review your order below
 										and follow the next quick steps to complete your order.
 								</p>
 							</div>
-							<div class="message-two">
-								<div class="left">
+							<div className="message-two">
+								<div className="left">
 									<p>
-										<i class="far fa-check-circle"></i>
+										<i className="far fa-check-circle"></i>
 											Selected Numbers was successfully added to your cart
 									</p>
 								</div>
-								<div class="right">
-									<a href="#"><i class="far fa-edit"></i> Update Cart</a>
+								<div className="right">
+									<Link to="#"><i className="far fa-edit"></i> Update Cart</Link>
 								</div>
 							</div>
-							<div class="cart-table-area">
-								<div class="responsive-table">
-									<table class="table">
+							<div className="cart-table-area">
+								<div className="responsive-table">
+									<table className="table">
 									<thead>
 										<tr>
 										<th scope="col">Ticket numbers</th>
@@ -70,7 +71,7 @@ export default function Cart() {
 									<tbody>
 										<tr>
 											<td>
-													<ul class="number-list">
+													<ul className="number-list">
 															<li>24</li>
 															<li>25</li>
 															<li>26</li>
@@ -83,40 +84,40 @@ export default function Cart() {
 												0.00000051
 											</td>
 											<td>
-												<div class="qty">
+												<div className="qty">
 														<ul>
 															<li>
-																<span class="qtminus">
-																	<i class="fas fa-angle-left"></i>
+																<span className="qtminus">
+																	<i className="fas fa-angle-left"></i>
 																</span>
 															</li>
 															<li>
-																<span class="qttotal">1</span>
+																<span className="qttotal">1</span>
 															</li>
 															<li>
-																<span class="qtplus">
-																	<i class="fas fa-angle-right"></i>
+																<span className="qtplus">
+																	<i className="fas fa-angle-right"></i>
 																</span>
 															</li>
 														</ul>
 												</div>
 											</td>
 											<td>
-												<span class="time">30 mins.left</span>
+												<span className="time">30 mins.left</span>
 											</td>
 											<td>
 												<img src="assets/images/icon1.png" alt="" />
 												0.00000051
 											</td>
 											<td>
-												<div class="remove">
-														<i class="fas fa-times"></i>
+												<div className="remove">
+														<i className="fas fa-times"></i>
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
-													<ul class="number-list">
+													<ul className="number-list">
 															<li>24</li>
 															<li>25</li>
 															<li>26</li>
@@ -129,40 +130,40 @@ export default function Cart() {
 												0.00000051
 											</td>
 											<td>
-												<div class="qty">
+												<div className="qty">
 														<ul>
 															<li>
-																<span class="qtminus">
-																	<i class="fas fa-angle-left"></i>
+																<span className="qtminus">
+																	<i className="fas fa-angle-left"></i>
 																</span>
 															</li>
 															<li>
-																<span class="qttotal">1</span>
+																<span className="qttotal">1</span>
 															</li>
 															<li>
-																<span class="qtplus">
-																	<i class="fas fa-angle-right"></i>
+																<span className="qtplus">
+																	<i className="fas fa-angle-right"></i>
 																</span>
 															</li>
 														</ul>
 												</div>
 											</td>
 											<td>
-												<span class="time">30 mins.left</span>
+												<span className="time">30 mins.left</span>
 											</td>
 											<td>
 												<img src="assets/images/icon1.png" alt="" />
 												0.00000051
 											</td>
 											<td>
-												<div class="remove">
-														<i class="fas fa-times"></i>
+												<div className="remove">
+														<i className="fas fa-times"></i>
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
-													<ul class="number-list">
+													<ul className="number-list">
 															<li>24</li>
 															<li>25</li>
 															<li>26</li>
@@ -175,40 +176,40 @@ export default function Cart() {
 												0.00000051
 											</td>
 											<td>
-												<div class="qty">
+												<div className="qty">
 														<ul>
 															<li>
-																<span class="qtminus">
-																	<i class="fas fa-angle-left"></i>
+																<span className="qtminus">
+																	<i className="fas fa-angle-left"></i>
 																</span>
 															</li>
 															<li>
-																<span class="qttotal">1</span>
+																<span className="qttotal">1</span>
 															</li>
 															<li>
-																<span class="qtplus">
-																	<i class="fas fa-angle-right"></i>
+																<span className="qtplus">
+																	<i className="fas fa-angle-right"></i>
 																</span>
 															</li>
 														</ul>
 												</div>
 											</td>
 											<td>
-												<span class="time">30 mins.left</span>
+												<span className="time">30 mins.left</span>
 											</td>
 											<td>
 												<img src="assets/images/icon1.png" alt="" />
 												0.00000051
 											</td>
 											<td>
-												<div class="remove">
-														<i class="fas fa-times"></i>
+												<div className="remove">
+														<i className="fas fa-times"></i>
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
-													<ul class="number-list">
+													<ul className="number-list">
 															<li>24</li>
 															<li>25</li>
 															<li>26</li>
@@ -221,34 +222,34 @@ export default function Cart() {
 												0.00000051
 											</td>
 											<td>
-												<div class="qty">
+												<div className="qty">
 														<ul>
 															<li>
-																<span class="qtminus">
-																	<i class="fas fa-angle-left"></i>
+																<span className="qtminus">
+																	<i className="fas fa-angle-left"></i>
 																</span>
 															</li>
 															<li>
-																<span class="qttotal">1</span>
+																<span className="qttotal">1</span>
 															</li>
 															<li>
-																<span class="qtplus">
-																	<i class="fas fa-angle-right"></i>
+																<span className="qtplus">
+																	<i className="fas fa-angle-right"></i>
 																</span>
 															</li>
 														</ul>
 												</div>
 											</td>
 											<td>
-												<span class="time">30 mins.left</span>
+												<span className="time">30 mins.left</span>
 											</td>
 											<td>
 												<img src="assets/images/icon1.png" alt="" />
 												0.00000051
 											</td>
 											<td>
-												<div class="remove">
-														<i class="fas fa-times"></i>
+												<div className="remove">
+														<i className="fas fa-times"></i>
 												</div>
 											</td>
 										</tr>
@@ -256,10 +257,10 @@ export default function Cart() {
 									</table>
 								</div>
 							</div>
-							<div class="total-pay">
-								<div class="content">
+							<div className="total-pay">
+								<div className="content">
 									<span>Total to Pay:</span>
-									<div class="num">
+									<div className="num">
 											<img src="assets/images/icon1.png" alt="" />
 											0.00000051
 									</div>
@@ -270,158 +271,158 @@ export default function Cart() {
 				</div>
 			</section>
 
-			<section class="payment-method">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<h4 class="title">
+			<section className="payment-method">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<h4 className="title">
 									Payment Method
 							</h4>
-							<p class="text">
+							<p className="text">
 									Choose a payment method 
 							</p>
 						</div>
-						<div class="col-lg-12">
-							<div class="method-slider">
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+						<div className="col-lg-12">
+							<div className="method-slider">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/dabit-card.png" alt="" />
 										</div>
 										<span>Credit Card</span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/dabit-card.png" alt="" />
 										</div>
 										<span>Dabit Card</span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method active">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method active">
+										<div className="icon">
 												<img src="assets/images/payment/paypal.png" alt="" />
 										</div>
 										<span>Paypal</span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/bitcoin.png" alt="" />
 										</div>
 										<span>Bitcoin</span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/litecoin.png" alt="" />
 										</div>
 										<span>Litecoin</span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/ether.png" alt="" />
 										</div>
 										<span>Ethereum</span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/rippel.png" alt="" />
 										</div>
 										<span>Ripple </span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-										<a href="#" class="single-method">
-											<div class="icon">
+								<div className="item">
+										<Link to="#" className="single-method">
+											<div className="icon">
 													<img src="assets/images/payment/bitcoin.png" alt="" />
 											</div>
 											<span>Bitcoin</span>
-										</a>
+										</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/litecoin.png" alt="" />
 										</div>
 										<span>Litecoin</span>
-									</a>
+									</Link>
 								</div>
-								<div class="item">
-									<a href="#" class="single-method">
-										<div class="icon">
+								<div className="item">
+									<Link to="#" className="single-method">
+										<div className="icon">
 												<img src="assets/images/payment/ether.png" alt="" />
 										</div>
 										<span>Ethereum</span>
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 text-center">
-							<a href="#" class="mybtn1">
+						<div className="col-lg-12 text-center">
+							<Link to="#" className="mybtn1">
 									PurChase
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<Footer />
-			<div class="bottomtotop">
-				<i class="fas fa-chevron-right"></i>
+			<div className="bottomtotop">
+				<i className="fas fa-chevron-right"></i>
 			</div>
 
-			<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div class="modal-body">
-							<div class="logo-area">
-									<img class="logo" src="assets/images/logo.png" alt="" />
+			<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+					<div className="modal-dialog modal-dialog-centered" role="document">
+					<div className="modal-content">
+						<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div className="modal-body">
+							<div className="logo-area">
+									<img className="logo" src="assets/images/logo.png" alt="" />
 							</div>
-							<div class="header-area">
-								<h4 class="title">Great to have you back!</h4>
-								<p class="sub-title">Enter your details below.</p>
+							<div className="header-area">
+								<h4 className="title">Great to have you back!</h4>
+								<p className="sub-title">Enter your details below.</p>
 							</div>
-							<div class="form-area">
+							<div className="form-area">
 								<form action="#"  method="POST">
-									<div class="form-group">
+									<div className="form-group">
 											<label for="login-input-email">Email*</label>
-											<input type="email" class="input-field" id="login-input-email"  placeholder="Enter your Email" />
+											<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="login-input-password">Password*</label>
-											<input type="password" class="input-field" id="login-input-password"  placeholder="Password" />
+											<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
 									</div>
-									<div class="form-group">
-										<div class="box">
-											<div class="left">
-													<input type="checkbox" class="check-box-field" id="input-save-password" checked />
+									<div className="form-group">
+										<div className="box">
+											<div className="left">
+													<input type="checkbox" className="check-box-field" id="input-save-password" checked />
 												<label for="input-save-password">Remember Password</label>
 											</div>
-											<div class="right">
-												<a href="#">
+											<div className="right">
+												<Link to="#">
 													Forgot Password?
-												</a>
+												</Link>
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<button type="submit" class="mybtn1">Log In</button>
+									<div className="form-group">
+										<button type="submit" className="mybtn1">Log In</button>
 									</div>
 								</form>
 							</div>
-							<div class="form-footer">
+							<div className="form-footer">
 								<p>Not a member? 
-										<a href="#">Create account <i class="fas fa-angle-double-right"></i></a>
+										<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
 								</p>
 							</div>
 						</div>
@@ -429,47 +430,47 @@ export default function Cart() {
 					</div>
 				</div>
 
-			<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered " role="document">
-						<div class="modal-content">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<div class="modal-body">
-								<div class="logo-area">
-										<img class="logo" src="assets/images/logo.png" alt="" />
+			<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+						<div className="modal-dialog modal-dialog-centered " role="document">
+						<div className="modal-content">
+							<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<div className="modal-body">
+								<div className="logo-area">
+										<img className="logo" src="assets/images/logo.png" alt="" />
 								</div>
-								<div class="header-area">
-									<h4 class="title">Great to have you back!</h4>
-									<p class="sub-title">Enter your details below.</p>
+								<div className="header-area">
+									<h4 className="title">Great to have you back!</h4>
+									<p className="sub-title">Enter your details below.</p>
 								</div>
-								<div class="form-area">
+								<div className="form-area">
 									<form action="#" method="POST">
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-name">Name*</label>
-												<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name" />
+												<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
 										</div>
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-email">Email*</label>
-												<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email" />
+												<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
 										</div>
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-password">Password*</label>
-												<input type="password" class="input-field" id="input-password"  placeholder="Enter your password" />
+												<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
 										</div>
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-con-password">confirm password**</label>
-												<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
+												<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
 										</div>
 										
-										<div class="form-group">
-											<div class="check-group">
-													<input type="checkbox" class="check-box-field" id="input-terms" checked />
+										<div className="form-group">
+											<div className="check-group">
+													<input type="checkbox" className="check-box-field" id="input-terms" checked />
 													<label for="input-terms">
-															I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
+															I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
 													</label>
 											</div>
 										</div>
-										<div class="form-group">
-											<button type="submit" class="mybtn1">Take Bonus</button>
+										<div className="form-group">
+											<button type="submit" className="mybtn1">Take Bonus</button>
 										</div>
 									</form>
 								</div>

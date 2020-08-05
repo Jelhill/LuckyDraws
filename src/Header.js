@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment } from 'react'
 import { Link } from "react-router-dom"
 import Logo from "./assets/images/logo.png"
 import SignIn from './Modal/SignIn'

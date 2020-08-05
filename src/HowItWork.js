@@ -1,5 +1,6 @@
 
 import React, {Fragment} from 'react'
+import { Link } from "react-router-dom"
 import Header from './Header'
 import Footer from './Footer'
 
@@ -8,26 +9,26 @@ export default function HowItWork() {
 	return (
 		<Fragment>
 			<Header />
-			<section class="breadcrumb-area h-i-w">
-				<img class="bc-img" src="assets/images/breadcrumb/how-it-work.png" alt="" />
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<h4 class="title">
+			<section className="breadcrumb-area h-i-w">
+				<img className="bc-img" src="assets/images/breadcrumb/how-it-work.png" alt="" />
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<h4 className="title">
 								How it Works
 							</h4>
-							<ul class="breadcrumb-list">
+							<ul className="breadcrumb-list">
 								<li>
-									<a href="index.html">
-											<i class="fas fa-home"></i>
+									<Link to="index">
+											<i className="fas fa-home"></i>
 											Home
-									</a>
+									</Link>
 								</li>
 								<li>
-									<span><i class="fas fa-chevron-right"></i> </span>
+									<span><i className="fas fa-chevron-right"></i> </span>
 								</li>
 								<li>
-									<a href="how-it-work.html">How it Works</a>
+									<Link to="how-it-work">How it Works</Link>
 								</li>
 							</ul>
 						</div>
@@ -35,24 +36,24 @@ export default function HowItWork() {
 				</div>
 			</section>
 
-			<section class="how-play">
-				<div class="how-it-work">
-					<img class="bg-shape" src="assets/images/howitwork/bg-shape.png" alt="" />
-					<div class="container">
-					<div class="row justify-content-center">
-							<div class="col-lg-8 col-md-10">
-								<div class="section-heading">
-									<p class="text">
+			<section className="how-play">
+				<div className="how-it-work">
+					<img className="bg-shape" src="assets/images/howitwork/bg-shape.png" alt="" />
+					<div className="container">
+					<div className="row justify-content-center">
+							<div className="col-lg-8 col-md-10">
+								<div className="section-heading">
+									<p className="text">
 										We update our site regularly with new competitions and more winners are added every day! To locate the most recent winner's information
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-lg-4">
-								<div class="single-work">
+						<div className="row">
+							<div className="col-lg-4">
+								<div className="single-work">
 									<img src="assets/images/howitwork/ic1.png" alt="" />
-									<h4 class="title">
+									<h4 className="title">
 										START
 									</h4>
 									<p>
@@ -60,10 +61,10 @@ export default function HowItWork() {
 									</p>
 								</div>
 							</div>
-							<div class="col-lg-4">
-								<div class="single-work">
+							<div className="col-lg-4">
+								<div className="single-work">
 									<img src="assets/images/howitwork/ic2.png" alt="" />
-									<h4 class="title">
+									<h4 className="title">
 										CHOOSE
 									</h4>
 									<p>
@@ -71,10 +72,10 @@ export default function HowItWork() {
 									</p>
 								</div>
 							</div>
-							<div class="col-lg-4">
-								<div class="single-work">
+							<div className="col-lg-4">
+								<div className="single-work">
 									<img src="assets/images/howitwork/ic3.png" alt="" />
-									<h4 class="title">
+									<h4 className="title">
 										WIN
 									</h4>
 									<p>
@@ -82,13 +83,13 @@ export default function HowItWork() {
 									</p>
 								</div>
 							</div>
-							<div class="container" style={{paddingTop: "70px"}}>
-							<div class="row justify-content-center">
-								<div class="section-heading">
-									<h5 class="subtitle">
+							<div className="container" style={{paddingTop: "70px"}}>
+							<div className="row justify-content-center">
+								<div className="section-heading">
+									<h5 className="subtitle">
 											How the winner is picked and when the draws go live. 
 									</h5>
-									<p class="text">
+									<p className="text">
 										Once the timer on the competition is complete the draw will go ahead. A live streamed video to our host will appear within ‘ten minutes’ of the draw timing out. One random number will be picked out during the live draw. WE HAVE A WINNER.
 									</p>
 								</div>
@@ -100,147 +101,147 @@ export default function HowItWork() {
 
 			</section>
 
-			<section class="lottery-video">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-10">
-							<div class="video-box">
-								<a href="#" class="video-play-btn video-icon mfp-iframe">
+			<section className="lottery-video">
+				<div className="container">
+					<div className="row justify-content-center">
+						<div className="col-lg-10">
+							<div className="video-box">
+								<Link to="#" className="video-play-btn video-icon mfp-iframe">
 									<img src="assets/images/play-icon-red.png" alt="" />
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="question-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
+			<section className="question-area">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-6">
 							<img src="assets/images/question-left.png" alt="" />
 						</div>
-						<div class="col-lg-6">
-							<div class="section-heading">
-								<h5 class="subtitle">
+						<div className="col-lg-6">
+							<div className="section-heading">
+								<h5 className="subtitle">
 										If you have any
 								</h5>
-								<h2 class="title">
+								<h2 className="title">
 										questions
 								</h2>
-								<p class="text">
+								<p className="text">
 										Our top priorities are to protect your privacy, 
 										provide secure transactions, and safeguard your data. 
 								</p>
-								<p class="text">
+								<p className="text">
 										When you're ready to play, registering an 
 										account is required so we know you're of legal age and so no one else can use your account.We answer the most commonly asked lotto 
 										questions..
 								</p>
-								<a href="#" class="mybtn1">Check FAQs</a>
+								<Link to="#" className="mybtn1">Check FAQs</Link>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="recent-winners">
-					<div class="container">
-							<div class="row justify-content-center">
-								<div class="col-lg-8 col-md-10">
-									<div class="section-heading">
-										<h5 class="subtitle">
+			<section className="recent-winners">
+					<div className="container">
+							<div className="row justify-content-center">
+								<div className="col-lg-8 col-md-10">
+									<div className="section-heading">
+										<h5 className="subtitle">
 											Try to Check out our
 										</h5>
-										<h2 class="title">
+										<h2 className="title">
 												Recent Winners
 										</h2>
-										<p class="text">
+										<p className="text">
 											We update our site regularly; more and more winners are added every day! To locate the most recent winner's information
 										</p>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-lg-4">
-									<div class="single-winer">
-										<div class="top-area">
-											<div class="left">
-												<h4 class="name">
+							<div className="row">
+								<div className="col-lg-4">
+									<div className="single-winer">
+										<div className="top-area">
+											<div className="left">
+												<h4 className="name">
 														Leroy Roy 
 												</h4>
-												<p class="date">
+												<p className="date">
 														15.05.2020
 												</p>
 											</div>
-											<div class="right">
-												<p class="id">#5747e75482</p>
+											<div className="right">
+												<p className="id">#5747e75482</p>
 											</div>
 										</div>
-										<div class="bottom-area">
-											<div class="left">
+										<div className="bottom-area">
+											<div className="left">
 													₦ 30,000
 											</div>
-											<div class="right">
+											<div className="right">
 													<img src="assets/images/icon2.png" alt="" />
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-4">
-									<div class="single-winer">
-										<div class="top-area">
-											<div class="left">
-												<h4 class="name">
+								<div className="col-lg-4">
+									<div className="single-winer">
+										<div className="top-area">
+											<div className="left">
+												<h4 className="name">
 														Jeff Mack
 												</h4>
-												<p class="date">
+												<p className="date">
 														01.08.2019
 												</p>
 											</div>
-											<div class="right">
-												<p class="id">#5747e75482</p>
+											<div className="right">
+												<p className="id">#5747e75482</p>
 											</div>
 										</div>
-										<div class="bottom-area">
-											<div class="left">
+										<div className="bottom-area">
+											<div className="left">
 													₦ 14,000
 											</div>
-											<div class="right">
+											<div className="right">
 													<img src="assets/images/icon2.png" alt="" />
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-4">
-									<div class="single-winer">
-										<div class="top-area">
-											<div class="left">
-												<h4 class="name">
+								<div className="col-lg-4">
+									<div className="single-winer">
+										<div className="top-area">
+											<div className="left">
+												<h4 className="name">
 														Neal Morris
 												</h4>
-												<p class="date">
+												<p className="date">
 														01.08.2019
 												</p>
 											</div>
-											<div class="right">
-												<p class="id">#5747e75482</p>
+											<div className="right">
+												<p className="id">#5747e75482</p>
 											</div>
 										</div>
-										<div class="bottom-area">
-											<div class="left">
+										<div className="bottom-area">
+											<div className="left">
 													₦ 40,000
 											</div>
-											<div class="right">
+											<div className="right">
 													<img src="assets/images/icon2.png" alt="" />
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-lg-12 text-xl-center">
-									<a class="mybtn2" href="#">View All </a>
+							<div className="row">
+								<div className="col-lg-12 text-xl-center">
+									<Link className="mybtn2" to="#">View All </Link>
 								</div>
 							</div>
 					</div>
@@ -248,53 +249,53 @@ export default function HowItWork() {
 		
 			<Footer />
 
-			<div class="bottomtotop">
-				<i class="fas fa-chevron-right"></i>
+			<div className="bottomtotop">
+				<i className="fas fa-chevron-right"></i>
 			</div>
 
-			<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div class="modal-body">
-							<div class="logo-area">
-									<img class="logo" src="assets/images/logo.png" alt="" />
+			<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+					<div className="modal-dialog modal-dialog-centered" role="document">
+					<div className="modal-content">
+						<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div className="modal-body">
+							<div className="logo-area">
+									<img className="logo" src="assets/images/logo.png" alt="" />
 							</div>
-							<div class="header-area">
-								<h4 class="title">Great to have you back!</h4>
-								<p class="sub-title">Enter your details below.</p>
+							<div className="header-area">
+								<h4 className="title">Great to have you back!</h4>
+								<p className="sub-title">Enter your details below.</p>
 							</div>
-							<div class="form-area">
+							<div className="form-area">
 								<form action="#"  method="POST">
-									<div class="form-group">
+									<div className="form-group">
 											<label for="login-input-email">Email*</label>
-											<input type="email" class="input-field" id="login-input-email"  placeholder="Enter your Email" />
+											<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="login-input-password">Password*</label>
-											<input type="password" class="input-field" id="login-input-password"  placeholder="Password" />
+											<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
 									</div>
-									<div class="form-group">
-										<div class="box">
-											<div class="left">
-													<input type="checkbox" class="check-box-field" id="input-save-password" checked />
+									<div className="form-group">
+										<div className="box">
+											<div className="left">
+													<input type="checkbox" className="check-box-field" id="input-save-password" checked />
 												<label for="input-save-password">Remember Password</label>
 											</div>
-											<div class="right">
-												<a href="#">
+											<div className="right">
+												<Link to="#">
 													Forgot Password?
-												</a>
+												</Link>
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<button type="submit" class="mybtn1">Log In</button>
+									<div className="form-group">
+										<button type="submit" className="mybtn1">Log In</button>
 									</div>
 								</form>
 							</div>
-							<div class="form-footer">
+							<div className="form-footer">
 								<p>Not a member? 
-										<a href="#">Create account <i class="fas fa-angle-double-right"></i></a>
+										<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
 								</p>
 							</div>
 						</div>
@@ -302,47 +303,47 @@ export default function HowItWork() {
 					</div>
 				</div>
 
-				<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered " role="document">
-						<div class="modal-content">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<div class="modal-body">
-								<div class="logo-area">
-										<img class="logo" src="assets/images/logo.png" alt="" />
+				<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+						<div className="modal-dialog modal-dialog-centered " role="document">
+						<div className="modal-content">
+							<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<div className="modal-body">
+								<div className="logo-area">
+										<img className="logo" src="assets/images/logo.png" alt="" />
 								</div>
-								<div class="header-area">
-									<h4 class="title">Great to have you back!</h4>
-									<p class="sub-title">Enter your details below.</p>
+								<div className="header-area">
+									<h4 className="title">Great to have you back!</h4>
+									<p className="sub-title">Enter your details below.</p>
 								</div>
-								<div class="form-area">
+								<div className="form-area">
 									<form action="#" method="POST">
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-name">Name*</label>
-												<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name" />
+												<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
 										</div>
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-email">Email*</label>
-												<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email" />
+												<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
 										</div>
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-password">Password*</label>
-												<input type="password" class="input-field" id="input-password"  placeholder="Enter your password" />
+												<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
 										</div>
-										<div class="form-group">
+										<div className="form-group">
 												<label for="input-con-password">confirm password**</label>
-												<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
+												<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
 										</div>
 										
-										<div class="form-group">
-											<div class="check-group">
-													<input type="checkbox" class="check-box-field" id="input-terms" checked />
+										<div className="form-group">
+											<div className="check-group">
+													<input type="checkbox" className="check-box-field" id="input-terms" checked />
 													<label for="input-terms">
-															I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
+															I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
 													</label>
 											</div>
 										</div>
-										<div class="form-group">
-											<button type="submit" class="mybtn1">Take Bonus</button>
+										<div className="form-group">
+											<button type="submit" className="mybtn1">Take Bonus</button>
 										</div>
 									</form>
 								</div>

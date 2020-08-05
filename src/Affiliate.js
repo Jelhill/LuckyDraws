@@ -1,1029 +1,60 @@
-// <!DOCTYPE html>
-// <html lang="en">
-
-
-
-// <head>
-// 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-// 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-// 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
-// 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-// 	<title> LuckyDraws - Select to Win</title>
-	
-// 	<!-- bootstrap -->
-// 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-// 	<!-- Plugin css -->
-// 	<link rel="stylesheet" href="assets/css/plugin.css">
-// 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-// 	<link rel="shortcut icon" href="favicon.ico">
-// 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-// 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-// 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-// 	<link rel="manifest" href="/site.webmanifest">
-
-// 	<!-- stylesheet -->
-// 	<link rel="stylesheet" href="assets/css/style.css">
-// 	<!-- responsive -->
-// 	<link rel="stylesheet" href="assets/css/responsive.css">
-// </head>
-// <body>
-	
-
-// 		<!-- Header Area Start  -->
-// 	<header class="header">
-// 		<!-- Top Header Area Start -->
-// 		<section class="top-header">
-// 			<div class="container">
-// 				<div class="row">
-// 					<div class="col-lg-12">
-// 						<div class="content">
-// 							<div class="left-content">
-// 								<ul class="left-list">
-// 									<li>
-// 										<p>
-// 											<i class="fas fa-headset"></i> Support
-// 										</p>
-// 									</li>
-// 									<li>
-// 										<p>
-// 											<i class="fas fa-envelope"></i>	info@luckdyrdaws.ng
-// 										</p>
-// 									</li>
-// 								</ul>
-// 							</div>
-// 							<div class="right-content">
-// 								<ul class="right-list">
-// 									<li>
-// 										<div class="cart-icon tm-dropdown">
-// 											<i class="fas fa-cart-arrow-down"></i>
-// 											<span class="cart-count">10</span>
-// 											<div class="tm-dropdown-menu">
-// 												<ul class="list">
-// 													<li class="list-item">
-// 															<div class="close">
-// 																	<i class="fas fa-times"></i>
-// 															</div>
-// 														<ul class="number-list">
-// 															<li>24</li>
-// 															<li>25</li>
-// 															<li>26</li>
-// 															<li>27</li>
-// 															<li>28</li>
-// 														</ul>
-// 													</li>
-// 													<li class="list-item">
-// 															<div class="close">
-// 																	<i class="fas fa-times"></i>
-// 															</div>
-// 														<ul class="number-list">
-// 															<li>24</li>
-// 															<li>25</li>
-// 															<li>26</li>
-// 															<li>27</li>
-// 															<li>28</li>
-// 														</ul>
-// 													</li>
-// 													<li class="list-item">
-// 															<div class="close">
-// 																	<i class="fas fa-times"></i>
-// 															</div>
-// 														<ul class="number-list">
-// 															<li>24</li>
-// 															<li>25</li>
-// 															<li>26</li>
-// 															<li>27</li>
-// 															<li>28</li>
-// 														</ul>
-// 													</li>
-// 													<li class="list-item">
-// 														<div class="close">
-// 																<i class="fas fa-times"></i>
-// 														</div>
-// 														<ul class="number-list">
-// 															<li>24</li>
-// 															<li>25</li>
-// 															<li>26</li>
-// 															<li>27</li>
-// 															<li>28</li>
-// 														</ul>
-// 													</li>
-// 												</ul>
-// 												<a href="cart.html" class="link-btn">Checkout</a>
-// 											</div>
-// 										</div>
-// 									</li>
-									
-// 									<li>
-// 										<a href="#" class="sign-in" data-toggle="modal" data-target="#login">
-// 											<i class="fas fa-user"></i> Sign In
-// 										</a>
-// 									</li>
-// 								</ul>
-// 							</div>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</section>
-// 		<!-- Top Header Area End -->
-// 		<!--Main-Menu Area Start-->
-// 		<div class="mainmenu-area">
-// 			<div class="container">
-// 				<div class="row">
-// 					<div class="col-lg-12">                 
-// 						<nav class="navbar navbar-expand-lg navbar-light">
-// 							<a class="navbar-brand" href="index.html">
-// 								<img src="assets/images/logo.png" alt="">
-// 							</a>
-// 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
-// 								aria-expanded="false" aria-label="Toggle navigation">
-// 								<span class="navbar-toggler-icon"></span>
-// 							</button>
-// 							<div class="collapse navbar-collapse fixed-height" id="main_menu">
-// 								<ul class="navbar-nav ml-auto">
-// 									<li class="nav-item ">
-// 										<a class="nav-link " href="index.html">Home
-// 												<div class="mr-hover-effect"></div></a>
-// 									</li>
-// 									<ul class="navbar-nav ml-auto">
-// 									<li class="nav-item ">
-// 										<a class="nav-link " href="index.html">Home
-// 												<div class="mr-hover-effect"></div></a>
-// 									</li>
-// 									<li class="nav-item">
-// 										<a class="nav-link" href="competitions.html">Competitions
-// 												<div class="mr-hover-effect"></div></a>
-// 									</li>
-// 									<li class="nav-item">
-// 										<a class="nav-link" href="how-it-work.html">How To Play
-// 												<div class="mr-hover-effect"></div></a>
-// 									</li>
-																
-// 											<li class="nav-item">
-// 											<a class="nav-link" href="contact.html">Contact
-// 													<div class="mr-hover-effect"></div></a>
-// 										</li>
-// 								</ul>
-																	
-									
-// 									<li class="nav-item">
-// 											<a class="nav-link" href="contact.html">Contact
-// 													<div class="mr-hover-effect"></div></a>
-// 										</li>
-// 								</ul>
-// 								<a href="#" class="mybtn1"  data-toggle="modal" data-target="#signin"> Join us</a>
-// 							</div>
-// 						</nav>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 		<!--Main-Menu Area Start-->
-// 	</header>
-// 	<!-- Header Area End  -->
-// 		<!--Main-Menu Area Start-->
-// 		<div class="mainmenu-area">
-// 			<div class="container">
-// 				<div class="row">
-// 					<div class="col-lg-12">                 
-// 						<nav class="navbar navbar-expand-lg navbar-light">
-// 							<a class="navbar-brand" href="index.html">
-// 								<img src="assets/images/logo.png" alt="">
-// 							</a>
-// 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
-// 								aria-expanded="false" aria-label="Toggle navigation">
-// 								<span class="navbar-toggler-icon"></span>
-// 							</button>
-// 							<div class="collapse navbar-collapse fixed-height" id="main_menu">
-// 								<ul class="navbar-nav ml-auto">
-// 									<li class="nav-item ">
-// 	<a class="nav-link " href="index.html">Home
-// 		<div class="mr-hover-effect"></div>
-// 	</a>
-// </li>
-// 									<ul class="navbar-nav ml-auto">
-// 									<li class="nav-item ">
-// 										<a class="nav-link " href="index.html">Home
-// 												<div class="mr-hover-effect"></div></a>
-// 									</li>
-// 									<li class="nav-item">
-// 										<a class="nav-link" href="competitions.html">Competitions
-// 												<div class="mr-hover-effect"></div></a>
-// 									</li>
-// 									<li class="nav-item">
-// 										<a class="nav-link" href="how-it-work.html">How To Play
-// 												<div class="mr-hover-effect"></div></a>
-// 									</li>
-																
-// 											<li class="nav-item">
-// 											<a class="nav-link" href="contact.html">Contact
-// 													<div class="mr-hover-effect"></div></a>
-// 										</li>
-// 								</ul>
-									
-									
-									
-// 									<li class="nav-item">
-// 											<a class="nav-link" href="contact.html">Contact
-// 													<div class="mr-hover-effect"></div></a>
-// 										</li>
-// 								</ul>
-// 								<a href="#" class="mybtn1"  data-toggle="modal" data-target="#signin"> Join us</a>
-// 							</div>
-// 						</nav>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 		<!--Main-Menu Area Start-->
-// 	</header>
-// 	<!-- Header Area End  -->
-
-// 	<!-- Breadcrumb Area Start -->
-// 	<section class="breadcrumb-area bc-affiliate">
-// 		<img class="bc-img" src="assets/images/breadcrumb/affiliate.png" alt="">
-// 		<div class="container">
-// 			<div class="row">
-// 				<div class="col-lg-12">
-// 					<h4 class="title">
-// 						affiliate
-// 					</h4>
-// 					<ul class="breadcrumb-list">
-// 						<li>
-// 							<a href="index.html">
-// 									<i class="fas fa-home"></i>
-// 									Home
-// 							</a>
-// 						</li>
-// 						<li>
-// 							<span><i class="fas fa-chevron-right"></i> </span>
-// 						</li>
-// 						<li>
-// 							<a href="affiliate.html">Affiliate</a>
-// 						</li>
-// 					</ul>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</section>
-// 	<!-- Breadcrumb Area End -->
-
-// 	<!-- Affiliate Process area Start -->
-// 	<section class="affiliate-process">
-// 		<div class="container">
-// 			<div class="row">
-// 				<div class="col-lg-4">
-// 					<div class="single-process">
-// 						<img src="assets/images/affiliate/ps1.png" alt="">
-// 						<span class="num">1</span>
-// 						<h4 class="title">
-// 							Join
-// 						</h4>
-// 						<p class="text">
-// 							Sign up for our Platform and fill in the required 
-// 							details to access your 
-// 							affiliate panel.
-// 						</p>
-// 					</div>
-// 				</div>
-// 				<div class="col-lg-4">
-// 					<div class="single-process">
-// 						<img src="assets/images/affiliate/ps2.png" alt="">
-// 						<span class="num">2</span>
-// 						<h4 class="title">
-// 							Promote
-// 						</h4>
-// 						<p class="text">
-// 							Sign up for our Platform and fill in the required 
-// 							details to access your 
-// 							affiliate panel.
-// 						</p>
-// 					</div>
-// 				</div>
-// 				<div class="col-lg-4">
-// 					<div class="single-process">
-// 						<img src="assets/images/affiliate/ps3.png" alt="">
-// 						<span class="num">3</span>
-// 						<h4 class="title">
-// 							Earn
-// 						</h4>
-// 						<p class="text">
-// 							Sign up for our Platform and fill in the required 
-// 							details to access your 
-// 							affiliate panel.
-// 						</p>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</section>
-// 	<!-- Affiliate Process area End -->
-
-
-// 	<!-- Affiliate Program Area Start -->
-// 	<section class="affiliate-program">
-// 		<div class="container">
-// 			<div class="row justify-content-center">
-// 				<div class="col-lg-8 col-md-10">
-// 					<div class="section-heading">
-// 						<h5 class="subtitle">
-// 							Why Should you Join
-// 						</h5>
-// 						<h2 class="title">
-// 							Affiliate program?
-// 						</h2>
-// 						<p class="text">
-// 							The World's leading online crypto games affiliate program. Promote Jeugo with the biggest lotteries & crypto games  to get 15% 25% revenue share commission.
-// 						</p>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			<div class="row">
-// 				<div class="col-lg-6 col-md-6">
-// 					<div class="single-program">
-// 						<div class="icon one">
-// 							<img src="assets/images/affiliate/ic1.png" alt="">
-// 						</div>
-// 						<div class="content">
-// 							<h4 class="title">
-// 								Joining is free & EASy
-// 							</h4>
-// 							<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div class="col-lg-6 col-md-6">
-// 					<div class="single-program">
-// 						<div class="icon four">
-// 							<img src="assets/images/affiliate/ic2.png" alt="">
-// 						</div>
-// 						<div class="content">
-// 							<h4 class="title">
-// 								Unlimited Affiliates
-// 							</h4>
-// 							<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div class="col-lg-6 col-md-6">
-// 					<div class="single-program">
-// 						<div class="icon two">
-// 							<img src="assets/images/affiliate/ic3.png" alt="">
-// 						</div>
-// 						<div class="content">
-// 							<h4 class="title">
-// 								Provably Fair
-// 							</h4>
-// 							<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div class="col-lg-6 col-md-6">
-// 					<div class="single-program">
-// 						<div class="icon two">
-// 							<img src="assets/images/affiliate/ic4.png" alt="">
-// 						</div>
-// 						<div class="content">
-// 							<h4 class="title">
-// 									Secure playing
-// 							</h4>
-// 							<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div class="col-lg-6 col-md-6">
-// 					<div class="single-program">
-// 						<div class="icon three">
-// 							<img src="assets/images/affiliate/ic5.png" alt="">
-// 						</div>
-// 						<div class="content">
-// 							<h4 class="title">
-// 								Rewarsd
-// 							</h4>
-// 							<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				<div class="col-lg-6 col-md-6">
-// 					<div class="single-program">
-// 						<div class="icon three">
-// 							<img src="assets/images/affiliate/ic6.png" alt="">
-// 						</div>
-// 						<div class="content">
-// 							<h4 class="title">
-// 									24/7 Support
-// 							</h4>
-// 							<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</section>
-// 	<!-- Affiliate Program Area End -->
-
-// 	<!-- Ref Commission Area Start -->
-// 	<section class="ref-commission">
-// 		<img class="ab-img" src="assets/images/affiliate/ref-comm.png" alt="">
-// 		<div class="container">
-// 			<div class="row justify-content-end">
-// 				<div class="col-lg-7">
-// 					<div class="section-heading">
-// 						<h5 class="subtitle">
-// 							Try to check out our
-// 						</h5>
-// 						<h2 class="title">
-// 							Ref.Commission
-// 						</h2>
-// 						<p class="text">
-// 							Get even more profit by attracting other participants as your referrals. We propose to take advantage of a 
-// 							convenient three-level referral system.Our affiliates enjoy some of the highest commission rates in the industry.
-// 							Your income is in your hands!
-// 						</p>
-// 						<p class="text">
-// 							We provide our affiliates with a whole set of promo tools in different formats to enable them to promote our services effectively to different target markets. To help you keep on top of the game we publish recent news on our website regularly.
-// 						</p>
-// 						<a href="#" class="mybtn1">join Now! </a>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</section>
-// 	<!-- Ref Commission Area End -->
-
-// 	<!-- Marketing Tools Area Start -->
-// 	<section class="marketing-tools">
-// 		<div class="container">
-// 				<div class="row justify-content-center">
-// 					<div class="col-lg-8 col-md-10">
-// 					<div class="section-heading">
-// 						<h5 class="subtitle">
-// 								Try to check out our
-// 						</h5>
-// 						<h2 class="title">
-// 								Marketing Tools
-// 						</h2>
-// 						<p class="text">
-// 								We create long term value for our partners by putting innovations, data and sustainability at the very heart of our business.
-// 						</p>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			<div class="row">
-// 					<div class="col-lg-3 col-md-6">
-// 						<div class="single-tools">
-// 							<div class="icon one">
-// 								<img src="assets/images/affiliate/ic7.png" alt="">
-// 							</div>
-// 							<div class="content">
-// 								<h4 class="title">
-// 										Banners
-// 								</h4>
-// 								<p class="text">
-// 										Use our templates to send high-quality newsletters to keep players engaged
-// 								</p>
-// 							</div>
-// 						</div>
-// 					</div>
-// 					<div class="col-lg-3 col-md-6">
-// 						<div class="single-tools">
-// 							<div class="icon two">
-// 								<img src="assets/images/affiliate/ic8.png" alt="">
-// 							</div>
-// 							<div class="content">
-// 								<h4 class="title">
-// 										Newsletters
-// 								</h4>
-// 								<p class="text">
-// 										Use our templates to send high-quality newsletters to keep players engaged
-// 								</p>
-// 							</div>
-// 						</div>
-// 					</div>
-// 					<div class="col-lg-3 col-md-6">
-// 						<div class="single-tools">
-// 							<div class="icon three">
-// 								<img src="assets/images/affiliate/ic9.png" alt="">
-// 							</div>
-// 							<div class="content">
-// 								<h4 class="title">
-// 										News
-// 								</h4>
-// 								<p class="text">
-// 										Use our templates to send high-quality newsletters to keep players engaged
-// 								</p>
-// 							</div>
-// 						</div>
-// 					</div>
-// 					<div class="col-lg-3 col-md-6">
-// 						<div class="single-tools">
-// 							<div class="icon three">
-// 								<img src="assets/images/affiliate/ic10.png" alt="">
-// 							</div>
-// 							<div class="content">
-// 								<h4 class="title">
-// 										Reports
-// 								</h4>
-// 								<p class="text">
-// 										Use our templates to send high-quality newsletters to keep players engaged
-// 								</p>
-// 							</div>
-// 						</div>
-// 					</div>
-// 				</div>
-// 		</div>
-// 	</section>
-// 	<!-- Marketing Tools Area End -->
-
-// 	<!-- Testimonial Area Start -->
-// 	<section class="testimonial">
-// 		<div class="container">
-// 			<div class="row justify-content-center">
-// 				<div class="col-lg-8 col-md-10">
-// 					<div class="section-heading">
-// 						<h5 class="subtitle">
-// 								Testimonials
-// 						</h5>
-// 						<h2 class="title">
-// 								earning With Us
-// 						</h2>
-// 						<p class="text">
-// 								If you enjoy our gaming community and would like the opportunity to earn an income, then you won't want to miss 
-// 						</p>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			<div class="row justify-content-center">
-// 				<div class="col-lg-8 col-md-10">
-// 					<div class="testimonial-slider">
-// 						<div class="single-testimonial">
-							
-// 								<div class="people">
-// 										<div class="img">
-// 												<img src="assets/images/review.png" alt="">
-// 										</div>
-// 										<h4 class="title">Kevin Ohashi</h4>
-// 										<p class="designation">CEO OF APPLE</p>
-// 									</div>
-// 								<div class="review-text">
-// 									<p>
-// 											“Jeugo Affiliates provides excellent brand and very 
-// professional team. It is very easy and profitable 
-// partnership with us and we converting very well.”
-// 									</p>
-// 								</div>
-// 						</div>
-// 						<div class="single-testimonial">
-							
-// 								<div class="people">
-// 										<div class="img">
-// 												<img src="assets/images/review.png" alt="">
-// 										</div>
-// 										<h4 class="title">Mamun Khan</h4>
-// 										<p class="designation">CEO OF APPLE</p>
-// 									</div>
-// 								<div class="review-text">
-// 									<p>
-// 											“Jeugo Affiliates provides excellent brand and very 
-// professional team. It is very easy and profitable 
-// partnership with us and we converting very well.”
-// 									</p>
-// 								</div>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</section>
-// 	<!-- Testimonial Area End -->
-
-// 	<!-- Footer Area Start -->
-// 	<footer class="footer" id="footer">
-// 			<div class="subscribe-area">
-// 				<div class="container">
-// 					<div class="row">
-// 						<div class="col-lg-12">
-// 							<div class="subscribe-box">
-// 									<form action="#">
-// 								<div class="row">
-// 									<div class="col-lg-12">
-// 										<div class="heading-area">
-// 												<h5 class="sub-title">
-// 														subscribe to LuckyDraws
-// 												</h5>
-// 												<h4 class="title">
-// 														To Get Exclusive Benefits
-// 												</h4>
-// 										</div>
-// 									</div>
-// 									<div class="col-lg-3 col-4 d-flex align-self-center">
-// 										<div class="icon">
-// 											<img src="assets/images/mail-box.png" alt="">
-// 										</div>
-// 									</div>
-// 									<div class="col-lg-6 col-8 d-flex align-self-center">
-// 										<div class="form-area">
-// 												<input type="text" placeholder="Your Email Address">
-// 										</div>
-// 									</div>
-// 									<div class="col-lg-3 d-flex align-self-center">
-// 										<div class="button-area">
-// 											<button class="mybtn1" type="submit">Subscribe
-// 												<span><i class="fas fa-paper-plane"></i></span>
-// 											</button>
-// 										</div>
-// 									</div>
-// 								</div>
-// 							</form>
-// 							</div>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			<div class="container">
-// 				<div class="row">
-// 					<div class="col-sm-6 col-lg-3">
-// 						<div class="footer-widget info-link-widget">
-// 							<h4 class="title">
-// 								About 
-// 							</h4>
-// 							<ul class="link-list">
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>	About Us
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>	Contact Us
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>	Latest Blog
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>	Authenticity Guarantee
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>	Customer Reviews
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>	Privacy Policy
-	
-// 									</a>
-// 								</li>
-// 							</ul>
-// 						</div>
-// 					</div>
-// 					<div class="col-sm-6 col-lg-3">
-// 						<div class="footer-widget info-link-widget">
-// 							<h4 class="title">
-// 								My Account
-// 							</h4>
-// 							<ul class="link-list">
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i> Manage Your Account
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i> How to Deposit
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i> How to Withdraw
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i> Account Varification
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i> Safety & Security
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i> Membership Level
-	
-// 									</a>
-// 								</li>
-// 							</ul>
-// 						</div>
-// 					</div>
-// 					<div class="col-sm-6 col-lg-3">
-// 						<div class="footer-widget info-link-widget">
-// 							<h4 class="title">
-// 								help center 
-// 							</h4>
-// 							<ul class="link-list">
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Help centre
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>FAQ
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Quick Start Guide
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Tutorials
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Borrow
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Lend
-	
-// 									</a>
-// 								</li>
-// 							</ul>
-// 						</div>
-// 					</div>
-// 					<div class="col-sm-6 col-lg-3">
-// 						<div class="footer-widget info-link-widget">
-// 							<h4 class="title">
-// 								Legal Info
-// 							</h4>
-// 							<ul class="link-list">
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Risk Warnings
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Privacy Notice
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Security
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Terms of Service
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Become Affiliate
-// 									</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">
-// 										<i class="fas fa-angle-double-right"></i>Complaints Policy
-	
-// 									</a>
-// 								</li>
-// 							</ul>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			<div class="copy-bg">
-// 				<div class="container">
-// 					<div class="row">
-// 						<div class="col-lg-5">
-// 							<div class="left-area">
-// 								<p>Copyright © 2020.All Rights Reserved By <a href="https://www.Doshservices.com">Dosh Services</a>
-// 								</p>
-// 							</div>
-// 						</div>
-// 						<div class="col-lg-7">
-// 							<ul class="copright-area-links">
-// 								<li>
-// 									<a href="#">Terms Of Use</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">Privacy Policy</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">Gamble</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">Aware</a>
-// 								</li>
-// 								<li>
-// 									<a href="#">Help Cente</a>
-// 								</li>
-// 							</ul>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</footer> 
-// 	<!-- Footer Area End -->
-
-// 	<!-- Back to Top Start -->
-// 	<div class="bottomtotop">
-// 		<i class="fas fa-chevron-right"></i>
-// 	</div>
-// 	<!-- Back to Top End -->
-
-// 	<!-- Login Area Start -->
-// 	<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-// 			<div class="modal-dialog modal-dialog-centered" role="document">
-// 			<div class="modal-content">
-// 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-// 				<div class="modal-body">
-// 					<div class="logo-area">
-// 							<img class="logo" src="assets/images/logo.png" alt="">
-// 					</div>
-// 					<div class="header-area">
-// 						<h4 class="title">Great to have you back!</h4>
-// 						<p class="sub-title">Enter your details below.</p>
-// 					</div>
-// 					<div class="form-area">
-// 						<form action="#"  method="POST">
-// 							<div class="form-group">
-// 									<label for="login-input-email">Email*</label>
-// 									<input type="email" class="input-field" id="login-input-email"  placeholder="Enter your Email">
-// 							</div>
-// 							<div class="form-group">
-// 									<label for="login-input-password">Password*</label>
-// 									<input type="password" class="input-field" id="login-input-password"  placeholder="Password">
-// 							</div>
-// 							<div class="form-group">
-// 								<div class="box">
-// 									<div class="left">
-// 											<input type="checkbox" class="check-box-field" id="input-save-password" checked>
-// 										<label for="input-save-password">Remember Password</label>
-// 									</div>
-// 									<div class="right">
-// 										<a href="#">
-// 											Forgot Password?
-// 										</a>
-// 									</div>
-// 								</div>
-// 							</div>
-// 							<div class="form-group">
-// 								   <button type="submit" class="mybtn1">Log In</button>
-// 							</div>
-// 						</form>
-// 					</div>
-// 					<div class="form-footer">
-// 						<p>Not a member? 
-// 								<a href="#">Create account <i class="fas fa-angle-double-right"></i></a>
-// 						</p>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			</div>
-// 		</div>
-// 		<!-- Login Area End -->
-	
-// 		<!-- SignIn Area Start -->
-// 		<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-// 				<div class="modal-dialog modal-dialog-centered " role="document">
-// 				<div class="modal-content">
-// 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-// 					<div class="modal-body">
-// 						<div class="logo-area">
-// 								<img class="logo" src="assets/images/logo.png" alt="">
-// 						</div>
-// 						<div class="header-area">
-// 							<h4 class="title">Great to have you back!</h4>
-// 							<p class="sub-title">Enter your details below.</p>
-// 						</div>
-// 						<div class="form-area">
-// 							<form action="#" method="POST">
-// 								<div class="form-group">
-// 										<label for="input-name">Name*</label>
-// 										<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name">
-// 								</div>
-// 								<div class="form-group">
-// 										<label for="input-email">Email*</label>
-// 										<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email">
-// 								</div>
-// 								<div class="form-group">
-// 										<label for="input-password">Password*</label>
-// 										<input type="password" class="input-field" id="input-password"  placeholder="Enter your password">
-// 								</div>
-// 								<div class="form-group">
-// 										<label for="input-con-password">confirm password**</label>
-// 										<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password">
-// 								</div>
-								
-// 								<div class="form-group">
-// 									<div class="check-group">
-// 											<input type="checkbox" class="check-box-field" id="input-terms" checked>
-// 											<label for="input-terms">
-// 													I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
-// 											</label>
-// 									</div>
-// 								</div>
-// 								<div class="form-group">
-// 									<button type="submit" class="mybtn1">Take Bonus</button>
-// 								</div>
-// 							</form>
-// 						</div>
-// 					</div>
-// 				</div>
-// 				</div>
-// 			</div>
-// 		<!-- SignIn Area End -->
-
-// 	<!-- jquery -->
-// 	<script src="assets/js/jquery.js"></script>
-// 	<!-- popper -->
-// 	<script src="assets/js/popper.min.js"></script>
-// 	<!-- bootstrap -->
-// 	<script src="assets/js/bootstrap.min.js"></script>
-// 	<!-- plugin js-->
-// 	<script src="assets/js/plugin.js"></script>
-
-// 	<!-- MpusemoverParallax JS-->
-// 	<script src="assets/js/TweenMax.js"></script>
-// 	<script src="assets/js/mousemoveparallax.js"></script>
-// 	<!-- main -->
-// 	<script src="assets/js/main.js"></script>
-// </body>
-
-
-
-// </html>
-
 
 import React from 'react'
 import Header from './Header'
+import { Link } from "react-router-dom"
 
 export default function Affiliate() {
 	return (
 		<div>
 			<Header />
 
-			<div class="mainmenu-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">                 
-						<nav class="navbar navbar-expand-lg navbar-light">
-							<a class="navbar-brand" href="index.html">
+			<div className="mainmenu-area">
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-12">                 
+						<nav className="navbar navbar-expand-lg navbar-light">
+							<Link className="navbar-brand" to="index">
 								<img src="assets/images/logo.png" alt="" />
-							</a>
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
+							</Link>
+							<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu"
 								aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
+								<span className="navbar-toggler-icon"></span>
 							</button>
-							<div class="collapse navbar-collapse fixed-height" id="main_menu">
-								<ul class="navbar-nav ml-auto">
-									<li class="nav-item ">
-	<a class="nav-link " href="index.html">Home
-		<div class="mr-hover-effect"></div>
-	</a>
+							<div className="collapse navbar-collapse fixed-height" id="main_menu">
+								<ul className="navbar-nav ml-auto">
+									<li className="nav-item ">
+	<Link className="nav-link " to="index">Home
+		<div className="mr-hover-effect"></div>
+	</Link>
 </li>
-									<ul class="navbar-nav ml-auto">
-									<li class="nav-item ">
-										<a class="nav-link " href="index.html">Home
-												<div class="mr-hover-effect"></div></a>
+									<ul className="navbar-nav ml-auto">
+									<li className="nav-item ">
+										<Link className="nav-link " to="index">Home
+												<div className="mr-hover-effect"></div></Link>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="competitions.html">Competitions
-												<div class="mr-hover-effect"></div></a>
+									<li className="nav-item">
+										<Link className="nav-link" to="competitions">Competitions
+												<div className="mr-hover-effect"></div></Link>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="how-it-work.html">How To Play
-												<div class="mr-hover-effect"></div></a>
+									<li className="nav-item">
+										<Link className="nav-link" to="how-it-work">How To Play
+												<div className="mr-hover-effect"></div></Link>
 									</li>
 																
-											<li class="nav-item">
-											<a class="nav-link" href="contact.html">Contact
-													<div class="mr-hover-effect"></div></a>
+											<li className="nav-item">
+											<Link className="nav-link" to="contact">Contact
+													<div className="mr-hover-effect"></div></Link>
 										</li>
 								</ul>
 									
 									
 									
-									<li class="nav-item">
-											<a class="nav-link" href="contact.html">Contact
-													<div class="mr-hover-effect"></div></a>
+									<li className="nav-item">
+											<Link className="nav-link" to="contact">Contact
+													<div className="mr-hover-effect"></div></Link>
 										</li>
 								</ul>
-								<a href="#" class="mybtn1"  data-toggle="modal" data-target="#signin"> Join us</a>
+								<Link to="#" className="mybtn1"  data-toggle="modal" data-target="#signin"> Join us</Link>
 							</div>
 						</nav>
 					</div>
@@ -1033,26 +64,26 @@ export default function Affiliate() {
 
 	{/* </header> */}
 
-		<section class="breadcrumb-area bc-affiliate">
-			<img class="bc-img" src="assets/images/breadcrumb/affiliate.png" alt="" />
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<h4 class="title">
+		<section className="breadcrumb-area bc-affiliate">
+			<img className="bc-img" src="assets/images/breadcrumb/affiliate.png" alt="" />
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-12">
+						<h4 className="title">
 							affiliate
 						</h4>
-						<ul class="breadcrumb-list">
+						<ul className="breadcrumb-list">
 							<li>
-								<a href="index.html">
-										<i class="fas fa-home"></i>
+								<Link to="index">
+										<i className="fas fa-home"></i>
 										Home
-								</a>
+								</Link>
 							</li>
 							<li>
-								<span><i class="fas fa-chevron-right"></i> </span>
+								<span><i className="fas fa-chevron-right"></i> </span>
 							</li>
 							<li>
-								<a href="affiliate.html">Affiliate</a>
+								<Link to="affiliate">Affiliate</Link>
 							</li>
 						</ul>
 					</div>
@@ -1060,45 +91,45 @@ export default function Affiliate() {
 			</div>
 		</section>
 
-		<section class="affiliate-process">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="single-process">
+		<section className="affiliate-process">
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-4">
+						<div className="single-process">
 							<img src="assets/images/affiliate/ps1.png" alt="" />
-							<span class="num">1</span>
-							<h4 class="title">
+							<span className="num">1</span>
+							<h4 className="title">
 								Join
 							</h4>
-							<p class="text">
+							<p className="text">
 								Sign up for our Platform and fill in the required 
 								details to access your 
 								affiliate panel.
 							</p>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-process">
+					<div className="col-lg-4">
+						<div className="single-process">
 							<img src="assets/images/affiliate/ps2.png" alt="" />
-							<span class="num">2</span>
-							<h4 class="title">
+							<span className="num">2</span>
+							<h4 className="title">
 								Promote
 							</h4>
-							<p class="text">
+							<p className="text">
 								Sign up for our Platform and fill in the required 
 								details to access your 
 								affiliate panel.
 							</p>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-process">
+					<div className="col-lg-4">
+						<div className="single-process">
 							<img src="assets/images/affiliate/ps3.png" alt="" />
-							<span class="num">3</span>
-							<h4 class="title">
+							<span className="num">3</span>
+							<h4 className="title">
 								Earn
 							</h4>
-							<p class="text">
+							<p className="text">
 								Sign up for our Platform and fill in the required 
 								details to access your 
 								affiliate panel.
@@ -1108,99 +139,99 @@ export default function Affiliate() {
 				</div>
 			</div>
 		</section>
-		<section class="affiliate-program">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
-						<div class="section-heading">
-							<h5 class="subtitle">
+		<section className="affiliate-program">
+			<div className="container">
+				<div className="row justify-content-center">
+					<div className="col-lg-8 col-md-10">
+						<div className="section-heading">
+							<h5 className="subtitle">
 								Why Should you Join
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 								Affiliate program?
 							</h2>
-							<p class="text">
+							<p className="text">
 								The World's leading online crypto games affiliate program. Promote Jeugo with the biggest lotteries & crypto games  to get 15% 25% revenue share commission.
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-6 col-md-6">
-						<div class="single-program">
-							<div class="icon one">
+				<div className="row">
+					<div className="col-lg-6 col-md-6">
+						<div className="single-program">
+							<div className="icon one">
 								<img src="assets/images/affiliate/ic1.png" alt="" />
 							</div>
-							<div class="content">
-								<h4 class="title">
+							<div className="content">
+								<h4 className="title">
 									Joining is free & EASy
 								</h4>
-								<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
+								<Link to="#" className="link">read more <i className="fas fa-arrow-right"></i></Link>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<div class="single-program">
-							<div class="icon four">
+					<div className="col-lg-6 col-md-6">
+						<div className="single-program">
+							<div className="icon four">
 								<img src="assets/images/affiliate/ic2.png" alt="" />
 							</div>
-							<div class="content">
-								<h4 class="title">
+							<div className="content">
+								<h4 className="title">
 									Unlimited Affiliates
 								</h4>
-								<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
+								<Link to="#" className="link">read more <i className="fas fa-arrow-right"></i></Link>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<div class="single-program">
-							<div class="icon two">
+					<div className="col-lg-6 col-md-6">
+						<div className="single-program">
+							<div className="icon two">
 								<img src="assets/images/affiliate/ic3.png" alt="" />
 							</div>
-							<div class="content">
-								<h4 class="title">
+							<div className="content">
+								<h4 className="title">
 									Provably Fair
 								</h4>
-								<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
+								<Link to="#" className="link">read more <i className="fas fa-arrow-right"></i></Link>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<div class="single-program">
-							<div class="icon two">
+					<div className="col-lg-6 col-md-6">
+						<div className="single-program">
+							<div className="icon two">
 								<img src="assets/images/affiliate/ic4.png" alt="" />
 							</div>
-							<div class="content">
-								<h4 class="title">
+							<div className="content">
+								<h4 className="title">
 										Secure playing
 								</h4>
-								<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
+								<Link to="#" className="link">read more <i className="fas fa-arrow-right"></i></Link>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<div class="single-program">
-							<div class="icon three">
+					<div className="col-lg-6 col-md-6">
+						<div className="single-program">
+							<div className="icon three">
 								<img src="assets/images/affiliate/ic5.png" alt="" />
 							</div>
-							<div class="content">
-								<h4 class="title">
+							<div className="content">
+								<h4 className="title">
 									Rewarsd
 								</h4>
-								<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
+								<Link to="#" className="link">read more <i className="fas fa-arrow-right"></i></Link>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<div class="single-program">
-							<div class="icon three">
+					<div className="col-lg-6 col-md-6">
+						<div className="single-program">
+							<div className="icon three">
 								<img src="assets/images/affiliate/ic6.png" alt="" />
 							</div>
-							<div class="content">
-								<h4 class="title">
+							<div className="content">
+								<h4 className="title">
 										24/7 Support
 								</h4>
-								<a href="#" class="link">read more <i class="fas fa-arrow-right"></i></a>
+								<Link to="#" className="link">read more <i className="fas fa-arrow-right"></i></Link>
 							</div>
 						</div>
 					</div>
@@ -1208,106 +239,106 @@ export default function Affiliate() {
 			</div>
 		</section>
 
-		<section class="ref-commission">
-			<img class="ab-img" src="assets/images/affiliate/ref-comm.png" alt="" />
-			<div class="container">
-				<div class="row justify-content-end">
-					<div class="col-lg-7">
-						<div class="section-heading">
-							<h5 class="subtitle">
+		<section className="ref-commission">
+			<img className="ab-img" src="assets/images/affiliate/ref-comm.png" alt="" />
+			<div className="container">
+				<div className="row justify-content-end">
+					<div className="col-lg-7">
+						<div className="section-heading">
+							<h5 className="subtitle">
 								Try to check out our
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 								Ref.Commission
 							</h2>
-							<p class="text">
+							<p className="text">
 								Get even more profit by attracting other participants as your referrals. We propose to take advantage of a 
 								convenient three-level referral system.Our affiliates enjoy some of the highest commission rates in the industry.
 								Your income is in your hands!
 							</p>
-							<p class="text">
+							<p className="text">
 								We provide our affiliates with a whole set of promo tools in different formats to enable them to promote our services effectively to different target markets. To help you keep on top of the game we publish recent news on our website regularly.
 							</p>
-							<a href="#" class="mybtn1">join Now! </a>
+							<Link to="#" className="mybtn1">join Now! </Link>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="marketing-tools">
-			<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-8 col-md-10">
-						<div class="section-heading">
-							<h5 class="subtitle">
+		<section className="marketing-tools">
+			<div className="container">
+					<div className="row justify-content-center">
+						<div className="col-lg-8 col-md-10">
+						<div className="section-heading">
+							<h5 className="subtitle">
 									Try to check out our
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 									Marketing Tools
 							</h2>
-							<p class="text">
+							<p className="text">
 									We create long term value for our partners by putting innovations, data and sustainability at the very heart of our business.
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-						<div class="col-lg-3 col-md-6">
-							<div class="single-tools">
-								<div class="icon one">
+				<div className="row">
+						<div className="col-lg-3 col-md-6">
+							<div className="single-tools">
+								<div className="icon one">
 									<img src="assets/images/affiliate/ic7.png" alt="" />
 								</div>
-								<div class="content">
-									<h4 class="title">
+								<div className="content">
+									<h4 className="title">
 											Banners
 									</h4>
-									<p class="text">
+									<p className="text">
 											Use our templates to send high-quality newsletters to keep players engaged
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-tools">
-								<div class="icon two">
+						<div className="col-lg-3 col-md-6">
+							<div className="single-tools">
+								<div className="icon two">
 									<img src="assets/images/affiliate/ic8.png" alt="" />
 								</div>
-								<div class="content">
-									<h4 class="title">
+								<div className="content">
+									<h4 className="title">
 											Newsletters
 									</h4>
-									<p class="text">
+									<p className="text">
 											Use our templates to send high-quality newsletters to keep players engaged
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-tools">
-								<div class="icon three">
+						<div className="col-lg-3 col-md-6">
+							<div className="single-tools">
+								<div className="icon three">
 									<img src="assets/images/affiliate/ic9.png" alt="" />
 								</div>
-								<div class="content">
-									<h4 class="title">
+								<div className="content">
+									<h4 className="title">
 											News
 									</h4>
-									<p class="text">
+									<p className="text">
 											Use our templates to send high-quality newsletters to keep players engaged
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-tools">
-								<div class="icon three">
+						<div className="col-lg-3 col-md-6">
+							<div className="single-tools">
+								<div className="icon three">
 									<img src="assets/images/affiliate/ic10.png" alt="" />
 								</div>
-								<div class="content">
-									<h4 class="title">
+								<div className="content">
+									<h4 className="title">
 											Reports
 									</h4>
-									<p class="text">
+									<p className="text">
 											Use our templates to send high-quality newsletters to keep players engaged
 									</p>
 								</div>
@@ -1316,36 +347,36 @@ export default function Affiliate() {
 					</div>
 			</div>
 		</section>
-		<section class="testimonial">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
-						<div class="section-heading">
-							<h5 class="subtitle">
+		<section className="testimonial">
+			<div className="container">
+				<div className="row justify-content-center">
+					<div className="col-lg-8 col-md-10">
+						<div className="section-heading">
+							<h5 className="subtitle">
 									Testimonials
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 									earning With Us
 							</h2>
-							<p class="text">
+							<p className="text">
 									If you enjoy our gaming community and would like the opportunity to earn an income, then you won't want to miss 
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
-						<div class="testimonial-slider">
-							<div class="single-testimonial">
+				<div className="row justify-content-center">
+					<div className="col-lg-8 col-md-10">
+						<div className="testimonial-slider">
+							<div className="single-testimonial">
 								
-									<div class="people">
-											<div class="img">
+									<div className="people">
+											<div className="img">
 													<img src="assets/images/review.png" alt="" />
 											</div>
-											<h4 class="title">Kevin Ohashi</h4>
-											<p class="designation">CEO OF APPLE</p>
+											<h4 className="title">Kevin Ohashi</h4>
+											<p className="designation">CEO OF APPLE</p>
 										</div>
-									<div class="review-text">
+									<div className="review-text">
 										<p>
 												“Jeugo Affiliates provides excellent brand and very 
 	professional team. It is very easy and profitable 
@@ -1353,16 +384,16 @@ export default function Affiliate() {
 										</p>
 									</div>
 							</div>
-							<div class="single-testimonial">
+							<div className="single-testimonial">
 								
-									<div class="people">
-											<div class="img">
+									<div className="people">
+											<div className="img">
 													<img src="assets/images/review.png" alt="" />
 											</div>
-											<h4 class="title">Mamun Khan</h4>
-											<p class="designation">CEO OF APPLE</p>
+											<h4 className="title">Mamun Khan</h4>
+											<p className="designation">CEO OF APPLE</p>
 										</div>
-									<div class="review-text">
+									<div className="review-text">
 										<p>
 												“Jeugo Affiliates provides excellent brand and very 
 	professional team. It is very easy and profitable 
@@ -1376,38 +407,38 @@ export default function Affiliate() {
 			</div>
 		</section>
 
-		<footer class="footer" id="footer">
-				<div class="subscribe-area">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="subscribe-box">
+		<footer className="footer" id="footer">
+				<div className="subscribe-area">
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-12">
+								<div className="subscribe-box">
 										<form action="#">
-									<div class="row">
-										<div class="col-lg-12">
-											<div class="heading-area">
-													<h5 class="sub-title">
+									<div className="row">
+										<div className="col-lg-12">
+											<div className="heading-area">
+													<h5 className="sub-title">
 															subscribe to LuckyDraws
 													</h5>
-													<h4 class="title">
+													<h4 className="title">
 															To Get Exclusive Benefits
 													</h4>
 											</div>
 										</div>
-										<div class="col-lg-3 col-4 d-flex align-self-center">
-											<div class="icon">
+										<div className="col-lg-3 col-4 d-flex align-self-center">
+											<div className="icon">
 												<img src="assets/images/mail-box.png" alt="" />
 											</div>
 										</div>
-										<div class="col-lg-6 col-8 d-flex align-self-center">
-											<div class="form-area">
+										<div className="col-lg-6 col-8 d-flex align-self-center">
+											<div className="form-area">
 													<input type="text" placeholder="Your Email Address" />
 											</div>
 										</div>
-										<div class="col-lg-3 d-flex align-self-center">
-											<div class="button-area">
-												<button class="mybtn1" type="submit">Subscribe
-													<span><i class="fas fa-paper-plane"></i></span>
+										<div className="col-lg-3 d-flex align-self-center">
+											<div className="button-area">
+												<button className="mybtn1" type="submit">Subscribe
+													<span><i className="fas fa-paper-plane"></i></span>
 												</button>
 											</div>
 										</div>
@@ -1418,195 +449,195 @@ export default function Affiliate() {
 						</div>
 					</div>
 				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6 col-lg-3">
-							<div class="footer-widget info-link-widget">
-								<h4 class="title">
+				<div className="container">
+					<div className="row">
+						<div className="col-sm-6 col-lg-3">
+							<div className="footer-widget info-link-widget">
+								<h4 className="title">
 									About 
 								</h4>
-								<ul class="link-list">
+								<ul className="link-list">
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>	About Us
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>	About Us
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>	Contact Us
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>	Contact Us
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>	Latest Blog
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>	Latest Blog
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>	Authenticity Guarantee
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>	Authenticity Guarantee
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>	Customer Reviews
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>	Customer Reviews
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>	Privacy Policy
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>	Privacy Policy
 		
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="footer-widget info-link-widget">
-								<h4 class="title">
+						<div className="col-sm-6 col-lg-3">
+							<div className="footer-widget info-link-widget">
+								<h4 className="title">
 									My Account
 								</h4>
-								<ul class="link-list">
+								<ul className="link-list">
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i> Manage Your Account
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i> Manage Your Account
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i> How to Deposit
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i> How to Deposit
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i> How to Withdraw
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i> How to Withdraw
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i> Account Varification
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i> Account Varification
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i> Safety & Security
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i> Safety & Security
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i> Membership Level
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i> Membership Level
 		
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="footer-widget info-link-widget">
-								<h4 class="title">
+						<div className="col-sm-6 col-lg-3">
+							<div className="footer-widget info-link-widget">
+								<h4 className="title">
 									help center 
 								</h4>
-								<ul class="link-list">
+								<ul className="link-list">
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Help centre
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Help centre
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>FAQ
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>FAQ
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Quick Start Guide
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Quick Start Guide
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Tutorials
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Tutorials
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Borrow
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Borrow
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Lend
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Lend
 		
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="footer-widget info-link-widget">
-								<h4 class="title">
+						<div className="col-sm-6 col-lg-3">
+							<div className="footer-widget info-link-widget">
+								<h4 className="title">
 									Legal Info
 								</h4>
-								<ul class="link-list">
+								<ul className="link-list">
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Risk Warnings
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Risk Warnings
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Privacy Notice
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Privacy Notice
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Security
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Security
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Terms of Service
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Terms of Service
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Become Affiliate
-										</a>
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Become Affiliate
+										</Link>
 									</li>
 									<li>
-										<a href="#">
-											<i class="fas fa-angle-double-right"></i>Complaints Policy
+										<Link to="#">
+											<i className="fas fa-angle-double-right"></i>Complaints Policy
 		
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="copy-bg">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-5">
-								<div class="left-area">
-									<p>Copyright © 2020.All Rights Reserved By <a href="https://www.Doshservices.com">Dosh Services</a>
+				<div className="copy-bg">
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-5">
+								<div className="left-area">
+									<p>Copyright © 2020.All Rights Reserved By <Link to="https://www.Doshservices.com">Dosh Services</Link>
 									</p>
 								</div>
 							</div>
-							<div class="col-lg-7">
-								<ul class="copright-area-links">
+							<div className="col-lg-7">
+								<ul className="copright-area-links">
 									<li>
-										<a href="#">Terms Of Use</a>
+										<Link to="#">Terms Of Use</Link>
 									</li>
 									<li>
-										<a href="#">Privacy Policy</a>
+										<Link to="#">Privacy Policy</Link>
 									</li>
 									<li>
-										<a href="#">Gamble</a>
+										<Link to="#">Gamble</Link>
 									</li>
 									<li>
-										<a href="#">Aware</a>
+										<Link to="#">Aware</Link>
 									</li>
 									<li>
-										<a href="#">Help Cente</a>
+										<Link to="#">Help Cente</Link>
 									</li>
 								</ul>
 							</div>
@@ -1614,100 +645,100 @@ export default function Affiliate() {
 					</div>
 				</div>
 			</footer> 
-		<div class="bottomtotop">
-			<i class="fas fa-chevron-right"></i>
+		<div className="bottomtotop">
+			<i className="fas fa-chevron-right"></i>
 		</div>
 
-		<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<div class="modal-body">
-						<div class="logo-area">
-								<img class="logo" src="assets/images/logo.png" alt="" />
+		<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+				<div className="modal-dialog modal-dialog-centered" role="document">
+				<div className="modal-content">
+					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div className="modal-body">
+						<div className="logo-area">
+								<img className="logo" src="assets/images/logo.png" alt="" />
 						</div>
-						<div class="header-area">
-							<h4 class="title">Great to have you back!</h4>
-							<p class="sub-title">Enter your details below.</p>
+						<div className="header-area">
+							<h4 className="title">Great to have you back!</h4>
+							<p className="sub-title">Enter your details below.</p>
 						</div>
-						<div class="form-area">
+						<div className="form-area">
 							<form action="#"  method="POST">
-								<div class="form-group">
+								<div className="form-group">
 										<label for="login-input-email">Email*</label>
-										<input type="email" class="input-field" id="login-input-email"  placeholder="Enter your Email" />
+										<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="login-input-password">Password*</label>
-										<input type="password" class="input-field" id="login-input-password"  placeholder="Password" />
+										<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
 								</div>
-								<div class="form-group">
-									<div class="box">
-										<div class="left">
-												<input type="checkbox" class="check-box-field" id="input-save-password" checked />
+								<div className="form-group">
+									<div className="box">
+										<div className="left">
+												<input type="checkbox" className="check-box-field" id="input-save-password" checked />
 											<label for="input-save-password">Remember Password</label>
 										</div>
-										<div class="right">
-											<a href="#">
+										<div className="right">
+											<Link to="#">
 												Forgot Password?
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>
-								<div class="form-group">
-									<button type="submit" class="mybtn1">Log In</button>
+								<div className="form-group">
+									<button type="submit" className="mybtn1">Log In</button>
 								</div>
 							</form>
 						</div>
-						<div class="form-footer">
+						<div className="form-footer">
 							<p>Not a member? 
-									<a href="#">Create account <i class="fas fa-angle-double-right"></i></a>
+									<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
 							</p>
 						</div>
 					</div>
 				</div>
 				</div>
 			</div>
-		<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered " role="document">
-				<div class="modal-content">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<div class="modal-body">
-						<div class="logo-area">
-								<img class="logo" src="assets/images/logo.png" alt="" />
+		<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+				<div className="modal-dialog modal-dialog-centered " role="document">
+				<div className="modal-content">
+					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div className="modal-body">
+						<div className="logo-area">
+								<img className="logo" src="assets/images/logo.png" alt="" />
 						</div>
-						<div class="header-area">
-							<h4 class="title">Great to have you back!</h4>
-							<p class="sub-title">Enter your details below.</p>
+						<div className="header-area">
+							<h4 className="title">Great to have you back!</h4>
+							<p className="sub-title">Enter your details below.</p>
 						</div>
-						<div class="form-area">
+						<div className="form-area">
 							<form action="#" method="POST">
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-name">Name*</label>
-										<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name" />
+										<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-email">Email*</label>
-										<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email" />
+										<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-password">Password*</label>
-										<input type="password" class="input-field" id="input-password"  placeholder="Enter your password" />
+										<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-con-password">confirm password**</label>
-										<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
+										<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
 								</div>
 								
-								<div class="form-group">
-									<div class="check-group">
-											<input type="checkbox" class="check-box-field" id="input-terms" checked />
+								<div className="form-group">
+									<div className="check-group">
+											<input type="checkbox" className="check-box-field" id="input-terms" checked />
 											<label for="input-terms">
-													I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
+													I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
 											</label>
 									</div>
 								</div>
-								<div class="form-group">
-									<button type="submit" class="mybtn1">Take Bonus</button>
+								<div className="form-group">
+									<button type="submit" className="mybtn1">Take Bonus</button>
 								</div>
 							</form>
 						</div>

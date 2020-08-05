@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider } from "react-redux";
-import { createStore, combineReducers, applyMiddleware } from "redux"
+import { createStore, combineReducers } from "redux"
 import modalReducer from "./Reducers/modalReducer"
 
 import * as serviceWorker from './serviceWorker';

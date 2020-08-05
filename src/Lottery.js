@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from "react-router-dom"
 import Header from './Header'
 import Footer from './Footer'
 
@@ -8,26 +9,26 @@ export default function Lottery() {
 		<div>
 			<Header />
 	
-	<section class="breadcrumb-area bc-lottery">
-		<img class="bc-img" src="assets/images/breadcrumb/lottery.png" alt="" />
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h4 class="title">
+	<section className="breadcrumb-area bc-lottery">
+		<img className="bc-img" src="assets/images/breadcrumb/lottery.png" alt="" />
+		<div className="container">
+			<div className="row">
+				<div className="col-lg-12">
+					<h4 className="title">
 						Lottery
 					</h4>
-					<ul class="breadcrumb-list">
+					<ul className="breadcrumb-list">
 						<li>
-							<a href="index.html">
-									<i class="fas fa-home"></i>
+							<Link to="index">
+									<i className="fas fa-home"></i>
 									Home
-							</a>
+							</Link>
 						</li>
 						<li>
-							<span><i class="fas fa-chevron-right"></i> </span>
+							<span><i className="fas fa-chevron-right"></i> </span>
 						</li>
 						<li>
-							<a href="lottery.html">Lottery</a>
+							<Link to="lottery">Lottery</Link>
 						</li>
 					</ul>
 				</div>
@@ -35,52 +36,52 @@ export default function Lottery() {
 		</div>
 	</section>
 
-	<section class="lottery-area">
-		<div class="lottery-staticstics">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="single-staticstics">
-							<div class="left">
-								<div class="icon">
+	<section className="lottery-area">
+		<div className="lottery-staticstics">
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-4">
+						<div className="single-staticstics">
+							<div className="left">
+								<div className="icon">
 									<img src="assets/images/lottery/st1.png" alt="" />
 								</div>
 							</div>
-							<div class="right">
-								<h4 class="title">Lottery Reward</h4>
-								<div class="count">
+							<div className="right">
+								<h4 className="title">Lottery Reward</h4>
+								<div className="count">
 									
 									<span>₦200,000</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-staticstics">
-							<div class="left">
-								<div class="icon">
+					<div className="col-lg-4">
+						<div className="single-staticstics">
+							<div className="left">
+								<div className="icon">
 									<img src="assets/images/lottery/st2.png" alt="" />
 								</div>
 							</div>
-							<div class="right">
-								<h4 class="title">Purchased Tickets</h4>
-								<div class="count">
+							<div className="right">
+								<h4 className="title">Purchased Tickets</h4>
+								<div className="count">
 									<img src="assets/images/tikit-icon.png" alt="" />
 									<span>120</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-staticstics">
-							<div class="left">
-								<div class="icon">
+					<div className="col-lg-4">
+						<div className="single-staticstics">
+							<div className="left">
+								<div className="icon">
 									<img src="assets/images/lottery/st2.png" alt="" />
 								</div>
 							</div>
-							<div class="right">
-								<h4 class="title">My Tickets</h4>
-								<div class="count">
+							<div className="right">
+								<h4 className="title">My Tickets</h4>
+								<div className="count">
 									<img src="assets/images/tikit-icon.png" alt="" />
 									<span>02</span>
 								</div>
@@ -90,33 +91,33 @@ export default function Lottery() {
 				</div>
 			</div>
 		</div>
-		<div class="daily-lottery">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
-						<div class="section-heading">
-							<h5 class="subtitle">
+		<div className="daily-lottery">
+			<div className="container">
+				<div className="row justify-content-center">
+					<div className="col-lg-8 col-md-10">
+						<div className="section-heading">
+							<h5 className="subtitle">
 								Try to check out our
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 								Daily Lottery
 							</h2>
-							<p class="text">
+							<p className="text">
 								We update our site regularly; more and more winners are added every day! To locate the most recent winner's information
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="draw-time">
-							<h5 class="subtitle">
+				<div className="row">
+					<div className="col-lg-12">
+						<div className="draw-time">
+							<h5 className="subtitle">
 									Lottery Draw Starts In:
 							</h5>
-							<div class="draw-counter">
+							<div className="draw-counter">
 									<div data-countdown="2021/12/15"></div>
 							</div>
-							<p class="text">
+							<p className="text">
 									To meet Today's challenges
 							</p>
 						</div>
@@ -125,62 +126,62 @@ export default function Lottery() {
 				
 			</div>
 		</div>
-		<div class="buy-tickets">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="buy-tickets-box">
-							<div class="heading">
-								<h4 class="title">
+		<div className="buy-tickets">
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-12">
+						<div className="buy-tickets-box">
+							<div className="heading">
+								<h4 className="title">
 									Buy Lottery Tickets
 								</h4>
 								
 							</div>
-							<div class="content">
-								<div class="top-area">
-									<div class="row">
+							<div className="content">
+								<div className="top-area">
+									<div className="row">
 										
-										<div class="col-lg-3">
-											<div class="info-box">
-												<h4 class="title">
+										<div className="col-lg-3">
+											<div className="info-box">
+												<h4 className="title">
 														1 TICKET COSTS
 												</h4>
-												<div class="number">
-														<i class="fab fa-naira"></i>
+												<div className="number">
+														<i className="fab fa-naira"></i>
 														5,000
 												</div>
 											</div>
 										</div>
-										<div class="col-lg-3">
-											<div class="info-box">
-												<h4 class="title">
+										<div className="col-lg-3">
+											<div className="info-box">
+												<h4 className="title">
 														QUANTITY 
 												</h4>
-												<div class="number">
+												<div className="number">
 													<input type="number" value="1" />
 												</div>
 											</div>
 										</div>
-										<div class="col-lg-3">
-											<div class="info-box">
-												<h4 class="title">
+										<div className="col-lg-3">
+											<div className="info-box">
+												<h4 className="title">
 														TOTAL COST
 												</h4>
-												<div class="number">
-														<i class="fab fa-naira"></i>
+												<div className="number">
+														<i className="fab fa-naira"></i>
 														0.0000
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="game-numbers">
-									<h4 class="title">
+								<div className="game-numbers">
+									<h4 className="title">
 										GAME NUMBERS
 									</h4>
-									<div class="number-box">
-										<div class="auto-number">
-											<div class="top-content">
+									<div className="number-box">
+										<div className="auto-number">
+											<div className="top-content">
 												<input type="radio" id="auto-num" name="auto-num" />
 												<label for="auto-num">
 														Auto Generated
@@ -190,16 +191,16 @@ export default function Lottery() {
 												</label>
 											</div>
 										</div>
-										<div class="manual-number">
-											<div class="top-content">
+										<div className="manual-number">
+											<div className="top-content">
 												<input type="radio" id="manual-num" name="auto-num" />
 												<label for="manual-num">
 														Manual Select
 														<span>Pick 5 numbers manually</span>
 												</label>
 											</div>
-											<div class="main-content">
-												<ul class="number-list">
+											<div className="main-content">
+												<ul className="number-list">
 													<li>1</li>
 													<li>2</li>
 													<li>3</li>
@@ -208,27 +209,27 @@ export default function Lottery() {
 													<li>6</li>
 													<li>7</li>
 													<li>8</li>
-													<li class="active">9</li>
+													<li className="active">9</li>
 													<li>10</li>
 													<li>11</li>
 													<li>12</li>
-													<li class="active">13</li>
+													<li className="active">13</li>
 													<li>14</li>
 													<li>15</li>
 													<li>16</li>
 													<li>17</li>
 													<li>18</li>
 													<li>19</li>
-													<li class="active">20</li>
+													<li className="active">20</li>
 													<li>21</li>
-													<li class="active">22</li>
+													<li className="active">22</li>
 													<li>23</li>
 													<li>24</li>
 													<li>25</li>
 													<li>26</li>
 													<li>27</li>
 													<li>28</li>
-													<li class="active">29</li>
+													<li className="active">29</li>
 													<li>30</li>
 													<li>31</li>
 													<li>32</li>
@@ -255,9 +256,9 @@ export default function Lottery() {
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-lg-12 text-center">
-										<a href="#" class="mybtn1">Buy ticket</a>
+								<div className="row">
+									<div className="col-lg-12 text-center">
+										<Link to="#" className="mybtn1">Buy ticket</Link>
 									</div>
 
 								</div>
@@ -273,29 +274,29 @@ export default function Lottery() {
 			</div>
 
 		</div>
-		<div class="how-it-work">
-			<img class="bg-shape" src="assets/images/howitwork/bg-shape.png" alt="" />
-			<div class="container">
-			<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
-						<div class="section-heading">
-							<h5 class="subtitle">
+		<div className="how-it-work">
+			<img className="bg-shape" src="assets/images/howitwork/bg-shape.png" alt="" />
+			<div className="container">
+			<div className="row justify-content-center">
+					<div className="col-lg-8 col-md-10">
+						<div className="section-heading">
+							<h5 className="subtitle">
 									Want to see how 
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 									How it works? 
 							</h2>
-							<p class="text">
+							<p className="text">
 								We update our site regularly with new competitions and more winners are added every day! To locate the most recent winner's information
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="single-work">
+				<div className="row">
+					<div className="col-lg-4">
+						<div className="single-work">
 							<img src="assets/images/howitwork/ic1.png" alt="" />
-							<h4 class="title">
+							<h4 className="title">
 								START
 							</h4>
 							<p>
@@ -303,10 +304,10 @@ export default function Lottery() {
 							</p>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-work">
+					<div className="col-lg-4">
+						<div className="single-work">
 							<img src="assets/images/howitwork/ic2.png" alt="" />
-							<h4 class="title">
+							<h4 className="title">
 								CHOOSE
 							</h4>
 							<p>
@@ -314,10 +315,10 @@ export default function Lottery() {
 							</p>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-work">
+					<div className="col-lg-4">
+						<div className="single-work">
 							<img src="assets/images/howitwork/ic3.png" alt="" />
-							<h4 class="title">
+							<h4 className="title">
 								WIN
 							</h4>
 							<p>
@@ -325,13 +326,13 @@ export default function Lottery() {
 							</p>
 						</div>
 					</div>
-					<div class="container" style={{paddingTop: "70px"}}>
-					<div class="row justify-content-center">
-						<div class="section-heading">
-							<h5 class="subtitle">
+					<div className="container" style={{paddingTop: "70px"}}>
+					<div className="row justify-content-center">
+						<div className="section-heading">
+							<h5 className="subtitle">
 									How the winner is picked and when the draws go live. 
 							</h5>
-							<p class="text">
+							<p className="text">
 								Once the timer on the competition is complete the draw will go ahead. A live streamed video to our host will appear within ‘ten minutes’ of the draw timing out. One random number will be picked out during the live draw. WE HAVE A WINNER.
 							</p>
 						</div>
@@ -343,133 +344,133 @@ export default function Lottery() {
 
 	</section>
 
-	<section class="question-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
+	<section className="question-area">
+		<div className="container">
+			<div className="row">
+				<div className="col-lg-6">
 					<img src="assets/images/question-left.png" alt="" />
 				</div>
-				<div class="col-lg-6">
-					<div class="section-heading">
-						<h5 class="subtitle">
+				<div className="col-lg-6">
+					<div className="section-heading">
+						<h5 className="subtitle">
 								If you have any
 						</h5>
-						<h2 class="title">
+						<h2 className="title">
 								questions
 						</h2>
-						<p class="text">
+						<p className="text">
 								Our top priorities are to protect your privacy, 
 								provide secure transactions, and safeguard your data. 
 						</p>
-						<p class="text">
+						<p className="text">
 								When you're ready to play, registering an 
 								account is required so we know you're of legal age and so no one else can use your account.We answer the most commonly asked lotto 
 								questions..
 						</p>
-						<a href="#" class="mybtn1">Check FAQs</a>
+						<Link to="#" className="mybtn1">Check FAQs</Link>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="recent-winners">
-			<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-8 col-md-10">
-							<div class="section-heading">
-								<h5 class="subtitle">
+	<section className="recent-winners">
+			<div className="container">
+					<div className="row justify-content-center">
+						<div className="col-lg-8 col-md-10">
+							<div className="section-heading">
+								<h5 className="subtitle">
 									Try to Check out our
 								</h5>
-								<h2 class="title">
+								<h2 className="title">
 										Recent Winners
 								</h2>
-								<p class="text">
+								<p className="text">
 									We update our site regularly; more and more winners are added every day! To locate the most recent winner's information
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-winer">
-								<div class="top-area">
-									<div class="left">
-										<h4 class="name">
+					<div className="row">
+						<div className="col-lg-4">
+							<div className="single-winer">
+								<div className="top-area">
+									<div className="left">
+										<h4 className="name">
 												Leroy Roy 
 										</h4>
-										<p class="date">
+										<p className="date">
 												15.05.2020
 										</p>
 									</div>
-									<div class="right">
-										<p class="id">#5747e75482</p>
+									<div className="right">
+										<p className="id">#5747e75482</p>
 									</div>
 								</div>
-								<div class="bottom-area">
-									<div class="left">
+								<div className="bottom-area">
+									<div className="left">
 											₦ 30,000
 									</div>
-									<div class="right">
+									<div className="right">
 											<img src="assets/images/icon2.png" alt="" />
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="single-winer">
-								<div class="top-area">
-									<div class="left">
-										<h4 class="name">
+						<div className="col-lg-4">
+							<div className="single-winer">
+								<div className="top-area">
+									<div className="left">
+										<h4 className="name">
 												Jeff Mack
 										</h4>
-										<p class="date">
+										<p className="date">
 												01.08.2019
 										</p>
 									</div>
-									<div class="right">
-										<p class="id">#5747e75482</p>
+									<div className="right">
+										<p className="id">#5747e75482</p>
 									</div>
 								</div>
-								<div class="bottom-area">
-									<div class="left">
+								<div className="bottom-area">
+									<div className="left">
 											₦ 14,000
 									</div>
-									<div class="right">
+									<div className="right">
 											<img src="assets/images/icon2.png" alt="" />
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="single-winer">
-								<div class="top-area">
-									<div class="left">
-										<h4 class="name">
+						<div className="col-lg-4">
+							<div className="single-winer">
+								<div className="top-area">
+									<div className="left">
+										<h4 className="name">
 												Neal Morris
 										</h4>
-										<p class="date">
+										<p className="date">
 												01.08.2019
 										</p>
 									</div>
-									<div class="right">
-										<p class="id">#5747e75482</p>
+									<div className="right">
+										<p className="id">#5747e75482</p>
 									</div>
 								</div>
-								<div class="bottom-area">
-									<div class="left">
+								<div className="bottom-area">
+									<div className="left">
 											₦ 40,000
 									</div>
-									<div class="right">
+									<div className="right">
 											<img src="assets/images/icon2.png" alt="" />
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-lg-12 text-xl-center">
-							<a class="mybtn2" href="#">View All </a>
+					<div className="row">
+						<div className="col-lg-12 text-xl-center">
+							<Link className="mybtn2" to="#">View All </Link>
 						</div>
 					</div>
 			</div>
@@ -477,53 +478,53 @@ export default function Lottery() {
 
 	<Footer />
 
-	<div class="bottomtotop">
-		<i class="fas fa-chevron-right"></i>
+	<div className="bottomtotop">
+		<i className="fas fa-chevron-right"></i>
 	</div>
 
-	<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div class="modal-body">
-					<div class="logo-area">
-							<img class="logo" src="assets/images/logo.png" alt="" />
+	<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+			<div className="modal-dialog modal-dialog-centered" role="document">
+			<div className="modal-content">
+				<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<div className="modal-body">
+					<div className="logo-area">
+							<img className="logo" src="assets/images/logo.png" alt="" />
 					</div>
-					<div class="header-area">
-						<h4 class="title">Great to have you back!</h4>
-						<p class="sub-title">Enter your details below.</p>
+					<div className="header-area">
+						<h4 className="title">Great to have you back!</h4>
+						<p className="sub-title">Enter your details below.</p>
 					</div>
-					<div class="form-area">
+					<div className="form-area">
 						<form action="#"  method="POST">
-							<div class="form-group">
+							<div className="form-group">
 									<label for="login-input-email">Email*</label>
-									<input type="email" class="input-field" id="login-input-email"  placeholder="Enter your Email" />
+									<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
 							</div>
-							<div class="form-group">
+							<div className="form-group">
 									<label for="login-input-password">Password*</label>
-									<input type="password" class="input-field" id="login-input-password"  placeholder="Password" />
+									<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
 							</div>
-							<div class="form-group">
-								<div class="box">
-									<div class="left">
-											<input type="checkbox" class="check-box-field" id="input-save-password" checked />
+							<div className="form-group">
+								<div className="box">
+									<div className="left">
+											<input type="checkbox" className="check-box-field" id="input-save-password" checked />
 										<label for="input-save-password">Remember Password</label>
 									</div>
-									<div class="right">
-										<a href="#">
+									<div className="right">
+										<Link to="#">
 											Forgot Password?
-										</a>
+										</Link>
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								   <button type="submit" class="mybtn1">Log In</button>
+							<div className="form-group">
+								   <button type="submit" className="mybtn1">Log In</button>
 							</div>
 						</form>
 					</div>
-					<div class="form-footer">
+					<div className="form-footer">
 						<p>Not a member? 
-								<a href="#">Create account <i class="fas fa-angle-double-right"></i></a>
+								<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
 						</p>
 					</div>
 				</div>
@@ -531,47 +532,47 @@ export default function Lottery() {
 			</div>
 		</div>
 
-		<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered " role="document">
-				<div class="modal-content">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<div class="modal-body">
-						<div class="logo-area">
-								<img class="logo" src="assets/images/logo.png" alt="" />
+		<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+				<div className="modal-dialog modal-dialog-centered " role="document">
+				<div className="modal-content">
+					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div className="modal-body">
+						<div className="logo-area">
+								<img className="logo" src="assets/images/logo.png" alt="" />
 						</div>
-						<div class="header-area">
-							<h4 class="title">Great to have you back!</h4>
-							<p class="sub-title">Enter your details below.</p>
+						<div className="header-area">
+							<h4 className="title">Great to have you back!</h4>
+							<p className="sub-title">Enter your details below.</p>
 						</div>
-						<div class="form-area">
+						<div className="form-area">
 							<form action="#" method="POST">
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-name">Name*</label>
-										<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name" />
+										<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-email">Email*</label>
-										<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email" />
+										<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-password">Password*</label>
-										<input type="password" class="input-field" id="input-password"  placeholder="Enter your password" />
+										<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="input-con-password">confirm password**</label>
-										<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
+										<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
 								</div>
 								
-								<div class="form-group">
-									<div class="check-group">
-											<input type="checkbox" class="check-box-field" id="input-terms" checked />
+								<div className="form-group">
+									<div className="check-group">
+											<input type="checkbox" className="check-box-field" id="input-terms" checked />
 											<label for="input-terms">
-													I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
+													I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
 											</label>
 									</div>
 								</div>
-								<div class="form-group">
-									<button type="submit" class="mybtn1">Take Bonus</button>
+								<div className="form-group">
+									<button type="submit" className="mybtn1">Take Bonus</button>
 								</div>
 							</form>
 						</div>

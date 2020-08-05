@@ -1,147 +1,148 @@
 
 import React, {Fragment} from 'react'
 import Header from './Header'
+import { Link } from "react-router-dom"
 
 export default function Tournaments() {
 	return (
 		
 		<Fragment>
 			<Header />
-			<section class="breadcrumb-area bc-tournaments">
-			<img class="bc-img" src="assets/images/breadcrumb/tournaments.png" alt="" />
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<h4 class="title">
+			<section className="breadcrumb-area bc-tournaments">
+			<img className="bc-img" src="assets/images/breadcrumb/tournaments.png" alt="" />
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-12">
+						<h4 className="title">
 							Tournaments
 						</h4>
-						<ul class="breadcrumb-list">
+						<ul className="breadcrumb-list">
 							<li>
-								<a href="index.html">
-									<i class="fas fa-home"></i>
+								<Link to="index">
+									<i className="fas fa-home"></i>
 									Home
-								</a>
+								</Link>
 							</li>
 							<li>
-								<span><i class="fas fa-chevron-right"></i> </span>
+								<span><i className="fas fa-chevron-right"></i> </span>
 							</li>
 							<li>
-								<a href="tournaments.html">Tournaments</a>
+								<Link to="tournaments">Tournaments</Link>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			</section>
-			<section class="tournaments">
-				<div class="container">
-					<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
-						<div class="section-heading">
-							<h5 class="subtitle">
+			<section className="tournaments">
+				<div className="container">
+					<div className="row justify-content-center">
+					<div className="col-lg-8 col-md-10">
+						<div className="section-heading">
+							<h5 className="subtitle">
 								Try to check out our
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 								Tournaments!
 							</h2>
-							<p class="text">
+							<p className="text">
 								LuckyDraws Tournaments are exciting slot competitions. The goal is to win as many points within a
 								certain amount of time. Player with the most points at the end wins.
 							</p>
 						</div>
 					</div>
 				</div>
-					<div class="row">
-					<div class="col-lg-6">
-						<div class="tournament-time-box">
-							<div class="top-area">
-								<div class="status">
+					<div className="row">
+					<div className="col-lg-6">
+						<div className="tournament-time-box">
+							<div className="top-area">
+								<div className="status">
 									In Progress
 								</div>
-								<h4 class="title">
+								<h4 className="title">
 									All Players (Excl VIP's)
 								</h4>
-								<p class="sub-title">
+								<p className="sub-title">
 									Slots Tournament
 								</p>
 							</div>
-							<div class="timer-area">
-								<h4 class="title">
+							<div className="timer-area">
+								<h4 className="title">
 									Ending in
 								</h4>
-								<div class="clock"></div>
+								<div className="clock"></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
-						<div class="tournament-time-box">
-							<div class="top-area">
-								<div class="status">
+					<div className="col-lg-6">
+						<div className="tournament-time-box">
+							<div className="top-area">
+								<div className="status">
 									In Progress
 								</div>
-								<h4 class="title">
+								<h4 className="title">
 									VIP Only
 								</h4>
-								<p class="sub-title">
+								<p className="sub-title">
 									Slots Tournament
 								</p>
 							</div>
-							<div class="timer-area">
-								<h4 class="title">
+							<div className="timer-area">
+								<h4 className="title">
 									Ending in
 								</h4>
-								<div class="clock2"></div>
+								<div className="clock2"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 				</div>
-				<div class="info-table">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="main-box">
-								<div class="main-header-area">
-									<ul class="nav" role="tablist">
-										<li class="nav-item">
-											<a class="nav-link active" id="pills-all-player-tab" data-toggle="pill"
-												href="#pills-all-player" role="tab" aria-controls="pills-all-player"
-												aria-selected="true">All Player</a>
+				<div className="info-table">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<div className="main-box">
+								<div className="main-header-area">
+									<ul className="nav" role="tablist">
+										<li className="nav-item">
+											<Link className="nav-link active" id="pills-all-player-tab" data-toggle="pill"
+												to="#pills-all-player" role="tab" aria-controls="pills-all-player"
+												aria-selected="true">All Player</Link>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" id="pills-vip-only-tab" data-toggle="pill"
-												href="#pills-vip-only" role="tab" aria-controls="pills-vip-only"
-												aria-selected="false">Vip Only</a>
+										<li className="nav-item">
+											<Link className="nav-link" id="pills-vip-only-tab" data-toggle="pill"
+												to="#pills-vip-only" role="tab" aria-controls="pills-vip-only"
+												aria-selected="false">Vip Only</Link>
 										</li>
 									</ul>
 								</div>
-								<div class="tab-content">
-									<div class="tab-pane fade show active" id="pills-all-player" role="tabpanel"
+								<div className="tab-content">
+									<div className="tab-pane fade show active" id="pills-all-player" role="tabpanel"
 										aria-labelledby="pills-all-player-tab">
-										<div class="inner-table-content">
-											<div class="header-area">
-												<ul class="nav" role="tablist">
-													<li class="nav-item">
-														<a class="nav-link active" id="pills-leaderboardr-tab"
-															data-toggle="pill" href="#pills-leaderboardr" role="tab"
+										<div className="inner-table-content">
+											<div className="header-area">
+												<ul className="nav" role="tablist">
+													<li className="nav-item">
+														<Link className="nav-link active" id="pills-leaderboardr-tab"
+															data-toggle="pill" to="#pills-leaderboardr" role="tab"
 															aria-controls="pills-leaderboardr"
-															aria-selected="true">Leaderboard</a>
+															aria-selected="true">Leaderboard</Link>
 													</li>
-													<li class="nav-item">
-														<a class="nav-link" id="pills-more-info-tab" data-toggle="pill"
-															href="#pills-more-info" role="tab"
+													<li className="nav-item">
+														<Link className="nav-link" id="pills-more-info-tab" data-toggle="pill"
+															to="#pills-more-info" role="tab"
 															aria-controls="pills-more-info" aria-selected="false">More
-															Info</a>
+															Info</Link>
 													</li>
 												</ul>
 											</div>
-											<div class="tab-content">
-												<div class="tab-pane fade show active" id="pills-leaderboardr"
+											<div className="tab-content">
+												<div className="tab-pane fade show active" id="pills-leaderboardr"
 													role="tabpanel" aria-labelledby="pills-leaderboardr-tab">
 
-													<div class="inner-table">
-														<div class="responsive-table">
-															<table class="table">
+													<div className="inner-table">
+														<div className="responsive-table">
+															<table className="table">
 																<thead>
 																	<tr>
 																		<th scope="col">USER</th>
@@ -306,67 +307,67 @@ export default function Tournaments() {
 														</div>
 													</div>
 												</div>
-												<div class="tab-pane fade" id="pills-more-info" role="tabpanel"
+												<div className="tab-pane fade" id="pills-more-info" role="tabpanel"
 													aria-labelledby="pills-more-info-tab">
-													<div class="info-content">
-														<div class="info-box">
-															<h4 class="title">
+													<div className="info-content">
+														<div className="info-box">
+															<h4 className="title">
 																	Tournament Duration
 															</h4>
-															<p class="text">
+															<p className="text">
 																	7 Days (Monday 00:01 UTC - Sunday 23:59 UTC)
 															</p>
 														</div>
-														<div class="info-box two">
-															<h4 class="title">
+														<div className="info-box two">
+															<h4 className="title">
 																	Applicable Games
 															</h4>
-															<p class="text">
+															<p className="text">
 																	All Games Under 'Slots' Category
 															</p>
 														</div>
-														<div class="info-box three">
-															<h4 class="title">
+														<div className="info-box three">
+															<h4 className="title">
 																	Free Spin Reward Games
 
 															</h4>
-															<p class="text">
+															<p className="text">
 																	Book Of Pyramids, Brave Viking, Desert Treasure, Hawaii Cocktails, Lucky Blue, Lucky Lady Clover, Lucky Sweets,
 																	Princess Of Sky, Princess Royal, Scroll Of Adventure, Slotomon Go, West Town Any Softswiss Slots Game | Wager x 40 times
 															</p>
 														</div>
-														<a href="#" class="mybtn1">Terms and Conditions</a>
+														<Link to="#" className="mybtn1">Terms and Conditions</Link>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane fade" id="pills-vip-only" role="tabpanel"
+									<div className="tab-pane fade" id="pills-vip-only" role="tabpanel"
 										aria-labelledby="pills-vip-only-tab">
-										<div class="inner-table-content">
-												<div class="header-area">
-													<ul class="nav" role="tablist">
-														<li class="nav-item">
-															<a class="nav-link active" id="pills-leaderboardr-vip-tab"
-																data-toggle="pill" href="#pills-leaderboardr-vip" role="tab"
+										<div className="inner-table-content">
+												<div className="header-area">
+													<ul className="nav" role="tablist">
+														<li className="nav-item">
+															<Link className="nav-link active" id="pills-leaderboardr-vip-tab"
+																data-toggle="pill" to="#pills-leaderboardr-vip" role="tab"
 																aria-controls="pills-leaderboardr-vip"
-																aria-selected="true">Leaderboard</a>
+																aria-selected="true">Leaderboard</Link>
 														</li>
-														<li class="nav-item">
-															<a class="nav-link" id="pills-more-info-vip-tab" data-toggle="pill"
-																href="#pills-more-info-vip" role="tab"
+														<li className="nav-item">
+															<Link className="nav-link" id="pills-more-info-vip-tab" data-toggle="pill"
+																to="#pills-more-info-vip" role="tab"
 																aria-controls="pills-more-info-vip" aria-selected="false">More
-																Info</a>
+																Info</Link>
 														</li>
 													</ul>
 												</div>
-												<div class="tab-content" id="pills-tabContent">
-													<div class="tab-pane fade show active" id="pills-leaderboardr-vip"
+												<div className="tab-content" id="pills-tabContent">
+													<div className="tab-pane fade show active" id="pills-leaderboardr-vip"
 														role="tabpanel" aria-labelledby="pills-leaderboardr-vip-tab">
 		
-														<div class="inner-table">
-															<div class="responsive-table">
-																<table class="table">
+														<div className="inner-table">
+															<div className="responsive-table">
+																<table className="table">
 																	<thead>
 																		<tr>
 																			<th scope="col">USER</th>
@@ -531,36 +532,36 @@ export default function Tournaments() {
 															</div>
 														</div>
 													</div>
-													<div class="tab-pane fade" id="pills-more-info-vip" role="tabpanel"
+													<div className="tab-pane fade" id="pills-more-info-vip" role="tabpanel"
 														aria-labelledby="pills-more-info-vip-tab">
-														<div class="info-content">
-															<div class="info-box">
-																<h4 class="title">
+														<div className="info-content">
+															<div className="info-box">
+																<h4 className="title">
 																		Tournament Duration
 																</h4>
-																<p class="text">
+																<p className="text">
 																		7 Days (Monday 00:01 UTC - Sunday 23:59 UTC)
 																</p>
 															</div>
-															<div class="info-box two">
-																<h4 class="title">
+															<div className="info-box two">
+																<h4 className="title">
 																		Applicable Games
 																</h4>
-																<p class="text">
+																<p className="text">
 																		All Games Under 'Slots' Category
 																</p>
 															</div>
-															<div class="info-box three">
-																<h4 class="title">
+															<div className="info-box three">
+																<h4 className="title">
 																		Free Spin Reward Games
 		
 																</h4>
-																<p class="text">
+																<p className="text">
 																		Book Of Pyramids, Brave Viking, Desert Treasure, Hawaii Cocktails, Lucky Blue, Lucky Lady Clover, Lucky Sweets,
 																		Princess Of Sky, Princess Royal, Scroll Of Adventure, Slotomon Go, West Town Any Softswiss Slots Game | Wager x 40 times
 																</p>
 															</div>
-															<a href="#" class="mybtn1">Terms and Conditions</a>
+															<Link to="#" className="mybtn1">Terms and Conditions</Link>
 														</div>
 													</div>
 												</div>
@@ -574,140 +575,140 @@ export default function Tournaments() {
 				</div>
 			</div>
 			</section>
-			<section class="recent-winners">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-md-10">
-						<div class="section-heading">
-							<h5 class="subtitle">
+			<section className="recent-winners">
+			<div className="container">
+				<div className="row justify-content-center">
+					<div className="col-lg-8 col-md-10">
+						<div className="section-heading">
+							<h5 className="subtitle">
 								Try to Check out our
 							</h5>
-							<h2 class="title">
+							<h2 className="title">
 								Recent Winners
 							</h2>
-							<p class="text">
+							<p className="text">
 								We update our site regularly; more and more winners are added every day! To locate the most
 								recent winner's information
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="single-winer">
-							<div class="top-area">
-								<div class="left">
-									<h4 class="name">
+				<div className="row">
+					<div className="col-lg-4">
+						<div className="single-winer">
+							<div className="top-area">
+								<div className="left">
+									<h4 className="name">
 										Leroy Roy
 									</h4>
-									<p class="date">
+									<p className="date">
 										01.08.2019
 									</p>
 								</div>
-								<div class="right">
-									<p class="id">#5747e75482</p>
+								<div className="right">
+									<p className="id">#5747e75482</p>
 								</div>
 							</div>
-							<div class="bottom-area">
-								<div class="left">
+							<div className="bottom-area">
+								<div className="left">
 									0.099 ETH
 								</div>
-								<div class="right">
+								<div className="right">
 									<img src="assets/images/icon2.png" alt="" />
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-winer">
-							<div class="top-area">
-								<div class="left">
-									<h4 class="name">
+					<div className="col-lg-4">
+						<div className="single-winer">
+							<div className="top-area">
+								<div className="left">
+									<h4 className="name">
 										Jeff Mack
 									</h4>
-									<p class="date">
+									<p className="date">
 										01.08.2019
 									</p>
 								</div>
-								<div class="right">
-									<p class="id">#5747e75482</p>
+								<div className="right">
+									<p className="id">#5747e75482</p>
 								</div>
 							</div>
-							<div class="bottom-area">
-								<div class="left">
+							<div className="bottom-area">
+								<div className="left">
 									0.099 ETH
 								</div>
-								<div class="right">
+								<div className="right">
 									<img src="assets/images/icon2.png" alt="" />
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="single-winer">
-							<div class="top-area">
-								<div class="left">
-									<h4 class="name">
+					<div className="col-lg-4">
+						<div className="single-winer">
+							<div className="top-area">
+								<div className="left">
+									<h4 className="name">
 										Neal Morris
 									</h4>
-									<p class="date">
+									<p className="date">
 										01.08.2019
 									</p>
 								</div>
-								<div class="right">
-									<p class="id">#5747e75482</p>
+								<div className="right">
+									<p className="id">#5747e75482</p>
 								</div>
 							</div>
-							<div class="bottom-area">
-								<div class="left">
+							<div className="bottom-area">
+								<div className="left">
 									0.099 ETH
 								</div>
-								<div class="right">
+								<div className="right">
 									<img src="assets/images/icon2.png" alt="" />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-12 text-xl-center">
-						<a class="mybtn2" href="#">View All </a>
+				<div className="row">
+					<div className="col-lg-12 text-xl-center">
+						<Link className="mybtn2" to="#">View All </Link>
 					</div>
 				</div>
 			</div>
 		</section>
-			<footer class="footer" id="footer">
-			<div class="subscribe-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="subscribe-box">
+			<footer className="footer" id="footer">
+			<div className="subscribe-area">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<div className="subscribe-box">
 									<form action="#">
-								<div class="row">
-									<div class="col-lg-12">
-										<div class="heading-area">
-												<h5 class="sub-title">
+								<div className="row">
+									<div className="col-lg-12">
+										<div className="heading-area">
+												<h5 className="sub-title">
 														subscribe to LuckyDraws
 												</h5>
-												<h4 class="title">
+												<h4 className="title">
 														To Get Exclusive Benefits
 												</h4>
 										</div>
 									</div>
-									<div class="col-lg-3 col-4 d-flex align-self-center">
-										<div class="icon">
+									<div className="col-lg-3 col-4 d-flex align-self-center">
+										<div className="icon">
 											<img src="assets/images/mail-box.png" alt="" />
 										</div>
 									</div>
-									<div class="col-lg-6 col-8 d-flex align-self-center">
-										<div class="form-area">
+									<div className="col-lg-6 col-8 d-flex align-self-center">
+										<div className="form-area">
 												<input type="text" placeholder="Your Email Address" />
 										</div>
 									</div>
-									<div class="col-lg-3 d-flex align-self-center">
-										<div class="button-area">
-											<button class="mybtn1" type="submit">Subscribe
-												<span><i class="fas fa-paper-plane"></i></span>
+									<div className="col-lg-3 d-flex align-self-center">
+										<div className="button-area">
+											<button className="mybtn1" type="submit">Subscribe
+												<span><i className="fas fa-paper-plane"></i></span>
 											</button>
 										</div>
 									</div>
@@ -718,83 +719,83 @@ export default function Tournaments() {
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-lg-3">
-						<div class="footer-widget info-link-widget">
-							<h4 class="title">
+			<div className="container">
+				<div className="row">
+					<div className="col-sm-6 col-lg-3">
+						<div className="footer-widget info-link-widget">
+							<h4 className="title">
 								About 
 							</h4>
-							<ul class="link-list">
+							<ul className="link-list">
 								<li>
-									<a href="about.html">
-										<i class="fas fa-angle-double-right"></i>	About Us
-									</a>
+									<Link to="about">
+										<i className="fas fa-angle-double-right"></i>	About Us
+									</Link>
 								</li>
 								<li>
-									<a href="contact.html">
-										<i class="fas fa-angle-double-right"></i>	Contact Us
-									</a>
+									<Link to="contact">
+										<i className="fas fa-angle-double-right"></i>	Contact Us
+									</Link>
 								</li>
 								
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-3">
-						<div class="footer-widget info-link-widget">
-							<h4 class="title">
+					<div className="col-sm-6 col-lg-3">
+						<div className="footer-widget info-link-widget">
+							<h4 className="title">
 								My Account
 							</h4>
-							<ul class="link-list">
+							<ul className="link-list">
 								<li>
-									<a href="#">
-										<i class="fas fa-angle-double-right"></i> Manage Your Account
-									</a>
+									<Link to="#">
+										<i className="fas fa-angle-double-right"></i> Manage Your Account
+									</Link>
 								</li>
 								<li>
-									<a href="#">
-										<i class="fas fa-angle-double-right"></i> How to Deposit
-									</a>
+									<Link to="#">
+										<i className="fas fa-angle-double-right"></i> How to Deposit
+									</Link>
 								</li>
 															
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-3">
-						<div class="footer-widget info-link-widget">
-							<h4 class="title">
+					<div className="col-sm-6 col-lg-3">
+						<div className="footer-widget info-link-widget">
+							<h4 className="title">
 								help center 
 							</h4>
-							<ul class="link-list">
+							<ul className="link-list">
 								<li>
-									<a href="faq.html">
-										<i class="fas fa-angle-double-right"></i>Help centre
-									</a>
+									<Link to="faq">
+										<i className="fas fa-angle-double-right"></i>Help centre
+									</Link>
 								</li>
 								<li>
-									<a href="faq.html">
-										<i class="fas fa-angle-double-right"></i>FAQ
-									</a>
+									<Link to="faq">
+										<i className="fas fa-angle-double-right"></i>FAQ
+									</Link>
 								</li>
 								
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-3">
-						<div class="footer-widget info-link-widget">
-							<h4 class="title">
+					<div className="col-sm-6 col-lg-3">
+						<div className="footer-widget info-link-widget">
+							<h4 className="title">
 								Legal Info
 							</h4>
-							<ul class="link-list">
+							<ul className="link-list">
 								<li>
-									<a href="terms-conditions-details.html">
-										<i class="fas fa-angle-double-right"></i>Privacy Policy
-									</a>
+									<Link to="terms-conditions-details">
+										<i className="fas fa-angle-double-right"></i>Privacy Policy
+									</Link>
 								</li>
 								<li>
-									<a href="terms-conditions-details.html">
-										<i class="fas fa-angle-double-right"></i>Terms of Service
-									</a>
+									<Link to="terms-conditions-details">
+										<i className="fas fa-angle-double-right"></i>Terms of Service
+									</Link>
 								</li>
 								
 							</ul>
@@ -802,12 +803,12 @@ export default function Tournaments() {
 					</div>
 				</div>
 			</div>
-			<div class="copy-bg">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="left-area">
-								<p>Copyright © 2020.All Rights Reserved By <a href="https://www.Doshservices.com">Dosh Services</a>
+			<div className="copy-bg">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-12">
+							<div className="left-area">
+								<p>Copyright © 2020.All Rights Reserved By <Link to="https://www.Doshservices.com">Dosh Services</Link>
 								</p>
 							</div>
 						</div>
@@ -816,99 +817,99 @@ export default function Tournaments() {
 				</div>
 			</div>
 			</footer> 	
-			<div class="bottomtotop">
-				<i class="fas fa-chevron-right"></i>
+			<div className="bottomtotop">
+				<i className="fas fa-chevron-right"></i>
 			</div>
-			<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<div class="modal-body">
-						<div class="logo-area">
-								<img class="logo" src="assets/images/logo.png" alt="" />
+			<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+				<div className="modal-dialog modal-dialog-centered" role="document">
+				<div className="modal-content">
+					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<div className="modal-body">
+						<div className="logo-area">
+								<img className="logo" src="assets/images/logo.png" alt="" />
 						</div>
-						<div class="header-area">
-							<h4 class="title">Great to have you back!</h4>
-							<p class="sub-title">Enter your details below.</p>
+						<div className="header-area">
+							<h4 className="title">Great to have you back!</h4>
+							<p className="sub-title">Enter your details below.</p>
 						</div>
-						<div class="form-area">
+						<div className="form-area">
 							<form action="#"  method="POST">
-								<div class="form-group">
+								<div className="form-group">
 										<label for="login-input-email">Email*</label>
-										<input type="email" class="input-field" id="login-input-email"  placeholder="Enter your Email" />
+										<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
 								</div>
-								<div class="form-group">
+								<div className="form-group">
 										<label for="login-input-password">Password*</label>
-										<input type="password" class="input-field" id="login-input-password"  placeholder="Password" />
+										<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
 								</div>
-								<div class="form-group">
-									<div class="box">
-										<div class="left">
-												<input type="checkbox" class="check-box-field" id="input-save-password" checked />
+								<div className="form-group">
+									<div className="box">
+										<div className="left">
+												<input type="checkbox" className="check-box-field" id="input-save-password" checked />
 											<label for="input-save-password">Remember Password</label>
 										</div>
-										<div class="right">
-											<a href="#">
+										<div className="right">
+											<Link to="#">
 												Forgot Password?
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>
-								<div class="form-group">
-									<button type="submit" class="mybtn1">Log In</button>
+								<div className="form-group">
+									<button type="submit" className="mybtn1">Log In</button>
 								</div>
 							</form>
 						</div>
-						<div class="form-footer">
+						<div className="form-footer">
 							<p>Not a member? 
-									<a href="#">Create account <i class="fas fa-angle-double-right"></i></a>
+									<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
 							</p>
 						</div>
 					</div>
 				</div>
 				</div>
 			</div>	
-			<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-					<div class="modal-dialog modal-dialog-centered " role="document">
-					<div class="modal-content">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div class="modal-body">
-							<div class="logo-area">
-									<img class="logo" src="assets/images/logo.png" alt="" />
+			<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+					<div className="modal-dialog modal-dialog-centered " role="document">
+					<div className="modal-content">
+						<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<div className="modal-body">
+							<div className="logo-area">
+									<img className="logo" src="assets/images/logo.png" alt="" />
 							</div>
-							<div class="header-area">
-								<h4 class="title">Great to have you back!</h4>
-								<p class="sub-title">Enter your details below.</p>
+							<div className="header-area">
+								<h4 className="title">Great to have you back!</h4>
+								<p className="sub-title">Enter your details below.</p>
 							</div>
-							<div class="form-area">
+							<div className="form-area">
 								<form action="#" method="POST">
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-name">Name*</label>
-											<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name" />
+											<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-email">Email*</label>
-											<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email" />
+											<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-password">Password*</label>
-											<input type="password" class="input-field" id="input-password"  placeholder="Enter your password" />
+											<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 											<label for="input-con-password">confirm password**</label>
-											<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
+											<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
 									</div>
 									
-									<div class="form-group">
-										<div class="check-group">
-												<input type="checkbox" class="check-box-field" id="input-terms" checked />
+									<div className="form-group">
+										<div className="check-group">
+												<input type="checkbox" className="check-box-field" id="input-terms" checked />
 												<label for="input-terms">
-														I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
+														I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
 												</label>
 										</div>
 									</div>
-									<div class="form-group">
-										<button type="submit" class="mybtn1">Take Bonus</button>
+									<div className="form-group">
+										<button type="submit" className="mybtn1">Take Bonus</button>
 									</div>
 								</form>
 							</div>
