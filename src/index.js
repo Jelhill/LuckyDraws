@@ -7,7 +7,7 @@ import { createStore, combineReducers } from "redux"
 import modalReducer from "./Reducers/modalReducer"
 
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, BrowserRouter} from "react-router-dom"
+import { BrowserRouter as Router} from "react-router-dom"
 
 const rootReducer = combineReducers({
   modalReducer, 
@@ -17,9 +17,9 @@ const store = createStore(rootReducer)
 ReactDOM.render(
   <React.StrictMode>  
     <Provider store={store}>
-    <BrowserRouter>
+    <Router>
       <App />
-    </BrowserRouter>  
+    </Router>  
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
