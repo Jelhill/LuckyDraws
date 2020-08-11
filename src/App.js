@@ -19,6 +19,7 @@ import Competitions from './Competitions';
 import HowItWork from './HowItWork';
 import SignIn from './Modal/SignIn';
 import Error404 from './404';
+// import APIEndpoints from './APIEndpoints';
 // import Index2 from "./Index2"
 
 
@@ -41,12 +42,13 @@ function App() {
          <Route exact path="/competitions" component={Competitions} /> 
          <Route exact path="/howItWork" component={HowItWork} /> 
          <Route exact path="/signIn" component={SignIn} /> 
-         <Route exact path="/lottery" component={Lottery} /> 
+         <Route exact path="/competition-details/:id" component={Lottery} /> 
          <Route exact path="/winners" component={Winners} /> 
          <Route exact path="/wallet" component={Wallet} /> 
          <Route exact path="/tournaments" component={Tournaments} /> 
          <Route exact path="/faq" component={FAQ} /> 
          <Route exact path="/404" component={Error404} /> 
+         {/* <Route exact path="/apiEndpoints" component={APIEndpoints} />  */}
       </Switch>
     </Fragment> 
   );

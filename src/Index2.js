@@ -1449,7 +1449,7 @@
 // 	<!-- Back to Top End -->
 
 // 	<!-- Login Area Start -->
-// 	<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+// 	<div className="modal fade login-modal" id="login" tabIndex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
 // 			<div className="modal-dialog modal-dialog-centered" role="document">
 // 			<div className="modal-content">
 // 				<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -1464,18 +1464,18 @@
 // 					<div className="form-area">
 // 						<form action="#"  method="POST">
 // 							<div className="form-group">
-// 									<label for="login-input-email">Email*</label>
+// 									<label htmlFor="login-input-email">Email*</label>
 // 									<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email">
 // 							</div>
 // 							<div className="form-group">
-// 									<label for="login-input-password">Password*</label>
+// 									<label htmlFor="login-input-password">Password*</label>
 // 									<input type="password" className="input-field" id="login-input-password"  placeholder="Password">
 // 							</div>
 // 							<div className="form-group">
 // 								<div className="box">
 // 									<div className="left">
 // 											<input type="checkbox" className="check-box-field" id="input-save-password" checked />
-// 										<label for="input-save-password">Remember Password</label>
+// 										<label htmlFor="input-save-password">Remember Password</label>
 // 									</div>
 // 									<div className="right">
 // 										<a href="#">
@@ -1501,7 +1501,7 @@
 // 		<!-- Login Area End -->
 	
 // 		<!-- SignIn Area Start -->
-// 		<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+// 		<div className="modal fade login-modal sign-in" id="signin" tabIndex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
 // 				<div className="modal-dialog modal-dialog-centered " role="document">
 // 				<div className="modal-content">
 // 					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -1516,26 +1516,26 @@
 // 						<div className="form-area">
 // 							<form action="#" method="POST">
 // 								<div className="form-group">
-// 										<label for="input-name">Name*</label>
+// 										<label htmlFor="input-name">Name*</label>
 // 										<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name">
 // 								</div>
 // 								<div className="form-group">
-// 										<label for="input-email">Email*</label>
+// 										<label htmlFor="input-email">Email*</label>
 // 										<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email">
 // 								</div>
 // 								<div className="form-group">
-// 										<label for="input-password">Password*</label>
+// 										<label htmlFor="input-password">Password*</label>
 // 										<input type="password" className="input-field" id="input-password"  placeholder="Enter your password">
 // 								</div>
 // 								<div className="form-group">
-// 										<label for="input-con-password">confirm password**</label>
+// 										<label htmlFor="input-con-password">confirm password**</label>
 // 										<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password">
 // 								</div>
 								
 // 								<div className="form-group">
 // 									<div className="check-group">
 // 											<input type="checkbox" className="check-box-field" id="input-terms" checked />
-// 											<label for="input-terms">
+// 											<label htmlFor="input-terms">
 // 													I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
 // 											</label>
 // 									</div>
@@ -2811,104 +2811,6 @@ export default function Index2() {
 		<div className="bottomtotop">
 			<i className="fas fa-chevron-right"></i>
 		</div>
-		
-		<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-				<div className="modal-dialog modal-dialog-centered" role="document">
-				<div className="modal-content">
-					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<div className="modal-body">
-						<div className="logo-area">
-								<img className="logo" src="assets/images/logo.png" alt="" />
-						</div>
-						<div className="header-area">
-							<h4 className="title">Great to have you back!</h4>
-							<p className="sub-title">Enter your details below.</p>
-						</div>
-						<div className="form-area">
-							<form action="#"  method="POST">
-								<div className="form-group">
-										<label for="login-input-email">Email*</label>
-										<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
-								</div>
-								<div className="form-group">
-										<label for="login-input-password">Password*</label>
-										<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
-								</div>
-								<div className="form-group">
-									<div className="box">
-										<div className="left">
-												<input type="checkbox" className="check-box-field" id="input-save-password" checked />
-											<label for="input-save-password">Remember Password</label>
-										</div>
-										<div className="right">
-											<a href="#">
-												Forgot Password?
-											</a>
-										</div>
-									</div>
-								</div>
-								<div className="form-group">
-									<button type="submit" className="mybtn1">Log In</button>
-								</div>
-							</form>
-						</div>
-						<div className="form-footer">
-							<p>Not a member? 
-									<a href="#">Create account <i className="fas fa-angle-double-right"></i></a>
-							</p>
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-		<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-					<div className="modal-dialog modal-dialog-centered " role="document">
-					<div className="modal-content">
-						<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div className="modal-body">
-							<div className="logo-area">
-									<img className="logo" src="assets/images/logo.png" alt="" />
-							</div>
-							<div className="header-area">
-								<h4 className="title">Great to have you back!</h4>
-								<p className="sub-title">Enter your details below.</p>
-							</div>
-							<div className="form-area">
-								<form action="#" method="POST">
-									<div className="form-group">
-											<label for="input-name">Name*</label>
-											<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
-									</div>
-									<div className="form-group">
-											<label for="input-email">Email*</label>
-											<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
-									</div>
-									<div className="form-group">
-											<label for="input-password">Password*</label>
-											<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
-									</div>
-									<div className="form-group">
-											<label for="input-con-password">confirm password**</label>
-											<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
-									</div>
-									
-									<div className="form-group">
-										<div className="check-group">
-												<input type="checkbox" className="check-box-field" id="input-terms" checked />
-												<label for="input-terms">
-														I agree with <a href="#">terms and Conditions</a> and  <a href="#">privacy policy</a>
-												</label>
-										</div>
-									</div>
-									<div className="form-group">
-										<button type="submit" className="mybtn1">Take Bonus</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
 	</div>
 	)
 }

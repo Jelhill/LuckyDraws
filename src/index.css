@@ -2571,21 +2571,46 @@ select:focus {
       .lottery-area .buy-tickets .buy-tickets-box .content .mybtn1 {
         margin-top: 60px;
         display: inline-block; }
+.top-content .game-by-alphabet{
+  display: flex;
+  width: 100%;
+ padding: 0px;
+}
+
+.game-by-alphabet li {
+  font-size: 2em;
+  color: #D0D3D4;
+  background-color: #252f5a;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  margin-right: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.game-by-alphabet li:hover {
+  background-color: #f72585;
+}
 
 .number-list {
   margin: 0 -3px; }
   .number-list li {
     cursor: pointer;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     font-size: 14px;
     text-align: center;
     line-height: 30px;
     display: inline-block;
-    margin: 3px;
+    margin: 5px;
     font-weight: 600;
-    color: #f9314b;
+    padding-top: 9px;
+    letter-spacing: 1px;
+    /* color: #f9314b; */
+    color: #F3F3F3;
     border-radius: 50%;
+    /* background-color:#d90429; */
+    background-color: #358600;
     background-image: -moz-linear-gradient(26deg, #0b122e 9%, #212643 39%, #363a58 100%);
     background-image: -webkit-linear-gradient(26deg, #0b122e 9%, #212643 39%, #363a58 100%);
     background-image: -ms-linear-gradient(26deg, #0b122e 9%, #212643 39%, #363a58 100%);
@@ -2596,7 +2621,9 @@ select:focus {
       background-image: -webkit-linear-gradient(26deg, #382f21 9%, #8b642a 39%, #de9932 100%);
       background-image: -ms-linear-gradient(26deg, #382f21 9%, #8b642a 39%, #de9932 100%);
       color: #ffffff; }
-
+  .number-list li:hover {
+    opacity: 0.7;
+  }
 /* Lottery Staticstics Area End */
 /*  How it Work Area Start  */
 .how-it-work {
@@ -5124,7 +5151,7 @@ textarea.form-control {
   /* background: url("./assets/css/owl.video.play.html") no-repeat; */
   cursor: pointer;
   z-index: 1;
-  /* -webkit-backface-visibility: hidden; */
+  -webkit-backface-visibility: hidden;
   -webkit-transition: scale 100ms ease;
   -moz-transition: scale 100ms ease;
   -ms-transition: scale 100ms ease;

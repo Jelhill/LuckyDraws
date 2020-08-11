@@ -3,8 +3,10 @@ import React, { Fragment } from 'react'
 import { Link } from "react-router-dom"
 import Header from './Header'
 import Footer from './Footer'
+import icon1 from "./assets/images/icon1.png"
+import { connect } from 'react-redux'
 
-export default function Cart() {
+const Cart = (props) => {
 	return (
 		<Fragment>
 			<Header />
@@ -70,17 +72,15 @@ export default function Cart() {
 									</thead>
 									<tbody>
 										<tr>
-											<td>
-													<ul className="number-list">
-															<li>24</li>
-															<li>25</li>
-															<li>26</li>
-															<li>27</li>
-															<li>28</li>
-														</ul>
+											<td>											
+												<ul className="number-list">
+												{props.userSelectedNumber.map((num, index) => {
+													return <li key={index}>{`A${num}`}</li>
+												})}													
+												</ul>
 											</td>
 											<td>
-												<img src="assets/images/icon1.png" alt="" />
+												<img src={icon1} alt="" />
 												0.00000051
 											</td>
 											<td>
@@ -106,145 +106,7 @@ export default function Cart() {
 												<span className="time">30 mins.left</span>
 											</td>
 											<td>
-												<img src="assets/images/icon1.png" alt="" />
-												0.00000051
-											</td>
-											<td>
-												<div className="remove">
-														<i className="fas fa-times"></i>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-													<ul className="number-list">
-															<li>24</li>
-															<li>25</li>
-															<li>26</li>
-															<li>27</li>
-															<li>28</li>
-														</ul>
-											</td>
-											<td>
-												<img src="assets/images/icon1.png" alt="" />
-												0.00000051
-											</td>
-											<td>
-												<div className="qty">
-														<ul>
-															<li>
-																<span className="qtminus">
-																	<i className="fas fa-angle-left"></i>
-																</span>
-															</li>
-															<li>
-																<span className="qttotal">1</span>
-															</li>
-															<li>
-																<span className="qtplus">
-																	<i className="fas fa-angle-right"></i>
-																</span>
-															</li>
-														</ul>
-												</div>
-											</td>
-											<td>
-												<span className="time">30 mins.left</span>
-											</td>
-											<td>
-												<img src="assets/images/icon1.png" alt="" />
-												0.00000051
-											</td>
-											<td>
-												<div className="remove">
-														<i className="fas fa-times"></i>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-													<ul className="number-list">
-															<li>24</li>
-															<li>25</li>
-															<li>26</li>
-															<li>27</li>
-															<li>28</li>
-														</ul>
-											</td>
-											<td>
-												<img src="assets/images/icon1.png" alt="" />
-												0.00000051
-											</td>
-											<td>
-												<div className="qty">
-														<ul>
-															<li>
-																<span className="qtminus">
-																	<i className="fas fa-angle-left"></i>
-																</span>
-															</li>
-															<li>
-																<span className="qttotal">1</span>
-															</li>
-															<li>
-																<span className="qtplus">
-																	<i className="fas fa-angle-right"></i>
-																</span>
-															</li>
-														</ul>
-												</div>
-											</td>
-											<td>
-												<span className="time">30 mins.left</span>
-											</td>
-											<td>
-												<img src="assets/images/icon1.png" alt="" />
-												0.00000051
-											</td>
-											<td>
-												<div className="remove">
-														<i className="fas fa-times"></i>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-													<ul className="number-list">
-															<li>24</li>
-															<li>25</li>
-															<li>26</li>
-															<li>27</li>
-															<li>28</li>
-														</ul>
-											</td>
-											<td>
-												<img src="assets/images/icon1.png" alt="" />
-												0.00000051
-											</td>
-											<td>
-												<div className="qty">
-														<ul>
-															<li>
-																<span className="qtminus">
-																	<i className="fas fa-angle-left"></i>
-																</span>
-															</li>
-															<li>
-																<span className="qttotal">1</span>
-															</li>
-															<li>
-																<span className="qtplus">
-																	<i className="fas fa-angle-right"></i>
-																</span>
-															</li>
-														</ul>
-												</div>
-											</td>
-											<td>
-												<span className="time">30 mins.left</span>
-											</td>
-											<td>
-												<img src="assets/images/icon1.png" alt="" />
+												<img src={icon1} alt="" />
 												0.00000051
 											</td>
 											<td>
@@ -261,7 +123,7 @@ export default function Cart() {
 								<div className="content">
 									<span>Total to Pay:</span>
 									<div className="num">
-											<img src="assets/images/icon1.png" alt="" />
+											<img src={icon1} alt="" />
 											0.00000051
 									</div>
 								</div>
@@ -303,7 +165,7 @@ export default function Cart() {
 								<div className="item">
 									<Link to="#" className="single-method active">
 										<div className="icon">
-												<img src="assets/images/payment/paypal.png" alt="" />
+											<img src="assets/images/payment/paypal.png" alt="" />
 										</div>
 										<span>Paypal</span>
 									</Link>
@@ -379,106 +241,17 @@ export default function Cart() {
 			<div className="bottomtotop">
 				<i className="fas fa-chevron-right"></i>
 			</div>
-
-			<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-					<div className="modal-dialog modal-dialog-centered" role="document">
-					<div className="modal-content">
-						<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div className="modal-body">
-							<div className="logo-area">
-									<img className="logo" src="assets/images/logo.png" alt="" />
-							</div>
-							<div className="header-area">
-								<h4 className="title">Great to have you back!</h4>
-								<p className="sub-title">Enter your details below.</p>
-							</div>
-							<div className="form-area">
-								<form action="#"  method="POST">
-									<div className="form-group">
-											<label for="login-input-email">Email*</label>
-											<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
-									</div>
-									<div className="form-group">
-											<label for="login-input-password">Password*</label>
-											<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
-									</div>
-									<div className="form-group">
-										<div className="box">
-											<div className="left">
-													<input type="checkbox" className="check-box-field" id="input-save-password" checked />
-												<label for="input-save-password">Remember Password</label>
-											</div>
-											<div className="right">
-												<Link to="#">
-													Forgot Password?
-												</Link>
-											</div>
-										</div>
-									</div>
-									<div className="form-group">
-										<button type="submit" className="mybtn1">Log In</button>
-									</div>
-								</form>
-							</div>
-							<div className="form-footer">
-								<p>Not a member? 
-										<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
-								</p>
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
-
-			<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-						<div className="modal-dialog modal-dialog-centered " role="document">
-						<div className="modal-content">
-							<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<div className="modal-body">
-								<div className="logo-area">
-										<img className="logo" src="assets/images/logo.png" alt="" />
-								</div>
-								<div className="header-area">
-									<h4 className="title">Great to have you back!</h4>
-									<p className="sub-title">Enter your details below.</p>
-								</div>
-								<div className="form-area">
-									<form action="#" method="POST">
-										<div className="form-group">
-												<label for="input-name">Name*</label>
-												<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
-										</div>
-										<div className="form-group">
-												<label for="input-email">Email*</label>
-												<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
-										</div>
-										<div className="form-group">
-												<label for="input-password">Password*</label>
-												<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
-										</div>
-										<div className="form-group">
-												<label for="input-con-password">confirm password**</label>
-												<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
-										</div>
-										
-										<div className="form-group">
-											<div className="check-group">
-													<input type="checkbox" className="check-box-field" id="input-terms" checked />
-													<label for="input-terms">
-															I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
-													</label>
-											</div>
-										</div>
-										<div className="form-group">
-											<button type="submit" className="mybtn1">Take Bonus</button>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						</div>
-					</div>
-
 		</Fragment>
 	)
 }
+
+
+const mapStateToProps = (state) => {
+	const { lotteryReducer } = state
+	console.log("numbers", lotteryReducer.userSelectedNumber)
+	return {	
+	  userSelectedNumber: lotteryReducer.userSelectedNumber,
+	}
+}
+
+export default connect(mapStateToProps)(Cart)

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import Logo from "./assets/images/logo.png"
 import Header from './Header'
 import Icon1 from "./assets/images/game/icon1.png"
 import Icon2 from "./assets/images/game/icon2.png"
@@ -378,55 +377,6 @@ export default function Landing() {
 		<i className="fas fa-chevron-right"></i>
 	</div>
 
-	<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-			<div className="modal-dialog modal-dialog-centered" role="document">
-			<div className="modal-content">
-				<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<div className="modal-body">
-					<div className="logo-area">
-							<img className="logo" src={Logo} alt="" />
-					</div>
-					<div className="header-area">
-						<h4 className="title">Great to have you back!</h4>
-						<p className="sub-title">Enter your details below.</p>
-					</div>
-					<div className="form-area">
-						<form action="#"  method="POST">
-							<div className="form-group">
-									<label for="login-input-email">Email</label>
-									<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
-							</div>
-							<div className="form-group">
-									<label for="login-input-password">Password</label>
-									<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
-							</div>
-							<div className="form-group">
-								<div className="box">
-									<div className="left">
-											<input type="checkbox" className="check-box-field" id="input-save-password" checked />
-										<label for="input-save-password">Remember Password</label>
-									</div>
-									<div className="right">
-										<Link to="#">
-											Forgot Password?
-										</Link>
-									</div>
-								</div>
-							</div>
-							<div className="form-group">
-								   <button type="submit" className="mybtn1">Log In</button>
-							</div>
-						</form>
-					</div>
-					<div className="form-footer">
-						<p>Not a member? 
-								<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
-						</p>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>		
-		</div>
+	</div>
 	)
 }

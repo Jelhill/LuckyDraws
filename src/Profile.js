@@ -51,7 +51,7 @@ export default function Profile() {
 										<div className="form-group mb-3">
 
 											
-												<label for="contactName">
+												<label htmlFor="contactName">
 													Full name
 												</label>
 
@@ -61,7 +61,7 @@ export default function Profile() {
 										</div>
 										<div className="form-group mb-3">
 												
-												<label for="gender">
+												<label htmlFor="gender">
 													Gender
 												</label>
 
@@ -71,7 +71,7 @@ export default function Profile() {
 										</div>
 										<div className="form-group mb-3">
 												
-												<label for="address">
+												<label htmlFor="address">
 													Address
 												</label>
 
@@ -81,7 +81,7 @@ export default function Profile() {
 										</div>
 										<div className="form-group mb-3">
 												
-												<label for="cityname">
+												<label htmlFor="cityname">
 													City
 												</label>
 
@@ -91,7 +91,7 @@ export default function Profile() {
 													
 										</div>
 										<div className="form-group mb-3">
-												<label for="state">
+												<label htmlFor="state">
 													State
 												</label>
 
@@ -100,7 +100,7 @@ export default function Profile() {
 													placeholder="State" />
 											</div>
 											<div className="form-group mb-3">
-												<label for="facebook">
+												<label htmlFor="facebook">
 													Facebook
 												</label>
 
@@ -109,7 +109,7 @@ export default function Profile() {
 													placeholder="facebook" />
 											</div>
 											<div className="form-group mb-3">
-												<label for="twiiter">
+												<label htmlFor="twiiter">
 													Twitter
 												</label>
 
@@ -136,106 +136,6 @@ export default function Profile() {
 			<div className="bottomtotop">
 				<i className="fas fa-chevron-right"></i>
 			</div>
-
-			<div className="modal fade login-modal" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-					<div className="modal-dialog modal-dialog-centered" role="document">
-					<div className="modal-content">
-						<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<div className="modal-body">
-							<div className="logo-area">
-									<img className="logo" src="assets/images/logo.png" alt="" />
-							</div>
-							<div className="header-area">
-								<h4 className="title">Great to have you back!</h4>
-								<p className="sub-title">Enter your details below.</p>
-							</div>
-							<div className="form-area">
-								<form action="#"  method="POST">
-									<div className="form-group">
-											<label for="login-input-email">Email*</label>
-											<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
-									</div>
-									<div className="form-group">
-											<label for="login-input-password">Password*</label>
-											<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
-									</div>
-									<div className="form-group">
-										<div className="box">
-											<div className="left">
-													<input type="checkbox" className="check-box-field" id="input-save-password" checked />
-												<label for="input-save-password">Remember Password</label>
-											</div>
-											<div className="right">
-												<Link to="#">
-													Forgot Password?
-												</Link>
-											</div>
-										</div>
-									</div>
-									<div className="form-group">
-										<button type="submit" className="mybtn1">Log In</button>
-									</div>
-								</form>
-							</div>
-							<div className="form-footer">
-								<p>Not a member?
-										<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
-								</p>
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
-				
-
-				<div className="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-						<div className="modal-dialog modal-dialog-centered " role="document">
-						<div className="modal-content">
-							<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<div className="modal-body">
-								<div className="logo-area">
-										<img className="logo" src="assets/images/logo.png" alt="" />
-								</div>
-								<div className="header-area">
-									<h4 className="title">Great to have you back!</h4>
-									<p className="sub-title">Enter your details below.</p>
-								</div>
-								<div className="form-area">
-									<form action="#" method="POST">
-										<div className="form-group">
-												<label for="input-name">Name*</label>
-												<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
-										</div>
-										<div className="form-group">
-												<label for="input-email">Email*</label>
-												<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
-										</div>
-										<div className="form-group">
-												<label for="input-password">Password*</label>
-												<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
-										</div>
-										<div className="form-group">
-												<label for="input-con-password">confirm password**</label>
-												<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
-										</div>
-
-										<div className="form-group">
-											<div className="check-group">
-													<input type="checkbox" className="check-box-field" id="input-terms" checked />
-													<label for="input-terms">
-															I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
-													</label>
-											</div>
-										</div>
-										<div className="form-group">
-											<button type="submit" className="mybtn1">Take Bonus</button>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						</div>
-					</div>
 		</Fragment>
 
 	)

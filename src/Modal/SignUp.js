@@ -17,47 +17,47 @@ function SignUp(props) {
     return (
 		
 		<div className="modalDiv">
-        <div class="login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered " role="document">
-				<div class="modal-content">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick={closeModal}><span aria-hidden="true" onClick={closeModal}>&times;</span></button>
-					<div class="modal-body">
-						<div class="logo-area">
-							<img class="logo" src={Logo} alt="" />
+        <div className="login-modal sign-in" id="signin" tabIndex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+				<div className="modal-dialog modal-dialog-centered " role="document">
+				<div className="modal-content">
+					<button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={closeModal}><span aria-hidden="true" onClick={closeModal}>&times;</span></button>
+					<div className="modal-body">
+						<div className="logo-area">
+							<img className="logo" src={Logo} alt="" />
 						</div>
-						<div class="header-area">
-							<h4 class="title">Great to have you back!</h4>
-							<p class="sub-title">Enter your details below.</p>
+						<div className="header-area">
+							<h4 className="title">Great to have you back!</h4>
+							<p className="sub-title">Enter your details below.</p>
 						</div>
-						<div class="form-area">
+						<div className="form-area">
 							<form action="#" method="POST">
-								<div class="form-group">
-										<label for="input-name">Name</label>
-										<input type="text" class="input-field" id="input-name"  placeholder="Enter your Name" />
+								<div className="form-group">
+										<label htmlFor="input-name">Name</label>
+										<input type="text" className="input-field" id="input-name"  placeholder="Enter your Name" />
 								</div>
-								<div class="form-group">
-										<label for="input-email">Email</label>
-										<input type="email" class="input-field" id="input-email"  placeholder="Enter your Email" />
+								<div className="form-group">
+										<label htmlFor="input-email">Email</label>
+										<input type="email" className="input-field" id="input-email"  placeholder="Enter your Email" />
 								</div>
-								<div class="form-group">
-										<label for="input-password">Password</label>
-										<input type="password" class="input-field" id="input-password"  placeholder="Enter your password" />
+								<div className="form-group">
+										<label htmlFor="input-password">Password</label>
+										<input type="password" className="input-field" id="input-password"  placeholder="Enter your password" />
 								</div>
-								<div class="form-group">
-										<label for="input-con-password">confirm password</label>
-										<input type="password" class="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
+								<div className="form-group">
+										<label htmlFor="input-con-password">confirm password</label>
+										<input type="password" className="input-field" id="input-con-password"  placeholder="Enter your Confirm Password" />
 								</div>
 								
-								<div class="form-group">
-									<div class="check-group">
-											<input type="checkbox" class="check-box-field" id="input-terms" checked />
-											<label for="input-terms">
+								<div className="form-group">
+									<div className="check-group">
+											<input type="checkbox" className="check-box-field" id="input-terms" checked />
+											<label htmlFor="input-terms">
 													I agree with <Link to="#">terms and Conditions</Link> and  <Link to="#">privacy policy</Link>
 											</label>
 									</div>
 								</div>
-								<div class="form-group">
-									<button type="submit" class="mybtn1">Sign Up</button>
+								<div className="form-group">
+									<button type="submit" className="mybtn1">Sign Up</button>
 								</div>
 							</form>
 						</div>
