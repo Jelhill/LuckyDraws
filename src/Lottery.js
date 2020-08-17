@@ -1,8 +1,6 @@
 
-import React, { Fragment } from 'react'
-// import React, { useEffect } from 'react'
-import { Link } from "react-router-dom"
-// import { useParams } from "react-router-dom"
+import React, { Fragment, useEffect } from 'react'
+import { Link, useParams, withRouter } from "react-router-dom"
 import Header from './Header'
 import Footer from './Footer'
 import breadcrumbLottery from "./assets/images/breadcrumb/lottery.png"
@@ -15,33 +13,24 @@ import howItWorkIC2 from "./assets/images/howitwork/ic2.png"
 import howItWorkIC3 from "./assets/images/howitwork/ic3.png"
 import questionLeft from "./assets/images/question-left.png"
 import icon2 from "./assets/images/icon2.png"
-// import { generateLotteryNumber } from "./Data/lotteryData"
-import { generateNumbers, saveUserSeletedNumber } from "./Actions/lotteryActions"
-import { connect } from 'react-redux'
-
+import { generateNumbers, saveUserSelectedNumber, updateGameBatchState } from "./Actions/lotteryActions"
+import { connect } from 'react-redux' 
+import { checkIncludes, thousandSeperator, totalAmount } from "./Actions/helperFunctions"
+import { filterSelectedTicketsByBatch } from "./Actions/helperFunctions"
 
 
 function Lottery(props) {
-	// const { id } = useParams()
-	const { state } = props.location
-	console.log("LLL", state)
-	// useEffect(() => {
-	// 	fetch(`https://app.luckydraws.ng/competition-details/${id}/tickets`, {
-	// 		method: "GET",
-	// 		headers: {"Content-type": "application/json"},
-	// 		// body: JSON.stringify({batch: state.ticket_row})
-	// 	})
-	// 	.then((res) => res.json())
-	// 	.then((jsonRes) => console.log(jsonRes) )
-	// })
+	const { id } = useParams()
+	const batchId = id
+	const { image_url, ticket_row, amount } = props.location.state	
 
-
-	const getSelectedNumber = (number) => {		
-		props.saveUserSeletedNumber(number)
+	
+	const getSelectedNumber = (number) => {	
+		props.saveUserSelectedNumber(number, image_url, amount, batchId )
 	}
 	
 	const getBatch = (compId) => {
-		const alphabet = props.alphabet
+		const alphabet = props.alphabet	
 		const batch = []
 		for (let i = 0; i < alphabet.length; i++) {
 			if(i + 1 <= compId) {
@@ -49,8 +38,39 @@ function Lottery(props) {
 			}        
 		}
 		   
-			return batch
+		return batch
 	}
+
+	const FetchDefaultBatch = () => {
+		fetch(`https://app.luckydraws.ng/competition-details/${id}/tickets`, {
+			method: "POST",
+			headers: {"Content-type": "application/json"},
+			body: JSON.stringify({batch: "A"})
+		})
+		.then(res => res.json())
+		.then((jsonRes) => {
+			if(jsonRes.status === "success"){
+				props.updateGameBatchState(jsonRes.data[0].tickets)	
+			}
+		})
+	}
+	useEffect(FetchDefaultBatch, [])
+
+
+	const getTickets = (batchType) => {
+		fetch(`https://app.luckydraws.ng/competition-details/${id}/tickets`, {
+			method: "POST",
+			headers: {"Content-type": "application/json"},
+			body: JSON.stringify({batch: batchType})
+		})
+		.then(res => res.json())
+		.then((jsonRes) => {
+			if(jsonRes.status === "success"){
+				props.updateGameBatchState(jsonRes.data[0].tickets)	
+			}
+		})
+	}
+
 	return (
 		<Fragment>
 			<Header />		
@@ -171,6 +191,9 @@ function Lottery(props) {
 						
 					</div>
 				</div>
+				<div className="lottery-poster">
+					<img src={image_url} alt=""/>
+				</div>
 				<div className="buy-tickets">
 					<div className="container">
 						<div className="row">
@@ -193,7 +216,7 @@ function Lottery(props) {
 														</h4>
 														<div className="number">
 																<i className="fab fa-naira"></i>
-																5,000
+																₦{thousandSeperator(amount.toFixed(2))}
 														</div>
 													</div>
 												</div>
@@ -202,19 +225,37 @@ function Lottery(props) {
 														<h4 className="title">
 																QUANTITY 
 														</h4>
-														<div className="number">
-															<input type="number" />
+														<div className="number">															
+															{!props.userSelectedNumber.length ? 
+															"0" :
+															 filterSelectedTicketsByBatch(props.userSelectedNumber, batchId).length
+															 }
 														</div>
 													</div>
 												</div>
 												<div className="col-lg-3">
 													<div className="info-box">
 														<h4 className="title">
-																TOTAL COST
+																	BATCH VALUE
 														</h4>
 														<div className="number">
 																<i className="fab fa-naira"></i>
-																0.0000
+																
+																₦{
+																	!props.userSelectedNumber.length ? 
+																	"0.00" :
+																	thousandSeperator(amount.toFixed(2) * filterSelectedTicketsByBatch(props.userSelectedNumber, batchId).length)}
+														</div>
+													</div>
+												</div>
+												<div className="col-lg-3">
+													<div className="info-box">
+														<h4 className="title">
+															CART VALUE
+														</h4>
+														<div className="number">
+																<i className="fab fa-naira"></i>
+																₦{thousandSeperator(totalAmount(props.userSelectedNumber))}
 														</div>
 													</div>
 												</div>
@@ -239,9 +280,9 @@ function Lottery(props) {
 												<div className="auto-number">
 													<div className="top-content">
 														<ul className="game-by-alphabet">
-														{!state.ticket_row > 0 ? null :														
-														getBatch(state.ticket_row).map((alphabet, index) =>{
-															return <li key={index}>{alphabet}</li>
+														{!ticket_row > 0 ? null :														
+														getBatch(ticket_row).map((batchType, index) =>{
+															return <li key={index} onClick={() => getTickets(batchType)}>{batchType}</li>
 														})														
 														}													
 														</ul>
@@ -257,15 +298,17 @@ function Lottery(props) {
 													</div>
 													<div className="main-content">
 														<ul className="number-list">
-														{Array.from({length: 500}, (v, k) => k+1).map((num, index) => {																										
-															return props.userSelectedNumber.includes(`A${num}`) ? 
+														{	!props.tickets.length ? "Loading..." :
+															props.tickets.map((ticket, index) => {																											
+									
+															return checkIncludes(props.userSelectedNumber, ticket.value, batchId) ? 
 															<li key={index} 
 																style={{backgroundColor: "orange"}}
-																onClick={() => getSelectedNumber(`A${num}`, index)}>{`A${num}`}
+																onClick={() => getSelectedNumber(ticket.value)}>{ticket.value}
 															</li>
 															:
 															<li key={index} 
-																onClick={() => getSelectedNumber(`A${num}`, index)}>{`A${num}`}
+																onClick={() => getSelectedNumber(ticket.value)}>{ticket.value}
 															</li>
 
 														})}		
@@ -276,7 +319,7 @@ function Lottery(props) {
 										</div>
 										<div className="row">
 											<div className="col-lg-12 text-center">
-												<Link to="cart" className="mybtn1">Buy ticket</Link>
+												<Link to="/cart" className="mybtn1">Buy ticket</Link>
 											</div>
 										</div>
 									</div>									
@@ -501,20 +544,26 @@ function Lottery(props) {
 
 const mapStateToProps = (state) => {
 	const { lotteryReducer } = state
-	console.log("lotteryComp", lotteryReducer.competitions)
+	// console.log("Tickets", lotteryReducer.tickets)
+	console.log("User Selected Number", lotteryReducer.userSelectedNumber)
+	
+	// console.log("Tracker", lotteryReducer.userSelectedNumberTracker)
+	// console.log("Competitions", lotteryReducer.competitions)
 	return {	
 	  userSelectedNumber: lotteryReducer.userSelectedNumber,
+	  userSelectedNumberTracker: lotteryReducer.userSelectedNumberTracker, 
 	  competitions: lotteryReducer.competitions,
-	  alphabet: lotteryReducer.alphabet
-	  
+	  alphabet: lotteryReducer.alphabet,
+	  tickets: lotteryReducer.tickets, 
 	}
   }
   
   const mapDispatchToProps = (dispatch) => {
 	return {
 		generateNumbers: (values) => dispatch(generateNumbers(values)),
-		saveUserSeletedNumber: (number) => dispatch(saveUserSeletedNumber(number))
+		saveUserSelectedNumber: (number, image_url, amount, batchId) => dispatch(saveUserSelectedNumber(number, image_url, amount, batchId)),
+		updateGameBatchState: (tickets) => dispatch(updateGameBatchState(tickets))
 	}
   }
 
-  export default connect(mapStateToProps, mapDispatchToProps)(Lottery)
+  export default  withRouter(connect(mapStateToProps, mapDispatchToProps)(Lottery))

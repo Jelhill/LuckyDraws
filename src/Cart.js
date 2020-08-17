@@ -1,12 +1,26 @@
-
 import React, { Fragment } from 'react'
 import { Link } from "react-router-dom"
 import Header from './Header'
 import Footer from './Footer'
-import icon1 from "./assets/images/icon1.png"
 import { connect } from 'react-redux'
+import { thousandSeperator } from "./Actions/helperFunctions"
+import { removeItemFromCart } from "./Actions/lotteryActions"
+// import paypalImage from "./assets/images/payment/paypal.png"
+// import bitcoinImage from "./assets/images/payment/bitcoin.png"
+// import litecoinImage from "./assets/images/payment/litecoin.png"
+// import etherImage from "./assets/images/payment/ether.png"
+import dabitcard from "./assets/images/payment/dabit-card.png"
+import payStackCard from "./assets/images/paystack-twitter-card.png"
+// import rippleImage from './assets/images/payment/rippel.png'
+import { totalAmount } from "./Actions/helperFunctions"
+
 
 const Cart = (props) => {
+
+	const removeItem = (ticket, batchId) => {
+		props.removeItemFromCart(ticket, batchId)		
+	}
+
 	return (
 		<Fragment>
 			<Header />
@@ -59,31 +73,37 @@ const Cart = (props) => {
 							</div>
 							<div className="cart-table-area">
 								<div className="responsive-table">
+								{props.userSelectedNumber.length ? null : 
+									<h2 className="empty-cart">You cart is currently empty</h2>
+								 }
 									<table className="table">
 									<thead>
 										<tr>
-										<th scope="col">Ticket numbers</th>
+										<th scope="col">Ticket</th>
+										<th scope="col">Game</th>
 										<th scope="col">Price</th>
-										<th scope="col">Quantity</th>
+										{/* <th scope="col">Quantity</th> */}
 										<th scope="col">Expires</th>
 										<th scope="col">Total</th>
 										<th scope="col"></th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
+									{	
+									
+										props.userSelectedNumber.map((select, index) => (													
+										<tr key={index}>
 											<td>											
 												<ul className="number-list">
-												{props.userSelectedNumber.map((num, index) => {
-													return <li key={index}>{`A${num}`}</li>
-												})}													
+													<li>{select.number}</li>												
 												</ul>
 											</td>
-											<td>
-												<img src={icon1} alt="" />
-												0.00000051
+											<td><img src={select.image_url} alt="" className="selected-game-image"/></td>
+											<td>											
+											
+												{`₦${thousandSeperator(select.amount)}`}
 											</td>
-											<td>
+											{/* <td>
 												<div className="qty">
 														<ul>
 															<li>
@@ -101,20 +121,24 @@ const Cart = (props) => {
 															</li>
 														</ul>
 												</div>
-											</td>
+											</td> */}
 											<td>
 												<span className="time">30 mins.left</span>
 											</td>
 											<td>
-												<img src={icon1} alt="" />
-												0.00000051
+
+											{`₦${thousandSeperator(select.amount)}`}
 											</td>
 											<td>
 												<div className="remove">
-														<i className="fas fa-times"></i>
+														<i className="fas fa-times" onClick={() => removeItem(select.number, select.batchId)}></i>
 												</div>
 											</td>
 										</tr>
+												
+									))}	
+										
+									
 									</tbody>
 									</table>
 								</div>
@@ -123,8 +147,8 @@ const Cart = (props) => {
 								<div className="content">
 									<span>Total to Pay:</span>
 									<div className="num">
-											<img src={icon1} alt="" />
-											0.00000051
+										
+											{thousandSeperator(totalAmount(props.userSelectedNumber))	}
 									</div>
 								</div>
 							</div>
@@ -141,23 +165,23 @@ const Cart = (props) => {
 									Payment Method
 							</h4>
 							<p className="text">
-									Choose a payment method 
+									Choose a payment method 	
 							</p>
 						</div>
 						<div className="col-lg-12">
 							<div className="method-slider">
-								<div className="item">
+								{/* <div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/dabit-card.png" alt="" />
+												<img src={dabitcard} alt="" />
 										</div>
 										<span>Credit Card</span>
 									</Link>
-								</div>
+								</div> */}
 								<div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/dabit-card.png" alt="" />
+												<img src={dabitcard} alt="" />
 										</div>
 										<span>Dabit Card</span>
 									</Link>
@@ -165,15 +189,16 @@ const Cart = (props) => {
 								<div className="item">
 									<Link to="#" className="single-method active">
 										<div className="icon">
-											<img src="assets/images/payment/paypal.png" alt="" />
+											<img src={payStackCard} alt="" />
 										</div>
-										<span>Paypal</span>
+										<span></span>
 									</Link>
 								</div>
+{/* 						
 								<div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/bitcoin.png" alt="" />
+												<img src={bitcoinImage} alt="" />
 										</div>
 										<span>Bitcoin</span>
 									</Link>
@@ -181,7 +206,7 @@ const Cart = (props) => {
 								<div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/litecoin.png" alt="" />
+												<img src={litecoinImage} alt="" />
 										</div>
 										<span>Litecoin</span>
 									</Link>
@@ -189,7 +214,7 @@ const Cart = (props) => {
 								<div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/ether.png" alt="" />
+												<img src={etherImage} alt="" />
 										</div>
 										<span>Ethereum</span>
 									</Link>
@@ -197,7 +222,7 @@ const Cart = (props) => {
 								<div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/rippel.png" alt="" />
+											<img src={rippleImage} alt="" />
 										</div>
 										<span>Ripple </span>
 									</Link>
@@ -205,7 +230,7 @@ const Cart = (props) => {
 								<div className="item">
 										<Link to="#" className="single-method">
 											<div className="icon">
-													<img src="assets/images/payment/bitcoin.png" alt="" />
+												<img src={bitcoinImage} alt="" />
 											</div>
 											<span>Bitcoin</span>
 										</Link>
@@ -213,7 +238,7 @@ const Cart = (props) => {
 								<div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/litecoin.png" alt="" />
+												<img src={litecoinImage} alt="" />
 										</div>
 										<span>Litecoin</span>
 									</Link>
@@ -221,15 +246,15 @@ const Cart = (props) => {
 								<div className="item">
 									<Link to="#" className="single-method">
 										<div className="icon">
-												<img src="assets/images/payment/ether.png" alt="" />
+												<img src={etherImage} alt="" />
 										</div>
 										<span>Ethereum</span>
 									</Link>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div className="col-lg-12 text-center">
-							<Link to="#" className="mybtn1">
+							<Link to="wallet" className="mybtn1">
 									PurChase
 							</Link>
 						</div>
@@ -249,9 +274,18 @@ const Cart = (props) => {
 const mapStateToProps = (state) => {
 	const { lotteryReducer } = state
 	console.log("numbers", lotteryReducer.userSelectedNumber)
+	console.log("Tracker", lotteryReducer.userSelectedNumberTracker)
 	return {	
 	  userSelectedNumber: lotteryReducer.userSelectedNumber,
+	  userSelectedNumberTracker: lotteryReducer.userSelectedNumberTracker, 
 	}
 }
 
-export default connect(mapStateToProps)(Cart)
+const mapDispatchToProps = (dispatch) => {
+	return {	
+		removeItemFromCart: (ticket, batchId) => dispatch(removeItemFromCart(ticket, batchId))
+	}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

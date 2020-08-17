@@ -19,8 +19,8 @@ import Competitions from './Competitions';
 import HowItWork from './HowItWork';
 import SignIn from './Modal/SignIn';
 import Error404 from './404';
-// import APIEndpoints from './APIEndpoints';
-// import Index2 from "./Index2"
+import Profile from './Profile';
+
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
          <Route exact path="/awards" component={Awards} /> 
          <Route exact path="/bonus" component={Bonus} /> 
          <Route exact path="/cart" component={Cart} /> 
-         <Route exact path="/termsAndCondition" component={TermsAndCondition} /> 
+         <Route exact path="/termsAndConditions" component={TermsAndCondition} /> 
          <Route exact path="/termsAndConditionDetails" component={TermsAndConditionDetails} />
          <Route exact path="/competitions" component={Competitions} /> 
          <Route exact path="/howItWork" component={HowItWork} /> 
@@ -48,7 +48,7 @@ function App() {
          <Route exact path="/tournaments" component={Tournaments} /> 
          <Route exact path="/faq" component={FAQ} /> 
          <Route exact path="/404" component={Error404} /> 
-         {/* <Route exact path="/apiEndpoints" component={APIEndpoints} />  */}
+         <Route exact path="/profile" component={Profile} /> 
       </Switch>
     </Fragment> 
   );

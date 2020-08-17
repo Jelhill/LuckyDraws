@@ -18,7 +18,7 @@ export default function TermsAndCondition() {
 								</h4>
 								<ul className="breadcrumb-list">
 									<li>
-										<Link to="index">
+										<Link to="/">
 											<i className="fas fa-home"></i>
 											Home
 										</Link>
@@ -27,7 +27,7 @@ export default function TermsAndCondition() {
 										<span><i className="fas fa-chevron-right"></i> </span>
 									</li>
 									<li>
-										<Link to="terms-conditions">Terms & Conditions</Link>
+										<Link to="termsAndConditions">Terms & Conditions</Link>
 									</li>
 								</ul>
 							</div>

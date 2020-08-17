@@ -114,13 +114,18 @@ class Competitions extends Component {
 									</ul>
 									<div className="tab-content" id="pills-tabContent">
 									<div className="tab-pane fade show active" id="pills-tab1" role="tabpanel" aria-labelledby="pills-tab1-tab">
-										<div className="row">									
-										{
+										<div className="row">
+																			
+										{	
+											!this.props.competitions.length ? 
+											<h1>Games are unavailabe at the moment</h1> :
 											this.props.competitions.map((competition, index) => {
 												return <div key={index} className="col-lg-4 col-md-6">
 													<div className="single-game">										
 														<img src={competition.image_url} alt="" />
-														<Link to={{pathname: `/competition-details/${competition.comp_id}`, state: competition}} className="mybtn2">PLay NoW !</Link>
+														<Link to={{pathname: `/competition-details/${competition.comp_id}`, state: competition}} className="mybtn2">
+															PLay NoW !
+														</Link>
 													</div>
 												</div>
 											})
@@ -483,7 +488,6 @@ class Competitions extends Component {
 
 const mapStateToProps = (state) => {
 	const { lotteryReducer } = state	
-	console.log(lotteryReducer.competitions)
 	return{
 		competitions: lotteryReducer.competitions,
 		loading: lotteryReducer.isLoading,

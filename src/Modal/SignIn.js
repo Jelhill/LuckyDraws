@@ -1,15 +1,43 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
-import { openSignInModal } from "../Actions/modalActions"
+import { openSignInModal, updateStateWithRegistration } from "../Actions/modalActions"
+import { saveTokenWithExpiration } from "../Actions/helperFunctions"
 
 function SignIn(props) {
 
 	const closeSignInModal = (e) => {
-		e.preventDefault()
         props.openSignInModal(false)
     }
 
+	const getFormInput = (e) => {
+		e.preventDefault()
+		props.updateStateWithRegistration({[e.target.name]: e.target.value})
+	}
+
+	const handleSignin = (e) => {
+		e.preventDefault()
+		console.log(props.formInputs)
+		const {email, password } = props.formInputs
+		const body = { email, password }
+		console.log(body)
+		fetch(`https://app.luckydraws.ng/login`, {
+			method: "POST",
+			headers: {"Content-type": "application/json"},
+			body: JSON.stringify(body)
+		})
+		.then(res => res.json())	
+		.then((jsonRes) => {
+			console.log(jsonRes)
+			const { access_token, user } = jsonRes
+			const bearerToken = `${access_token.token}`
+			if(jsonRes.status === "success"){
+				saveTokenWithExpiration("access-token", bearerToken, 2592000000, user)
+				closeSignInModal()				
+			}
+		})
+
+	}
 	if(!props.showSignInModal) {
 		return null
 	}
@@ -31,16 +59,16 @@ function SignIn(props) {
 						<form action="#"  method="POST">
 							<div className="form-group">
 									<label htmlFor="login-input-email">Email</label>
-									<input type="email" className="input-field" id="login-input-email"  placeholder="Enter your Email" />
+									<input type="email" name="email" onChange={getFormInput} className="input-field" placeholder="Enter your Email" />
 							</div>
 							<div className="form-group">
 									<label htmlFor="login-input-password">Password</label>
-									<input type="password" className="input-field" id="login-input-password"  placeholder="Password" />
+									<input type="password" name="password" onChange={getFormInput} className="input-field" placeholder="Password" />
 							</div>
 							<div className="form-group">
 								<div className="box">
 									<div className="left">
-											<input type="checkbox" className="check-box-field" id="input-save-password" checked />
+											<input type="checkbox" className="check-box-field" id="input-save-password" />
 										<label htmlFor="input-save-password">Remember Password</label>
 									</div>
 									<div className="right">
@@ -51,13 +79,13 @@ function SignIn(props) {
 								</div>
 							</div>
 							<div className="form-group">
-								   <button type="submit" className="mybtn1">Log In</button>
+								   <button type="submit" onClick={handleSignin} className="mybtn1">Log In</button>
 							</div>
 						</form>
 					</div>
 					<div className="form-footer">
 						<p>Not a member? 
-								<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
+							<Link to="#">Create account <i className="fas fa-angle-double-right"></i></Link>
 						</p>
 					</div>
 				</div>
@@ -74,6 +102,7 @@ const mapStateToProps = (state) => {
 	const { modalReducer } = state
 	return {
 	  showSignInModal: modalReducer.showSignInModal,
+	  formInputs: modalReducer.formInputs
 	}
   }
   
@@ -81,6 +110,7 @@ const mapStateToProps = (state) => {
   const mapDispatchToProps = (dispatch) => {
 	return {
 		openSignInModal: (value) =>  dispatch(openSignInModal(value)),
+		updateStateWithRegistration: (modalInputs) => dispatch(updateStateWithRegistration(modalInputs))
 	}
   }
 

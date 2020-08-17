@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -48,14 +49,10 @@ export default function Profile() {
 						<div className="col-lg 6 col-md-offset-2 profile" >
 								<div className="profile-form-wrapper">
 									<div className="profile-box">
-										<div className="form-group mb-3">
-
-											
+										<div className="form-group mb-3">											
 												<label htmlFor="contactName">
 													Full name
-												</label>
-
-												
+												</label>												
 												<input type="text" className="form-control" id="contactName"
 													placeholder="Full name" />
 										</div>
