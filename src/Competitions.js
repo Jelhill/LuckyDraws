@@ -24,7 +24,7 @@ import { connect } from 'react-redux'
 
 
 class Competitions extends Component {
-	componentDidMount = () => {		
+	componentDidMount = async () => {		
 		fetch(`https://app.luckydraws.ng/`, {
 		method: "GET"})
 		.then(res => res.json())
@@ -35,11 +35,12 @@ class Competitions extends Component {
 			}
 		})
 		.catch((err) => console.log(err))
-    }
+	}
+	
 	render(){
 	return (
 		<Fragment>
-			<Header />	
+			<Header comp_id={this.props.comp_id} />	
 			<section className="breadcrumb-area play">
 				<img className="bc-img" src={breadcrumbPlay} alt="" />
 				<div className="container">

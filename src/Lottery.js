@@ -15,18 +15,48 @@ import questionLeft from "./assets/images/question-left.png"
 import icon2 from "./assets/images/icon2.png"
 import { generateNumbers, saveUserSelectedNumber, updateGameBatchState } from "./Actions/lotteryActions"
 import { connect } from 'react-redux' 
-import { checkIncludes, thousandSeperator, totalAmount } from "./Actions/helperFunctions"
+import { checkIncludes, thousandSeperator, totalAmount, checkForTokenWithExpiryDate } from "./Actions/helperFunctions"
 import { filterSelectedTicketsByBatch } from "./Actions/helperFunctions"
 
 
 function Lottery(props) {
 	const { id } = useParams()
 	const batchId = id
-	const { image_url, ticket_row, amount } = props.location.state	
+	const { image_url, ticket_row, amount } = props.location.state
 
 	
-	const getSelectedNumber = (number) => {	
-		props.saveUserSelectedNumber(number, image_url, amount, batchId )
+	const getSelectedNumber = (ticket) => {	
+		const userObject = checkForTokenWithExpiryDate("access-token")
+		const checkForTicketInCart = checkIncludes(props.cart, ticket.id)
+		const myHeaders = new Headers()
+		myHeaders.append("Authorization", `Bearer ${userObject.token}`);
+		const data = new FormData()
+		data.append("value", ticket.value)
+		data.append("id", ticket.id)
+		const action = checkForTicketInCart ? "DELETE" : "POST"
+		fetch(`https://app.luckydraws.ng/competition-details/${id}`, {
+			method: action,
+			headers: myHeaders,
+			body: data
+		})
+		.then(res => res.json())
+		.then((jsonRes) => {
+			if(jsonRes.status === "success"){
+				// const userObject = checkForTokenWithExpiryDate("access-token")
+				// const myHeaders = new Headers()
+				// myHeaders.append("Authorization", `Bearer ${userObject.token}`);
+				fetch(`https://app.luckydraws.ng/account/cart`,{
+            		method: "GET",
+					headers: myHeaders					
+				})
+				.then(response => response.json())
+				.then(jsonResponse => {
+					if(jsonResponse.status === "success") {
+						props.saveUserSelectedNumber(jsonResponse.data)
+					}				
+				})
+			}
+		})
 	}
 	
 	const getBatch = (compId) => {
@@ -41,7 +71,7 @@ function Lottery(props) {
 		return batch
 	}
 
-	const FetchDefaultBatch = () => {
+	const fetchDefaultBatch = () => {
 		fetch(`https://app.luckydraws.ng/competition-details/${id}/tickets`, {
 			method: "POST",
 			headers: {"Content-type": "application/json"},
@@ -49,12 +79,12 @@ function Lottery(props) {
 		})
 		.then(res => res.json())
 		.then((jsonRes) => {
-			if(jsonRes.status === "success"){
+			if(jsonRes.status === "success" && jsonRes.data[0].tickets.length){
 				props.updateGameBatchState(jsonRes.data[0].tickets)	
 			}
 		})
 	}
-	useEffect(FetchDefaultBatch, [])
+	useEffect(fetchDefaultBatch, [])
 
 
 	const getTickets = (batchType) => {
@@ -280,8 +310,10 @@ function Lottery(props) {
 												<div className="auto-number">
 													<div className="top-content">
 														<ul className="game-by-alphabet">
-														{!ticket_row > 0 ? null :														
-														getBatch(ticket_row).map((batchType, index) =>{
+
+														{
+															!ticket_row > 0 ? null :														
+															getBatch(ticket_row).map((batchType, index) =>{
 															return <li key={index} onClick={() => getTickets(batchType)}>{batchType}</li>
 														})														
 														}													
@@ -299,19 +331,41 @@ function Lottery(props) {
 													<div className="main-content">
 														<ul className="number-list">
 														{	!props.tickets.length ? "Loading..." :
+															props.tickets.map((ticket, index) => {	
+
+															if(ticket.active === 1 && !checkIncludes(props.cart, ticket.id)){					
+																return <li key={index} 
+																style={{backgroundColor: "gray"}}
+																onClick={() => getSelectedNumber(ticket)}>{ticket.value}
+															</li>
+															}
+															else if((ticket.active === 1 || ticket.active === 0) && checkIncludes(props.cart, ticket.id)){
+																return <li key={index} 
+																// style={{backgroundColor: "#358600"}}
+																style={{backgroundColor: "orange"}}
+																onClick={() => getSelectedNumber(ticket)}>{ticket.value}
+															</li>
+															}else{
+																return <li key={index} 
+																	onClick={() => getSelectedNumber(ticket)}>{ticket.value}
+																</li>
+															}	
+
+														})}		
+														{/* {	!props.tickets.length ? "Loading..." :
 															props.tickets.map((ticket, index) => {																											
 									
 															return checkIncludes(props.userSelectedNumber, ticket.value, batchId) ? 
 															<li key={index} 
 																style={{backgroundColor: "orange"}}
-																onClick={() => getSelectedNumber(ticket.value)}>{ticket.value}
+																onClick={() => getSelectedNumber(ticket)}>{ticket.value}
 															</li>
 															:
 															<li key={index} 
-																onClick={() => getSelectedNumber(ticket.value)}>{ticket.value}
+																onClick={() => getSelectedNumber(ticket)}>{ticket.value}
 															</li>
 
-														})}		
+														})}		 */}
 														</ul>
 													</div>
 												</div>
@@ -544,24 +598,24 @@ function Lottery(props) {
 
 const mapStateToProps = (state) => {
 	const { lotteryReducer } = state
-	// console.log("Tickets", lotteryReducer.tickets)
-	console.log("User Selected Number", lotteryReducer.userSelectedNumber)
-	
-	// console.log("Tracker", lotteryReducer.userSelectedNumberTracker)
-	// console.log("Competitions", lotteryReducer.competitions)
+	console.log("Cart", lotteryReducer.cart)
+	// console.log("User Selected Number", lotteryReducer.userSelectedNumber)
+
 	return {	
 	  userSelectedNumber: lotteryReducer.userSelectedNumber,
 	  userSelectedNumberTracker: lotteryReducer.userSelectedNumberTracker, 
 	  competitions: lotteryReducer.competitions,
 	  alphabet: lotteryReducer.alphabet,
 	  tickets: lotteryReducer.tickets, 
+	  cart: lotteryReducer.cart
 	}
   }
   
   const mapDispatchToProps = (dispatch) => {
 	return {
 		generateNumbers: (values) => dispatch(generateNumbers(values)),
-		saveUserSelectedNumber: (number, image_url, amount, batchId) => dispatch(saveUserSelectedNumber(number, image_url, amount, batchId)),
+		saveUserSelectedNumber: (data) => dispatch(saveUserSelectedNumber(data)),
+		// saveUserSelectedNumber: (number, image_url, amount, batchId) => dispatch(saveUserSelectedNumber(number, image_url, amount, batchId)),
 		updateGameBatchState: (tickets) => dispatch(updateGameBatchState(tickets))
 	}
   }

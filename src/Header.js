@@ -1,20 +1,56 @@
 import React, { Fragment, useEffect } from 'react'
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import Logo from "./assets/images/logo.png"
 import SignIn from './Modal/SignIn'
 import { openSignInModal, openSignUpModal } from "./Actions/modalActions"
 import { updateStateForHeader, userIsLoggedIn } from "./Actions/userActions"
+import { saveUserSelectedNumber } from "./Actions/lotteryActions"
 import { checkForTokenWithExpiryDate } from "./Actions/helperFunctions"
+import { updateStateWIthWalletInfo } from "./Actions/userActions"
+import { thousandSeperator } from "./Actions/helperFunctions"
 import { connect } from "react-redux"
 import SignUp from './Modal/SignUp'
 
 function Header(props) {
+    const userObject = checkForTokenWithExpiryDate("access-token")
+    const myHeaders = new Headers();
 
-    useEffect(() => {
-        const response = checkForTokenWithExpiryDate("access-token")
-        console.log(response)
-        props.updateStateForHeader(response)
-    })
+    const getWalletBalance = () => {
+		myHeaders.append("Authorization", `Bearer ${userObject.token}`);
+		fetch("https://app.luckydraws.ng/account/wallet", {
+			method: "GET",
+			headers: myHeaders
+		})
+		.then(response => response.json())
+		.then(jsonResponse => {
+            console.log("i ran wallet")
+			if(jsonResponse.status === "success"){
+				props.updateStateWIthWalletInfo(jsonResponse.data[0])
+			}
+		})
+		.catch(err => console.log(err))	
+    }
+
+    const getCart = () => {
+		myHeaders.append("Authorization", `Bearer ${userObject.token}`);
+        props.updateStateForHeader(userObject)
+        fetch("https://app.luckydraws.ng/account/cart",{
+            method: "GET",
+            headers: myHeaders					
+        })
+        .then(response => response.json())
+        .then(jsonResponse => {
+            console.log("i ran cart")
+            if(jsonResponse.status === "success") {
+                props.saveUserSelectedNumber(jsonResponse.data)
+            }				
+        })
+        .catch(err => console.log(err))
+    }
+
+
+    useEffect(getCart, [])
+    useEffect(getWalletBalance)
 
     const displaySignInModal = () => {
         props.openSignInModal(true)
@@ -27,6 +63,8 @@ function Header(props) {
     const signOut = () => {
         localStorage.removeItem("access-token")
         props.userIsLoggedIn(false)
+        props.history.push("/competitions")
+        
     }
     
     return (     
@@ -59,7 +97,7 @@ function Header(props) {
                                         <li>
                                             <div className="cart-icon tm-dropdown">
                                                 <Link to={"/cart"}><i className="fas fa-cart-arrow-down"></i></Link>
-                                                <span className="cart-count">{props.userSelectedNumber.length}</span>
+                                                <span className="cart-count">{props.cart.length}</span>
                                                 <div className="tm-dropdown-menu">
                                                     <ul className="list">
                                                         <li className="list-item">
@@ -67,9 +105,9 @@ function Header(props) {
                                                                     <i className="fas fa-times"></i>
                                                             </div>
                                                             <ul className="number-list">
-                                                            {   !props.userSelectedNumber.length ? null :
-                                                                props.userSelectedNumber.map((select, index) => {
-                                                                return <li key={index}>{select.number}</li>
+                                                            {   !props.cart.length ? null :
+                                                                props.cart.map((ticket, index) => {
+                                                                return <li key={index}>{ticket.number}</li>
                                                             })}                                                          
                                                 
                                                             </ul>
@@ -115,10 +153,11 @@ function Header(props) {
                                 </div>
                                 <div className="right-content">                            
                                  <ul className="right-list">                                    
-                                        <li>
+                                        <li>                                             
                                             <div className="cart-icon tm-dropdown">
+                                            <span className="header-balance">Wallet  <span className="balance-bold">NGN {thousandSeperator(props.walletBalance.toFixed(2))}</span></span>
                                                 <Link to={"/cart"}><i className="fas fa-cart-arrow-down"></i></Link>
-                                                <span className="cart-count">{props.userSelectedNumber.length}</span>
+                                                <span className="cart-count">{props.cart.length}</span>
                                                 <div className="tm-dropdown-menu">
                                                     <ul className="list">
                                                         <li className="list-item">
@@ -126,9 +165,9 @@ function Header(props) {
                                                                     <i className="fas fa-times"></i>
                                                             </div>
                                                             <ul className="number-list">
-                                                            {   !props.userSelectedNumber.length ? null :
-                                                                props.userSelectedNumber.map((select, index) => {
-                                                                return <li key={index}>{select.number}</li>
+                                                            {   !props.cart.length ? null :
+                                                                props.cart.map((ticket, index) => {
+                                                                return <li key={index}>{ticket.number}</li>
                                                             })}                                                        
                                                 
                                                             </ul>
@@ -199,7 +238,9 @@ function Header(props) {
                                                 </Link>
                                         </li>
                                     </ul>
+                                    {props.isLoggedIn ? null :
                                     <span className="mybtn1" onClick={displaySignUpModal}> Join us</span>
+                                    }
                                     <SignUp />
                                 </div>
                             </nav>
@@ -218,14 +259,16 @@ const mapStateToProps = (state) => {
 	const { modalReducer } = state
     const { lotteryReducer } = state
     const { userReducer } = state
-    console.log(userReducer)
 	return {
       showSignInModal: modalReducer.showSignInModal,
       showSignUpModal: modalReducer.showSignUpModal,
       userSelectedNumber: lotteryReducer.userSelectedNumber,
       isLoggedIn: userReducer.isLoggedIn,
       firstname: userReducer.firstname,
-      userId: userReducer.userId
+      userId: userReducer.userId,
+      cart: lotteryReducer.cart,
+      walletBalance: userReducer.userWallet
+
 	}
 }
   
@@ -234,8 +277,11 @@ const mapStateToProps = (state) => {
         openSignInModal: (value) =>  dispatch(openSignInModal(value)),
         openSignUpModal: (value) =>  dispatch(openSignUpModal(value)),
         updateStateForHeader: (values) =>  dispatch(updateStateForHeader(values)),
-        userIsLoggedIn: (value) => dispatch(userIsLoggedIn(value))
+        userIsLoggedIn: (value) => dispatch(userIsLoggedIn(value)),
+        saveUserSelectedNumber: (value) => dispatch(saveUserSelectedNumber(value)),
+        updateStateWIthWalletInfo: (value) => dispatch(updateStateWIthWalletInfo(value)),
+
 	}
   }
 
-  export default connect(mapStateToProps, mapDispatchToProps)(Header)
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header))

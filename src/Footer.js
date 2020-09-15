@@ -46,6 +46,7 @@ export default function Footer() {
 				</div>
 			</div>
 		</div>
+	
 		<div className="container">
 			<div className="row">
 				<div className="col-sm-6 col-lg-3">

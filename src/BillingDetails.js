@@ -7,40 +7,40 @@ import { updateStateWithRegistration, saveImageInState } from "./Actions/modalAc
 import { checkForTokenWithExpiryDate } from "./Actions/helperFunctions"
 
 
-function Profile(props) {
+function BillingDetails(props) {
 
 	const getFormInput = (e) => {
-		props.updateStateWithRegistration({[e.target.name]: e.target.value})
+        props.updateStateWithRegistration({[e.target.name]: e.target.value})
 	}
 
-	const getRoomImage = (e) => {
-		props.saveImageInState({[e.target.name]: e.target.files})
-	}
-
-	const submitProfile = (e) => {
+	const updateBillingsDetails = (e) => {
 		e.preventDefault()
 		const userObject = checkForTokenWithExpiryDate("access-token")
-		const {gender, address, city, state, post_code, facebook, twitter } = props.formInputs
-		const data = new FormData()
+        const {address, city, state, post_code, first_name, last_name, email } = props.formInputs
+        
 		var myHeaders = new Headers();
-		myHeaders.append("Authorization", `Bearer ${userObject.token}`);
-		data.append("profile_photo", props.userImage.profile_photo[0])
-		data.append("gender", gender);
+        myHeaders.append("Authorization", `Bearer ${userObject.token}`);
+        
+		const data = new FormData()
+		data.append("email", email);
 		data.append("address", address);
 		data.append("city", city);
 		data.append("state", state);
 		data.append("post_code", post_code);
-		data.append("twitter", twitter);
-		data.append("facebook", facebook);
-
-		console.log(data)
-		fetch("https://app.luckydraws.ng/account/create_profile", {
+		data.append("last_name", last_name);
+		data.append("first_name", first_name);
+		fetch("https://app.luckydraws.ng/account/billing-adress", {
 			method: "POST",
 			headers: myHeaders,
 			body: data
 		})
 		.then(response => response.json())
-		.then(jsonResponse => console.log(jsonResponse))
+		.then(jsonResponse => {
+			console.log(jsonResponse)   
+			if(jsonResponse.status === "success" && Object.keys(jsonResponse.data).length > 0) {
+				props.history.push("/paystackCheckout")
+			}			
+        })
 		.catch(err => console.log(err))		
 	}
 
@@ -53,7 +53,7 @@ function Profile(props) {
 					<div className="row">
 						<div className="col-lg-12">
 							<h4 className="title">
-								Profile
+								Billing
 							</h4>
 							<ul className="breadcrumb-list">
 								<li>
@@ -77,29 +77,45 @@ function Profile(props) {
 			
 			<section className="awards-area">			
 				<div className="container">								
-					<div className="row">					
-						<div className="col-lg-4 ">						
-							<div className="single-awards">
-								<div className="content">
-									<img src={props.userImage} alt="" />
-									 <input type="file" name="profile_photo" onChange={getRoomImage} className="mybtn2"/>
-								</div>
-							</div>
-						</div>
-						
+					<div className="row">										
 						<div className="col-lg 6 col-md-offset-2 profile" >
 								<div className="profile-form-wrapper">
 									<div className="profile-box">
-										<div className="form-group mb-3">												
-											<label htmlFor="gender">Gender </label>												
-												<select className="form-control" name="gender" defaultValue="Gender" onChange={getFormInput}>
-													<option disabled hidden>Gender</option>
-													<option value="Male">Male</option>
-													<option value="Female">Female</option>
-												</select>
-										</div>
-										<div className="form-group mb-3">
+											<div className="form-group mb-3">
+												<label htmlFor="first_name">
+													Firtname
+												</label>												
+												<input type="text" className="form-control" name="first_name"
+													placeholder="First Name" onChange={getFormInput}/>
+											</div>
+											<div className="form-group mb-3">
+												<label htmlFor="last_name">
+													Last Name
+												</label>
+
 												
+												<input type="text" className="form-control" name="last_name"
+													placeholder="Last Name" onChange={getFormInput}/>
+											</div>
+											<div className="form-group mb-3">
+												<label htmlFor="email">
+													Email
+												</label>
+
+												
+												<input type="text" className="form-control" name="email"
+													placeholder="Email" onChange={getFormInput}/>
+											</div>
+											<div className="form-group mb-3">
+												<label htmlFor="phone">
+													Phone Number
+												</label>
+
+												
+												<input type="text" className="form-control" name="phone"
+													placeholder="Phone" onChange={getFormInput}/>
+											</div>
+										<div className="form-group mb-3">												
 												<label htmlFor="address">
 													Address
 												</label>
@@ -171,30 +187,7 @@ function Profile(props) {
 												<input type="text" className="form-control" name="post_code"
 													placeholder="Post Code" onChange={getFormInput} />
 											</div>
-											<div className="form-group mb-3">
-												<label htmlFor="facebook">
-													Facebook
-												</label>
-
-												
-												<input type="text" className="form-control" name="facebook"
-													placeholder="facebook" onChange={getFormInput}/>
-											</div>
-											<div className="form-group mb-3">
-												<label htmlFor="twiiter">
-													Twitter
-												</label>
-
-												
-												<input type="text" className="form-control" name="twitter"
-													placeholder="twiiter" onChange={getFormInput}/>
-											</div>
-												<button type="submit" className="mybtn1" onClick={submitProfile}>Update Profile</button>
-											{/* <form action="#">
-												<input type="text" className="input-field" placeholder="Enter Your Full Name" />
-												<input type="email" className="input-field" placeholder="Enter Your Email Address" />
-												<textarea className="input-field textarea" placeholder="Message *"></textareLink>
-											</form> */}
+												<button type="submit" className="mybtn1" onClick={updateBillingsDetails}>Checkout</button>
 									</div>
 								</div>
 						</div>
@@ -215,7 +208,7 @@ function Profile(props) {
 
 const mapStateToProps = (state) => {
 	const { modalReducer } = state
-	console.log("Success Message", modalReducer.successMessage)
+	console.log("Success Message", modalReducer.formInputs)
 	return {
 	  formInputs: modalReducer.formInputs,
 	  userImage: modalReducer.userImage,
@@ -227,8 +220,8 @@ const mapStateToProps = (state) => {
   const mapDispatchToProps = (dispatch) => {
 	return {
 		updateStateWithRegistration: (modalInputs) => dispatch(updateStateWithRegistration(modalInputs)),
-		saveImageInState: (image) => dispatch(saveImageInState(image))
+		saveImageInState: (image) => dispatch(saveImageInState(image)),
 	}
   }
 
-  export default connect(mapStateToProps, mapDispatchToProps)(Profile)
+  export default connect(mapStateToProps, mapDispatchToProps)(BillingDetails)

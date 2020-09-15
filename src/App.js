@@ -20,6 +20,8 @@ import HowItWork from './HowItWork';
 import SignIn from './Modal/SignIn';
 import Error404 from './404';
 import Profile from './Profile';
+import BillingDetails from './BillingDetails';
+import PaystackCheckoutPage from './Payment/PaystackCheckoutPage';
 
 
 
@@ -49,6 +51,8 @@ function App() {
          <Route exact path="/faq" component={FAQ} /> 
          <Route exact path="/404" component={Error404} /> 
          <Route exact path="/profile" component={Profile} /> 
+         <Route exact path="/billing" component={BillingDetails} /> 
+         <Route exact path="/paystackCheckout" component={PaystackCheckoutPage} /> 
       </Switch>
     </Fragment> 
   );

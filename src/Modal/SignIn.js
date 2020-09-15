@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import { openSignInModal, updateStateWithRegistration } from "../Actions/modalActions"
+import { userIsLoggedIn } from "../Actions/userActions"
 import { saveTokenWithExpiration } from "../Actions/helperFunctions"
 
 function SignIn(props) {
@@ -28,11 +29,11 @@ function SignIn(props) {
 		})
 		.then(res => res.json())	
 		.then((jsonRes) => {
-			console.log(jsonRes)
 			const { access_token, user } = jsonRes
 			const bearerToken = `${access_token.token}`
 			if(jsonRes.status === "success"){
 				saveTokenWithExpiration("access-token", bearerToken, 2592000000, user)
+				props.userIsLoggedIn(true)
 				closeSignInModal()				
 			}
 		})
@@ -110,7 +111,8 @@ const mapStateToProps = (state) => {
   const mapDispatchToProps = (dispatch) => {
 	return {
 		openSignInModal: (value) =>  dispatch(openSignInModal(value)),
-		updateStateWithRegistration: (modalInputs) => dispatch(updateStateWithRegistration(modalInputs))
+		updateStateWithRegistration: (modalInputs) => dispatch(updateStateWithRegistration(modalInputs)),
+		userIsLoggedIn: (value) => dispatch(userIsLoggedIn(value)),
 	}
   }
 

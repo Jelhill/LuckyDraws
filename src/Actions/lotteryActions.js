@@ -15,15 +15,21 @@ export const generateNumbers = (values) => {
     }
 }
 
-export const saveUserSelectedNumber = (number, image_url, amount, batchId) => {
+export const saveUserSelectedNumber = (data) => {
     return {
         type: SAVE_USER_SELECTED_NUMBER,
-        number,
-        image_url,
-        amount,
-        batchId
+        data
     }
 }
+// export const saveUserSelectedNumber = (number, image_url, amount, batchId) => {
+//     return {
+//         type: SAVE_USER_SELECTED_NUMBER,
+//         number,
+//         image_url,
+//         amount,
+//         batchId
+//     }
+// }
 
 export const updateCompetitionState = (values) => {
     return {
